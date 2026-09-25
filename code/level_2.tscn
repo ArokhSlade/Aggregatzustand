@@ -1,32 +1,16 @@
 [gd_scene format=3 uid="uid://dyv3nobje675e"]
 
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://code/level.gd" id="1_b4ril"]
-[ext_resource type="Texture2D" uid="uid://cm2i8wi320y5v" path="res://art/water_bubble.png" id="2_0usgv"]
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="3_qlut8"]
 [ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://code/bubble.gd" id="4_rs6fp"]
 [ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://code/ground_prototype.tscn" id="5_3i03a"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7g5w6"]
-radius = 63.03174
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://code/temperature_zone.tscn" id="5_b4ril"]
 
 [node name="Level" type="Node2D" unique_id=893623266]
 script = ExtResource("1_b4ril")
 
-[node name="test_ball" type="Node2D" parent="." unique_id=368204688]
-position = Vector2(230, 27)
-
-[node name="RigidBody2D" type="RigidBody2D" parent="test_ball" unique_id=1465452689]
-can_sleep = false
-freeze_mode = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="test_ball/RigidBody2D" unique_id=1234598457]
-scale = Vector2(0.15647939, 0.15647939)
-texture = ExtResource("2_0usgv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test_ball/RigidBody2D" unique_id=86517427]
-shape = SubResource("CircleShape2D_7g5w6")
-
 [node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("3_qlut8")]
+position = Vector2(85, 16)
 script = ExtResource("4_rs6fp")
 
 [node name="ground_prototype" parent="." unique_id=1580212633 instance=ExtResource("5_3i03a")]
@@ -320,3 +304,15 @@ scale = Vector2(0.48403627, 0.48403627)
 position = Vector2(612, 422)
 scale = Vector2(0.48403627, 0.48403627)
 desolve_time = 0.16
+
+[node name="TemperatureZone" parent="." unique_id=198987449 instance=ExtResource("5_b4ril")]
+modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
+position = Vector2(550, 547)
+scale = Vector2(1.2799994, 1)
+temperature = 70.0
+
+[node name="TemperatureZone2" parent="." unique_id=291037804 instance=ExtResource("5_b4ril")]
+modulate = Color(0.275326, 0.31628942, 0.76869035, 0.67058825)
+position = Vector2(527, 82)
+scale = Vector2(1.2799994, 1)
+temperature = 20.0
