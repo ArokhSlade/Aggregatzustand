@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://vgq4nwnu64hn"]
+
+[ext_resource type="Texture2D" uid="uid://drjt04jlen7iy" path="res://art/hexagon.png" id="1_5q1tt"]
+
+[node name="ground_prototype" type="Node2D" unique_id=1580212633]
+
+[node name="Ground" type="Node2D" parent="." unique_id=998688836]
+position = Vector2(127, 126)
+
+[node name="Hexagon" type="Sprite2D" parent="Ground" unique_id=1595861454]
+modulate = Color(0.624965, 0.1024543, 0.13096702, 1)
+texture = ExtResource("1_5q1tt")
+
+[node name="Area2D" type="Area2D" parent="Ground" unique_id=1533845526]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground/Area2D" unique_id=985452942]
+polygon = PackedVector2Array(-2, -122, 104, -58, 103, 63, 1, 124, -110, 60, -106, -58)
