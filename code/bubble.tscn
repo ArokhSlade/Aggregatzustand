@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://dqfsum7vwqwnx"]
 
+[ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://code/bubble.gd" id="1_0h62n"]
+[ext_resource type="Texture2D" uid="uid://cjvsvrs22jlfd" path="res://art/water_bubble.png" id="1_2t160"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_j1xdp"]
+radius = 44.04543
 
 [node name="Bubble" type="RigidBody2D" unique_id=1361995442]
+script = ExtResource("1_0h62n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=718959648]
 shape = SubResource("CircleShape2D_j1xdp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=145585015]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_2t160")

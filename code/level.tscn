@@ -2,10 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="1_dgv1k"]
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://code/level.gd" id="1_hnu4n"]
-[ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://code/bubble.gd" id="2_hnu4n"]
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://code/temperature_zone.tscn" id="3_hnu4n"]
 
 [node name="Level" type="Node2D" unique_id=893623266]
 script = ExtResource("1_hnu4n")
 
 [node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("1_dgv1k")]
-script = ExtResource("2_hnu4n")
+position = Vector2(525, 569)
+
+[node name="TemperatureZone" parent="." unique_id=198987449 instance=ExtResource("3_hnu4n")]
+position = Vector2(576, 597)
+gravity_point_center = Vector2(0, -1)
+gravity_direction = Vector2(0, -1)
+
+[node name="TemperatureZone2" parent="." unique_id=1903874082 instance=ExtResource("3_hnu4n")]
+position = Vector2(575, 411)
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+
+[node name="TemperatureZone3" parent="." unique_id=333579844 instance=ExtResource("3_hnu4n")]
+position = Vector2(575, 224)
