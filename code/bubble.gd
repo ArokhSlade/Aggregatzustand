@@ -50,10 +50,10 @@ func sample_gradient_texture(temperature_):
 func _physics_process(delta):
 	update_temperature(delta)
 	temp_to_speed(temperature)
-	temp_to_gravity_scale(temperature)
+	#temp_to_gravity_scale(temperature)
 	update_color()
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
-	#state.linear_velocity.y = speed_scale * max_speed
+	state.linear_velocity.y = speed_scale * max_speed
 	pass

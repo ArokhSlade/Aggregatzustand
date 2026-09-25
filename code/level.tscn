@@ -11,14 +11,14 @@ script = ExtResource("1_hnu4n")
 position = Vector2(525, 569)
 can_sleep = false
 
-[node name="HotTemperatureZone" parent="." unique_id=198987449 instance=ExtResource("3_hnu4n")]
-position = Vector2(576, 597)
-temperature = 100.0
+[node name="ColdTemperatureZone3" parent="." unique_id=333579844 instance=ExtResource("3_hnu4n")]
+position = Vector2(575, 224)
+temperature = 0.0
 
 [node name="MediumTemperatureZone2" parent="." unique_id=1903874082 instance=ExtResource("3_hnu4n")]
 position = Vector2(575, 411)
 temperature = 50.0
 
-[node name="ColdTemperatureZone3" parent="." unique_id=333579844 instance=ExtResource("3_hnu4n")]
-position = Vector2(575, 224)
-temperature = 0.0
+[node name="HotTemperatureZone" parent="." unique_id=198987449 instance=ExtResource("3_hnu4n")]
+position = Vector2(576, 597)
+temperature = 100.0

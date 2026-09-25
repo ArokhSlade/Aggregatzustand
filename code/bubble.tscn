@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cjvsvrs22jlfd" path="res://art/water_bubble.png" id="1_2t160"]
 
 [sub_resource type="Gradient" id="Gradient_0h62n"]
-offsets = PackedFloat32Array(0, 0.532, 1)
-colors = PackedColorArray(0.8672808, 0.2923065, 0.19177866, 1, 0.27727965, 0.54411334, 0.83408505, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.468, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.27727965, 0.54411334, 0.83408505, 1, 0.8672808, 0.2923065, 0.19177866, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0h62n"]
 gradient = SubResource("Gradient_0h62n")
