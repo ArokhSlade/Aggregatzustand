@@ -14,6 +14,7 @@ gradient = SubResource("Gradient_0h62n")
 radius = 44.04543
 
 [node name="Bubble" type="RigidBody2D" unique_id=1361995442]
+gravity_scale = 0.0
 script = ExtResource("1_0h62n")
 colors = SubResource("GradientTexture1D_0h62n")
 
