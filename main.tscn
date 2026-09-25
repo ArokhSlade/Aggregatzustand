@@ -1,7 +1,13 @@
 [gd_scene format=3 uid="uid://bs6eh0fuifr7b"]
 
+[ext_resource type="Script" uid="uid://drv3pyrh45wog" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bbnqhaywv5sca" path="res://poki/poki_test.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://d2hxtb7dsut48" path="res://code/level.tscn" id="3_1bvp3"]
 
 [node name="Main" type="Node" unique_id=1820909058]
+script = ExtResource("1_h2yge")
 
 [node name="PokiTest" parent="." unique_id=361775869 instance=ExtResource("1_ig7tw")]
+visible = false
+
+[node name="Level" parent="." unique_id=893623266 instance=ExtResource("3_1bvp3")]

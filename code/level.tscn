@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d2hxtb7dsut48"]
+
+[ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="1_dgv1k"]
+[ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://code/level.gd" id="1_hnu4n"]
+[ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://code/bubble.gd" id="2_hnu4n"]
+
+[node name="Level" type="Node2D" unique_id=893623266]
+script = ExtResource("1_hnu4n")
+
+[node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("1_dgv1k")]
+script = ExtResource("2_hnu4n")
