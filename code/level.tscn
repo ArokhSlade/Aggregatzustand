@@ -2,10 +2,26 @@
 
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="1_dgv1k"]
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://code/level.gd" id="1_hnu4n"]
-[ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://code/bubble.gd" id="2_hnu4n"]
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://code/temperature_zone.tscn" id="3_hnu4n"]
 
 [node name="Level" type="Node2D" unique_id=893623266]
 script = ExtResource("1_hnu4n")
 
+[node name="ColdTemperatureZone3" parent="." unique_id=333579844 instance=ExtResource("3_hnu4n")]
+modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
+position = Vector2(575, 129)
+temperature = 0.0
+
+[node name="MediumTemperatureZone2" parent="." unique_id=1903874082 instance=ExtResource("3_hnu4n")]
+modulate = Color(0.74424416, 0.59822375, 0.27655464, 1)
+position = Vector2(575, 316)
+temperature = 50.0
+
+[node name="HotTemperatureZone" parent="." unique_id=198987449 instance=ExtResource("3_hnu4n")]
+modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
+position = Vector2(576, 502)
+temperature = 100.0
+
 [node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("1_dgv1k")]
-script = ExtResource("2_hnu4n")
+position = Vector2(525, 474)
+can_sleep = false
