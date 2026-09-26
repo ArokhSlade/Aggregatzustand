@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://d15javxoieys0"]
 
-[ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://code/exchange_color_to_scrolling.gdshader" id="1_43myb"]
-[ext_resource type="Texture2D" uid="uid://d0050u7vlico7" path="res://art/mikrobcore.jpg" id="2_8lu0q"]
+[ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://art/shaders/exchange_color_to_scrolling.gdshader" id="1_43myb"]
+[ext_resource type="Texture2D" uid="uid://d0050u7vlico7" path="res://art/textures/mikrobcore.jpg" id="2_8lu0q"]
 
 [resource]
 shader = ExtResource("1_43myb")

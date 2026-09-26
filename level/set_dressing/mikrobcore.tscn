@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ctflcdeut6w5y"]
 
-[ext_resource type="Material" uid="uid://d15javxoieys0" path="res://art/worldscreen_bg.tres" id="1_ellkb"]
+[ext_resource type="Material" uid="uid://d15javxoieys0" path="res://art/materials/worldscreen_bg.tres" id="1_ellkb"]
 
 [sub_resource type="Gradient" id="Gradient_67f6p"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)

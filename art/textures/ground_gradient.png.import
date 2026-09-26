@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0050u7vlico7"
-path="res://.godot/imported/mikrobcore.jpg-3f500eae56e6a4a864342139c5c82b0b.ctex"
+uid="uid://bwcrxmbb8bfy6"
+path="res://.godot/imported/ground_gradient.png-828b6c4349736e0cd944e0ecbf41ec65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/mikrobcore.jpg"
-dest_files=["res://.godot/imported/mikrobcore.jpg-3f500eae56e6a4a864342139c5c82b0b.ctex"]
+source_file="res://art/textures/ground_gradient.png"
+dest_files=["res://.godot/imported/ground_gradient.png-828b6c4349736e0cd944e0ecbf41ec65.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drjt04jlen7iy"
-path="res://.godot/imported/hexagon.png-55cf285ce1e0d57a1118128f7affc441.ctex"
+uid="uid://cjvsvrs22jlfd"
+path="res://.godot/imported/water_bubble.png-ec6cc32c989dc5717af4f26d13e2d68a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/hexagon.png"
-dest_files=["res://.godot/imported/hexagon.png-55cf285ce1e0d57a1118128f7affc441.ctex"]
+source_file="res://art/textures/water_bubble.png"
+dest_files=["res://.godot/imported/water_bubble.png-ec6cc32c989dc5717af4f26d13e2d68a.ctex"]
 
 [params]
 

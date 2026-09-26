@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dns3x1p4xppco"]
 
-[ext_resource type="Shader" uid="uid://citiutijc64tw" path="res://shaders/2DHeatColdDistortion.gdshader" id="1_0vwcq"]
+[ext_resource type="Shader" uid="uid://citiutijc64tw" path="res://art/shaders/2DHeatColdDistortion.gdshader" id="1_0vwcq"]
 [ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="2_w1wto"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4sys0"]

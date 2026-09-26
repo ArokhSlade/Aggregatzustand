@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://do75qb8fsgnnb"]
 
-[ext_resource type="Shader" uid="uid://dx82k5jiodmi0" path="res://code/pattern_overlay.gdshader" id="1_aj2jf"]
-[ext_resource type="Texture2D" uid="uid://bwcrxmbb8bfy6" path="res://art/ground_gradient.png" id="2_610fq"]
+[ext_resource type="Shader" uid="uid://dx82k5jiodmi0" path="res://art/shaders/pattern_overlay.gdshader" id="1_aj2jf"]
+[ext_resource type="Texture2D" uid="uid://bwcrxmbb8bfy6" path="res://art/textures/ground_gradient.png" id="2_610fq"]
 
 [resource]
 shader = ExtResource("1_aj2jf")

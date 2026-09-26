@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnyh2ndsd8uht"
-path="res://.godot/imported/h1.png-7972507137c77bb6adc861e38c878182.ctex"
+uid="uid://d0050u7vlico7"
+path="res://.godot/imported/mikrobcore.jpg-209055c7e95794f088d78fc6a2102e91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/h1.png"
-dest_files=["res://.godot/imported/h1.png-7972507137c77bb6adc861e38c878182.ctex"]
+source_file="res://art/textures/mikrobcore.jpg"
+dest_files=["res://.godot/imported/mikrobcore.jpg-209055c7e95794f088d78fc6a2102e91.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwcrxmbb8bfy6"
-path="res://.godot/imported/ground_gradient.png-624d857a48e2571f8b06089072892e6f.ctex"
+uid="uid://ctwey75w28udh"
+path="res://.godot/imported/h3.png-45890d306e15b0017fd59a9316d8b679.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ground_gradient.png"
-dest_files=["res://.godot/imported/ground_gradient.png-624d857a48e2571f8b06089072892e6f.ctex"]
+source_file="res://art/shaders/h3.png"
+dest_files=["res://.godot/imported/h3.png-45890d306e15b0017fd59a9316d8b679.ctex"]
 
 [params]
 

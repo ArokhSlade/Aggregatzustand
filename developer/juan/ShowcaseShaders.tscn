@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://d7se3wih8553"]
 
 [ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="1_x3crf"]
-[ext_resource type="PackedScene" uid="uid://7aprsunnbd7" path="res://code/cold_particles.tscn" id="2_lsdes"]
-[ext_resource type="PackedScene" uid="uid://dns3x1p4xppco" path="res://code/heat_cold_distortion.tscn" id="3_jalyq"]
-[ext_resource type="PackedScene" uid="uid://bq4nyvyjob0ew" path="res://code/hot_particles.tscn" id="4_idd56"]
+[ext_resource type="PackedScene" uid="uid://7aprsunnbd7" path="res://art/particles/cold_particles.tscn" id="2_lsdes"]
+[ext_resource type="PackedScene" uid="uid://dns3x1p4xppco" path="res://art/particles/heat_cold_distortion.tscn" id="3_jalyq"]
+[ext_resource type="PackedScene" uid="uid://bq4nyvyjob0ew" path="res://art/particles/hot_particles.tscn" id="4_idd56"]
+[ext_resource type="PackedScene" uid="uid://ddg56pnl36rey" path="res://art/shaders/gas_2d_character.tscn" id="5_ew40i"]
 
 [node name="Node2D" type="Node2D" unique_id=762145785]
 
@@ -19,3 +20,7 @@ position = Vector2(593, 529)
 
 [node name="hot_particles" parent="." unique_id=792782090 instance=ExtResource("4_idd56")]
 position = Vector2(827, 239)
+
+[node name="gas_2d_character" parent="." unique_id=393402349 instance=ExtResource("5_ew40i")]
+position = Vector2(1108, 227)
+scale = Vector2(0.546875, 0.546875)
