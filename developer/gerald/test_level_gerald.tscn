@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="7_d764s"]
 [ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="8_f8pxk"]
 
-[node name="Level" type="Node2D" unique_id=893623266]
+[node name="Level" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start")]
 script = ExtResource("1_sh0jh")
+player_scene = ExtResource("3_no88w")
+level_start = NodePath("LevelStart")
 
 [node name="ColdTemperatureZone3" parent="." unique_id=333579844 instance=ExtResource("2_b3kng")]
 modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
@@ -26,9 +28,6 @@ temperature = 50.0
 modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(576, 502)
 temperature = 100.0
-
-[node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("3_no88w")]
-position = Vector2(617, 528)
 
 [node name="BottomLeftCornerHouse" parent="." unique_id=1612557856 instance=ExtResource("4_i0isw")]
 position = Vector2(-1.9999847, 371)
@@ -47,4 +46,6 @@ position = Vector2(778, 31.000008)
 scale = Vector2(0.29119998, 0.2912)
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("8_f8pxk")]
-position = Vector2(500, 288)
+position = Vector2(474, 505)
+
+[connection signal="player_spawned" from="LevelStart" to="." method="_on_level_start_player_spawned"]

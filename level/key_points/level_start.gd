@@ -1,11 +1,16 @@
 extends Node2D
 
+signal player_spawned(player)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+@export_range(0, 100, 1) var start_temperature = 50
 
+var player_scene : PackedScene
+var player 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func initialize(player_scene_):
+	player_scene = player_scene_
+
+func spawn():
+	player = player_scene.instantiate()
+	player_spawned.emit(player)
+	player.global_position = global_position
