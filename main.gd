@@ -58,13 +58,11 @@ class InGame extends State:
 	
 	
 	func on_enter():
-		owner.level.show()
 		owner.level.unpause()
 		PokiSDK.gameplay_start()
 	
 	
 	func on_exit():
-		owner.level.hide()
 		owner.level.pause()
 		PokiSDK.gameplay_stop()
 		#PokiSDK.commercial_break()
