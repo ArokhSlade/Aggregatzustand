@@ -18,6 +18,10 @@ func _ready():
 	target_temperature = temperature
 
 
+func _on_temperature_sensor_temperature_changed(temperature):
+	target_temperature = temperature
+
+
 func apply_temperature(temperature_):
 	target_temperature = temperature_
 

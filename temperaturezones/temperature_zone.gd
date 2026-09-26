@@ -10,11 +10,11 @@ func _physics_process(_delta):
 		pass
 
 
-func _on_body_entered(body):
-	try_apply_temperature(body, temperature)
+func _on_area_entered(area):
+	try_apply_temperature(area)
 
 
-func try_apply_temperature(body_, temperature_):
-	if body_.has_method("apply_temperature"):
-		body_.apply_temperature(temperature_)
+func try_apply_temperature(target):
+	if target.has_method("apply_temperature"):
+		target.apply_temperature(temperature)
 		#body_.update_color()

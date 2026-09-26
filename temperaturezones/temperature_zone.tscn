@@ -23,4 +23,4 @@ position = Vector2(-1, 0)
 scale = Vector2(17.906248, 2.9375)
 texture = SubResource("GradientTexture2D_l4j7i")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
