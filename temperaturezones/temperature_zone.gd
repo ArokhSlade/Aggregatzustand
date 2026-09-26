@@ -3,20 +3,18 @@ class_name temperature_zone
 
 @export var aggregate_state := AggregateStates.Type.WATER
 
-@export var temperature = 24.0
-
+# DEPRECATED
 func _physics_process(_delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
-		#try_apply_temperature(body, temperature)
+		#try_apply_aggregate_state(body)
 		pass
 
 
 func _on_area_entered(area):
-	try_apply_temperature(area)
+	try_apply_aggregate_state(area)
 
 
-func try_apply_temperature(target):
-	if target.has_method("apply_temperature"):
-		target.apply_temperature(temperature)
-		#body_.update_color()
+func try_apply_aggregate_state(target):
+	if target.has_method("apply_aggregate_state"):
+		target.apply_aggregate_state(aggregate_state)

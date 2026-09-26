@@ -36,4 +36,4 @@ script = ExtResource("3_mddvq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TemperatureSensor" unique_id=238846473]
 shape = SubResource("CircleShape2D_l4j7i")
 
-[connection signal="temperature_changed" from="TemperatureSensor" to="." method="_on_temperature_sensor_temperature_changed"]
+[connection signal="aggregate_changed" from="TemperatureSensor" to="." method="_on_temperature_sensor_aggregate_changed"]

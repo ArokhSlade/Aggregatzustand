@@ -4,7 +4,7 @@ extends Node
 @export var level_scene : PackedScene
 
 ## Resource that defines balancing values for aggregate states
-@export var aggregate_states : AggregateStates
+@export var aggregate_states_resoure : AggregateStates
 
 @onready var level_parent = $LevelParent
 @onready var menu = $Menu
@@ -24,6 +24,7 @@ func _ready():
 
 func load_level():
 	level = level_scene.instantiate()
+	level.initialize(aggregate_states_resoure)
 	level_parent.add_child(level)
 
 

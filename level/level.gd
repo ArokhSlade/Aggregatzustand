@@ -3,23 +3,37 @@ extends Node2D
 signal level_finished
 
 @export var player_scene : PackedScene
-
 @export var level_start : Node2D
+
+@export var DEBUG_aggregate_rules : AggregateStates
+
+## external dependency that must be initialize()'d
+var aggregate_rules : AggregateStates
 
 var current_state : State
 var player
+var initialized = false
 
 var states = {
 	"paused" : Paused.new(self),
 	"playing" : Playing.new(self)
 }
 
-
 func _ready():
 	current_state = states.paused
+	
+	if not initialized:
+		DEBUG_fallback_initialize()
+	
+
+func initialize(aggregate_rules_):
+	aggregate_rules = aggregate_rules_
+	
 	if level_start:
-		level_start.initialize(player_scene)
+		level_start.initialize(player_scene, aggregate_rules)
 		level_start.spawn()
+	
+	initialized = true
 
 
 func pause():
@@ -34,6 +48,10 @@ func unpause():
 
 func switch_state_to(new_state):
 	current_state = new_state
+
+
+func DEBUG_fallback_initialize():
+	initialize(DEBUG_aggregate_rules)
 
 
 @abstract class State:

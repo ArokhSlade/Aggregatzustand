@@ -33,19 +33,18 @@ shader_parameter/detail = 1.0
 [node name="Level_Tommy" unique_id=893623266 instance=ExtResource("1_cwafv")]
 
 [node name="LevelStart" parent="." index="0" unique_id=1790299339]
-position = Vector2(253, 239)
+position = Vector2(251, 171)
 
 [node name="TemperatureZone" parent="." index="1" unique_id=198987449 instance=ExtResource("2_mytjb")]
 modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(746, 961.00006)
 scale = Vector2(2.4661202, 1.1771753)
-temperature = 70.0
+aggregate_state = 2
 
 [node name="TemperatureZone2" parent="." index="2" unique_id=2053529676 instance=ExtResource("2_mytjb")]
 modulate = Color(0.275326, 0.31628942, 0.76869035, 0.67058825)
 position = Vector2(756, 98.00001)
 scale = Vector2(2.4661202, 1.1771753)
-temperature = 20.0
 
 [node name="ground_zone_tool" parent="." index="3" unique_id=1615348414 instance=ExtResource("3_sdpr0")]
 position = Vector2(134.99998, 0)
@@ -68,7 +67,7 @@ scale = Vector2(2.3441787, 2.3441787)
 modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(899, 626.99994)
 scale = Vector2(0.14612031, 2.4744563)
-temperature = 70.0
+aggregate_state = 2
 
 [node name="BottomLeftCornerHouse" parent="." index="6" unique_id=651454461 instance=ExtResource("8_deimu")]
 position = Vector2(-167, 387.99997)

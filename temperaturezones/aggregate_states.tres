@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" uid="uid://d7lqqt56xyby" path="res://temperaturezones/aggregate_states.gd" id="1_0b2i1"]
 
+[sub_resource type="Curve" id="Curve_mddvq"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, -2.0, 0, 1, Vector2(1, -1), -2.0, 0.0, 1, 0]
+point_count = 2
+
 [resource]
 script = ExtResource("1_0b2i1")
+gravity_curve = SubResource("Curve_mddvq")
 metadata/_custom_type_script = "uid://d7lqqt56xyby"
