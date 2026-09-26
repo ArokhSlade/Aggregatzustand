@@ -46,3 +46,6 @@ text = "Play"
 [node name="QuitButton" parent="Panel/VBoxContainer" unique_id=220340952 instance=ExtResource("2_4c782")]
 layout_mode = 2
 text = "Quit"
+
+[connection signal="pressed" from="Panel/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

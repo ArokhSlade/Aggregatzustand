@@ -15,3 +15,6 @@ visible = false
 visible = false
 
 [node name="Menu" parent="." unique_id=1073757890 instance=ExtResource("4_1bvp3")]
+
+[connection signal="play_requested" from="Menu" to="." method="_on_menu_play_requested"]
+[connection signal="quit_requested" from="Menu" to="." method="_on_menu_quit_requested"]

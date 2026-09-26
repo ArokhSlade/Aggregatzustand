@@ -21,9 +21,23 @@ func _input(event : InputEvent):
 
 
 func switch_state_to(state_):
+	if state_ == current_state:
+		return
 	current_state.on_exit()
 	current_state = state_
 	current_state.on_enter()
+
+
+func quit_game():
+	get_tree().quit()
+
+
+func _on_menu_play_requested():
+	switch_state_to(states.in_game)
+
+
+func _on_menu_quit_requested():
+	quit_game()
 
 
 @abstract class State:
