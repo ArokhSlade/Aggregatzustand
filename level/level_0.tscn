@@ -32,6 +32,9 @@ shader_parameter/detail = 1.0
 
 [node name="Level_Tommy" unique_id=893623266 instance=ExtResource("1_cwafv")]
 
+[node name="LevelStart" parent="." index="0" unique_id=1790299339]
+position = Vector2(253, 239)
+
 [node name="TemperatureZone" parent="." index="1" unique_id=198987449 instance=ExtResource("2_mytjb")]
 modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(746, 961.00006)
@@ -80,3 +83,6 @@ position = Vector2(-106, -474)
 
 [node name="TopRightCornerHouse" parent="." index="9" unique_id=97941170 instance=ExtResource("11_umpl3")]
 position = Vector2(1256, -207)
+
+[node name="LevelGoal" parent="." index="10" unique_id=1453480285]
+position = Vector2(1346, 494)

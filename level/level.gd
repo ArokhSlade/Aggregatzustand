@@ -1,5 +1,7 @@
 extends Node2D
 
+signal level_finished
+
 @export var player_scene : PackedScene
 
 @export var level_start : Node2D
@@ -58,3 +60,7 @@ class  Paused extends State:
 func _on_level_start_player_spawned(player_):
 	add_child(player_)
 	player = player_
+
+
+func _on_level_goal_level_goal_reached():
+	level_finished.emit()
