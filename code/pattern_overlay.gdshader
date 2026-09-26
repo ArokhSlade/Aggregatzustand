@@ -83,7 +83,7 @@ vec4 overlay_pattern(vec4 texture_color){
 }
 
 void vertex() {
-	world_position = (MODEL_MATRIX * vec4(VERTEX * world_scale , 0.0, world_scale)).xy;
+	world_position = (MODEL_MATRIX * vec4(VERTEX , 0.0, world_scale)).xy;
 	local_position = (inverse(MODEL_MATRIX) * vec4(world_position, 0.0, 1.0)).xy;
 }
 
@@ -91,6 +91,5 @@ void fragment() {
 	vec4 texture_color = texture(TEXTURE, UV);
 	vec4 overlayed_pattern = overlay_pattern(texture_color);
 
-	//vec4 final = texture(overlayed_pattern, UV);
 	COLOR = overlayed_pattern;
 }

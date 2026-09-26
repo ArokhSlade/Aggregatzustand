@@ -28,6 +28,7 @@ vec4 exchange_texture_areas(vec4 current_color, vec4 pattern_color) {
 	if (distance(current_color.rgb, color_to_replace.rgb) < feather_range)
         current_color = pattern_color;
 
+	current_color.a = 1.0;
 	return current_color;
 }
 
@@ -36,6 +37,7 @@ vec4 calc_pattern_color(sampler2D sample) {
 	vec2 move = scroll_dir * TIME * scroll_speed;
 	vec2 pattern_uv = fract(scaled_position + move);
 	vec4 pattern_color = texture(sample, pattern_uv);
+	pattern_color.a = 1.0;
 	return pattern_color;
 }
 
@@ -57,10 +59,20 @@ void vertex() {
 
 void fragment() {
 	vec4 current_color = texture(TEXTURE, UV);
+	float original_alpha = current_color.a;
 
 	vec4 pattern_color = calc_pattern_color(pattern_texture);
 
-    vec4 exchanged_color = exchange_texture_areas(current_color, pattern_color);
+	vec4 exchanged_color = exchange_texture_areas(current_color, pattern_color);
 
-    COLOR = exchanged_color;
+	if (distance(current_color.rgb, color_to_replace.rgb) < feather_range) {
+		exchanged_color.rgb = pattern_color.rgb;
+	}
+
+	exchanged_color.a = step(0.5, original_alpha);
+
+	vec4 color = COLOR;
+	color.a = COLOR.a * 2.0;
+
+	COLOR = exchanged_color * color;
 }
