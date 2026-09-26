@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://i85qqaldnt2e"]
+
+[ext_resource type="Script" uid="uid://c4blq6s1cd8uu" path="res://code/ground_zone_tool.gd" id="1_uwjeq"]
+
+[node name="ground_zone_tool" type="Polygon2D" unique_id=1615348414]
+color = Color(1, 0.36078432, 1, 0.29411766)
+polygon = PackedVector2Array(152, 20, 390, 178, 165, 224, 45, 60)
+script = ExtResource("1_uwjeq")
