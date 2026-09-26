@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ctflcdeut6w5y"]
+
+[ext_resource type="Texture2D" uid="uid://d0050u7vlico7" path="res://art/mikrobcore.jpg" id="1_ellkb"]
+
+[node name="Mikrobcore" type="Sprite2D" unique_id=1636845797]
+texture = ExtResource("1_ellkb")

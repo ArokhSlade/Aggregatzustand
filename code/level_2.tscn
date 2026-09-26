@@ -5,164 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="5_0usgv"]
 [ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://code/ground_prototype.tscn" id="5_3i03a"]
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://code/temperature_zone.tscn" id="5_b4ril"]
+[ext_resource type="PackedScene" uid="uid://ctflcdeut6w5y" path="res://code/mikrobcore.tscn" id="6_0usgv"]
 
 [node name="Level" type="Node2D" unique_id=893623266]
 script = ExtResource("1_b4ril")
 
 [node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("3_qlut8")]
 position = Vector2(85, 16)
-
-[node name="ground_prototype7" parent="." unique_id=167788507 instance=ExtResource("5_3i03a")]
-position = Vector2(247, 275)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype8" parent="." unique_id=1910081717 instance=ExtResource("5_3i03a")]
-position = Vector2(71, 237)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype10" parent="." unique_id=1124663127 instance=ExtResource("5_3i03a")]
-position = Vector2(395, 370)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype11" parent="." unique_id=107131814 instance=ExtResource("5_3i03a")]
-position = Vector2(95, 391)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype12" parent="." unique_id=338330536 instance=ExtResource("5_3i03a")]
-position = Vector2(251, 451)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype13" parent="." unique_id=391033417 instance=ExtResource("5_3i03a")]
-position = Vector2(43, 556)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype14" parent="." unique_id=352744253 instance=ExtResource("5_3i03a")]
-position = Vector2(185, 607)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype15" parent="." unique_id=428278434 instance=ExtResource("5_3i03a")]
-position = Vector2(386, 580)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype16" parent="." unique_id=709024907 instance=ExtResource("5_3i03a")]
-position = Vector2(521, 442)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype17" parent="." unique_id=1926117013 instance=ExtResource("5_3i03a")]
-position = Vector2(511, 629)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype25" parent="." unique_id=798414229 instance=ExtResource("5_3i03a")]
-position = Vector2(272, 372)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype26" parent="." unique_id=188779339 instance=ExtResource("5_3i03a")]
-position = Vector2(96, 334)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype28" parent="." unique_id=1882673001 instance=ExtResource("5_3i03a")]
-position = Vector2(420, 467)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype29" parent="." unique_id=778975002 instance=ExtResource("5_3i03a")]
-position = Vector2(120, 488)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype30" parent="." unique_id=1141585557 instance=ExtResource("5_3i03a")]
-position = Vector2(276, 548)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype31" parent="." unique_id=808238808 instance=ExtResource("5_3i03a")]
-position = Vector2(68, 653)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype32" parent="." unique_id=1730910170 instance=ExtResource("5_3i03a")]
-position = Vector2(210, 704)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype33" parent="." unique_id=803538987 instance=ExtResource("5_3i03a")]
-position = Vector2(411, 677)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype34" parent="." unique_id=1114098846 instance=ExtResource("5_3i03a")]
-position = Vector2(546, 539)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype35" parent="." unique_id=800374977 instance=ExtResource("5_3i03a")]
-position = Vector2(536, 726)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype43" parent="." unique_id=1828007475 instance=ExtResource("5_3i03a")]
-position = Vector2(330, 280)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype44" parent="." unique_id=2100209845 instance=ExtResource("5_3i03a")]
-position = Vector2(154, 242)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype46" parent="." unique_id=1602909703 instance=ExtResource("5_3i03a")]
-position = Vector2(478, 375)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype47" parent="." unique_id=955589780 instance=ExtResource("5_3i03a")]
-position = Vector2(178, 396)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype48" parent="." unique_id=1767824963 instance=ExtResource("5_3i03a")]
-position = Vector2(334, 456)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype49" parent="." unique_id=527416717 instance=ExtResource("5_3i03a")]
-position = Vector2(126.00001, 561)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype50" parent="." unique_id=995392076 instance=ExtResource("5_3i03a")]
-position = Vector2(268, 612)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype51" parent="." unique_id=1736148529 instance=ExtResource("5_3i03a")]
-position = Vector2(469, 585)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype61" parent="." unique_id=100715966 instance=ExtResource("5_3i03a")]
-position = Vector2(194, 332)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype62" parent="." unique_id=267173884 instance=ExtResource("5_3i03a")]
-position = Vector2(17.999992, 294)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype64" parent="." unique_id=528422995 instance=ExtResource("5_3i03a")]
-position = Vector2(342, 427)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype65" parent="." unique_id=1210690913 instance=ExtResource("5_3i03a")]
-position = Vector2(41.999992, 448)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype66" parent="." unique_id=402535094 instance=ExtResource("5_3i03a")]
-position = Vector2(198, 508)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype67" parent="." unique_id=340823448 instance=ExtResource("5_3i03a")]
-position = Vector2(-10.000008, 613)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype68" parent="." unique_id=928351588 instance=ExtResource("5_3i03a")]
-position = Vector2(132, 664)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype69" parent="." unique_id=1862948078 instance=ExtResource("5_3i03a")]
-position = Vector2(333, 637)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype70" parent="." unique_id=584048005 instance=ExtResource("5_3i03a")]
-position = Vector2(468, 499)
-scale = Vector2(0.48403627, 0.48403627)
-
-[node name="ground_prototype71" parent="." unique_id=1671384859 instance=ExtResource("5_3i03a")]
-position = Vector2(458, 686)
-scale = Vector2(0.48403627, 0.48403627)
 
 [node name="TemperatureZone" parent="." unique_id=198987449 instance=ExtResource("5_b4ril")]
 modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
@@ -177,7 +26,15 @@ scale = Vector2(1.2799994, 1)
 temperature = 20.0
 
 [node name="ground_zone_tool" parent="." unique_id=1703679963 instance=ExtResource("5_0usgv")]
-color = Color(1, 0.36078432, 1, 0)
-polygon = PackedVector2Array(1261, 143, 1324, 711, 1113, 791, 587, 791, 364, 309, 683, 99)
+color = Color(0.9843137, 0, 0.99215686, 0.41568628)
+polygon = PackedVector2Array(1261, 143, 1390, 441, 1324, 711, 1010, 749, 659, 779, 638, 524, 1119, 443, 1015, 278, 519, 322, 294, 498, 634, 505, 650, 753, 271, 801, -25, 507, -96, 124, 90, 213, 335, 97)
 object_to_spawn = ExtResource("5_3i03a")
-spawn_count = 120
+row_spacing = 65.0
+column_spacing = 65.0
+max_offset_x = 11.0
+max_offset_y = 9.5
+
+[node name="Mikrobcore" parent="." unique_id=1636845797 instance=ExtResource("6_0usgv")]
+z_index = -10
+position = Vector2(559.00006, 104)
+scale = Vector2(0.9380728, 0.9380728)

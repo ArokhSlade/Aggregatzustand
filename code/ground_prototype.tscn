@@ -15,6 +15,7 @@ desolve_curve = SubResource("Curve_0nssk")
 
 [node name="Hexagon" type="Sprite2D" parent="Ground" unique_id=1595861454]
 modulate = Color(0.624965, 0.1024543, 0.13096702, 1)
+z_index = -2
 texture = ExtResource("2_ljaxg")
 
 [node name="Area2D" type="Area2D" parent="Ground" unique_id=1533845526]

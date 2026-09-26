@@ -1,54 +1,45 @@
 extends Polygon2D
 
 @export var object_to_spawn: PackedScene
-@export var spawn_count: int = 20
 @export var ground_scale: float = .45
 
+@export var row_spacing: float = 32.0
+@export var column_spacing: float = 32.0
+@export var max_offset_x: float = 8.0
+@export var max_offset_y: float = 8.0
 
 func _ready():
-	spawn_objects_inside_polygon()
+	spawn_in_rows()
+	color.a = 0
 
-func spawn_objects_inside_polygon():
-	if polygon.size() < 3 or object_to_spawn == null:
+func spawn_in_rows():
+	if polygon.size() < 3 || object_to_spawn == null:
 		return
 
-	# triangulation
-	var indices: PackedInt32Array = Geometry2D.triangulate_polygon(polygon)
-	if indices.is_empty():
-		return
+	var min_pos: Vector2 = polygon[0]
+	var max_pos: Vector2 = polygon[0]
+	for point in polygon:
+		min_pos.x = min(min_pos.x, point.x)
+		min_pos.y = min(min_pos.y, point.y)
+		max_pos.x = max(max_pos.x, point.x)
+		max_pos.y = max(max_pos.y, point.y)
 
-	var triangles: Array[Dictionary] = []
-	var weights: PackedFloat32Array = []
+	var y: float = min_pos.y
+	while y <= max_pos.y:
 
-	for i in range(0, indices.size(), 3):
-		var p1: Vector2 = polygon[indices[i]]
-		var p2: Vector2 = polygon[indices[i + 1]]
-		var p3: Vector2 = polygon[indices[i + 2]]
+		var x: float = min_pos.x
+		while x <= max_pos.x:
 
-		var area: float = 0.5 * abs(p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y))
+			var offset := Vector2(
+				randf_range(-max_offset_x, max_offset_x),
+				randf_range(-max_offset_y, max_offset_y))
+			var candidate_pos: Vector2 = Vector2(x, y) + offset
 
-		triangles.append({"p1": p1, "p2": p2, "p3": p3})
-		weights.append(area)
+			if Geometry2D.is_point_in_polygon(candidate_pos, polygon):
+				var instance: Node2D = object_to_spawn.instantiate()
+				add_child(instance)
+				instance.position = candidate_pos
+				instance.scale = Vector2(ground_scale, ground_scale)
+			x += column_spacing
 
-	var rng = RandomNumberGenerator.new()
-
-	for _i in range(spawn_count):
-		var tri_index: int = rng.rand_weighted(weights)
-		var tri: Dictionary = triangles[tri_index]
-
-		var random_point: Vector2 = get_random_point_in_triangle(tri.p1, tri.p2, tri.p3)
-
-		var instance: Node2D = object_to_spawn.instantiate()
-		add_child(instance)
-		instance.position = random_point
-		instance.scale = Vector2(ground_scale,ground_scale)
-
-func get_random_point_in_triangle(p1: Vector2, p2: Vector2, p3: Vector2) -> Vector2:
-	var r1: float = sqrt(randf())
-	var r2: float = randf()
-
-	var a: float = 1.0 - r1
-	var b: float = r1 * (1.0 - r2)
-	var c: float = r1 * r2
-
-	return (a * p1) + (b * p2) + (c * p3)
+		y += row_spacing
