@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d7se3wih8553"]
+
+[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="1_x3crf"]
+[ext_resource type="PackedScene" uid="uid://7aprsunnbd7" path="res://code/cold_particles.tscn" id="2_lsdes"]
+[ext_resource type="PackedScene" uid="uid://dns3x1p4xppco" path="res://code/heat_cold_distortion.tscn" id="3_jalyq"]
+[ext_resource type="PackedScene" uid="uid://bq4nyvyjob0ew" path="res://code/hot_particles.tscn" id="4_idd56"]
+
+[node name="Node2D" type="Node2D" unique_id=762145785]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1175160882]
+position = Vector2(590, 469)
+texture = ExtResource("1_x3crf")
+
+[node name="cold_particles" parent="." unique_id=1989054374 instance=ExtResource("2_lsdes")]
+position = Vector2(294, 224)
+
+[node name="heat_cold_distortion" parent="." unique_id=920189255 instance=ExtResource("3_jalyq")]
+position = Vector2(593, 529)
+
+[node name="hot_particles" parent="." unique_id=792782090 instance=ExtResource("4_idd56")]
+position = Vector2(827, 239)

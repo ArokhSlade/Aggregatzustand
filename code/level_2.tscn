@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmggtm5qixpio"]
 
-[ext_resource type="Script" path="res://code/level.gd" id="1_b4ril"]
+[ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://level/level.gd" id="1_b4ril"]
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="3_qlut8"]
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="5_0usgv"]
 [ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://code/ground_prototype.tscn" id="5_3i03a"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://qk4dx0kc34eo"]
+
+[ext_resource type="PackedScene" uid="uid://dwf5flx0pb78q" path="res://models/SM_Eye.fbx" id="1_iayyy"]
+[ext_resource type="Texture2D" uid="uid://bmxde076vl5ju" path="res://Textures/tex_Eye.png" id="2_cgrpv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ienal"]
+shading_mode = 0
+albedo_texture = ExtResource("2_cgrpv")
+
+[node name="SM_Eye" unique_id=1265866433 instance=ExtResource("1_iayyy")]
+
+[node name="SM_Eye" parent="." index="0" unique_id=1228238323]
+material_override = SubResource("StandardMaterial3D_ienal")
