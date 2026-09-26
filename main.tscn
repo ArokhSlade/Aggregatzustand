@@ -26,7 +26,6 @@ script = ExtResource("6_272bh")
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1478496449]
 stream = ExtResource("7_272bh")
 volume_db = -4.745
-autoplay = true
 script = ExtResource("6_272bh")
 
 [connection signal="play_requested" from="Menu" to="." method="_on_menu_play_requested"]
