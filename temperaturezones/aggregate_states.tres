@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="AggregateStates" format=3 uid="uid://mn5f7fwwl6q1"]
+
+[ext_resource type="Script" uid="uid://d7lqqt56xyby" path="res://temperaturezones/aggregate_states.gd" id="1_0b2i1"]
+
+[resource]
+script = ExtResource("1_0b2i1")
+metadata/_custom_type_script = "uid://d7lqqt56xyby"

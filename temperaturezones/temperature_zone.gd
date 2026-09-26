@@ -1,6 +1,8 @@
 extends Area2D
 class_name temperature_zone
 
+@export var aggregate_state := AggregateStates.Type.WATER
+
 @export var temperature = 24.0
 
 func _physics_process(_delta):
