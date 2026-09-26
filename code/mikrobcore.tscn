@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://ctflcdeut6w5y"]
 
-[ext_resource type="Texture2D" uid="uid://d0050u7vlico7" path="res://art/mikrobcore.jpg" id="1_ellkb"]
+[ext_resource type="Material" uid="uid://d15javxoieys0" path="res://art/worldscreen_bg.tres" id="1_ellkb"]
 
-[node name="Mikrobcore" type="Sprite2D" unique_id=1636845797]
-texture = ExtResource("1_ellkb")
+[sub_resource type="Gradient" id="Gradient_67f6p"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7x48y"]
+gradient = SubResource("Gradient_67f6p")
+
+[node name="Mikrobcore_BG" type="Node2D" unique_id=1391745599]
+
+[node name="Mikrobcore" type="Sprite2D" parent="." unique_id=1636845797]
+material = ExtResource("1_ellkb")
+position = Vector2(138, 1245)
+scale = Vector2(64.12009, 45.37994)
+texture = SubResource("GradientTexture2D_7x48y")
