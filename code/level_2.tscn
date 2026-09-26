@@ -67,3 +67,7 @@ modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(899, 626.99994)
 scale = Vector2(0.14612031, 2.4744563)
 temperature = 70.0
+
+[node name="ground_prototype" parent="." unique_id=1580212633 instance=ExtResource("5_3i03a")]
+position = Vector2(3426, 1379)
+scale = Vector2(5.0109487, 5.0109487)

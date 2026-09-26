@@ -2,10 +2,30 @@
 
 [ext_resource type="Script" uid="uid://x218h1map1hp" path="res://code/ground_prototype.gd" id="1_0nssk"]
 [ext_resource type="Texture2D" uid="uid://drjt04jlen7iy" path="res://art/hexagon.png" id="2_ljaxg"]
+[ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://code/exchange_color_to_scrolling.gdshader" id="2_v00rn"]
+[ext_resource type="Texture2D" uid="uid://d0050u7vlico7" path="res://art/mikrobcore.jpg" id="3_v00rn"]
 
 [sub_resource type="Curve" id="Curve_0nssk"]
 _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.58, 0.5393259), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ljaxg"]
+shader = ExtResource("2_v00rn")
+shader_parameter/color_to_replace = Color(1, 1, 1, 1)
+shader_parameter/pattern_texture = ExtResource("3_v00rn")
+shader_parameter/feather_range = 0.0750000035625
+shader_parameter/tilemap_offset = Vector2(0, 0)
+shader_parameter/scroll_speed = 0.1
+shader_parameter/pattern_scale = 1.0
+shader_parameter/scroll_dir = Vector2(0, 0)
+shader_parameter/ankered_top = false
+shader_parameter/heightOffset = 0.0
+shader_parameter/speed = 0.0
+shader_parameter/minStrength = 0.0
+shader_parameter/maxStrength = 0.0
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 2.0
+shader_parameter/detail = 1.0
 
 [node name="ground_prototype" type="Node2D" unique_id=1580212633]
 script = ExtResource("1_0nssk")
@@ -13,20 +33,21 @@ desolve_curve = SubResource("Curve_0nssk")
 
 [node name="Ground" type="Node2D" parent="." unique_id=998688836]
 
-[node name="Hexagon" type="Sprite2D" parent="Ground" unique_id=1595861454]
-modulate = Color(0.624965, 0.1024543, 0.13096702, 1)
-z_index = -2
-texture = ExtResource("2_ljaxg")
-
 [node name="Area2D" type="Area2D" parent="Ground" unique_id=1533845526]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground/Area2D" unique_id=985452942]
+visible = false
 polygon = PackedVector2Array(-2, -122, 104, -58, 103, 63, 1, 124, -110, 60, -106, -58)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground" unique_id=267670195]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground/StaticBody2D" unique_id=1473772235]
+visible = false
 polygon = PackedVector2Array(-2, -122, 104, -58, 103, 63, 1, 124, -110, 60, -106, -58)
+
+[node name="Hexagon" type="Sprite2D" parent="Ground" unique_id=1689384322]
+material = SubResource("ShaderMaterial_ljaxg")
+texture = ExtResource("2_ljaxg")
 
 [connection signal="input_event" from="Ground/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Ground/Area2D" to="." method="_on_area_2d_mouse_entered"]
