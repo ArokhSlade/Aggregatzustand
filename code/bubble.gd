@@ -22,6 +22,10 @@ func apply_temperature(temperature_):
 	target_temperature = temperature_
 
 
+func apply_temperature_immediately(temperature_):
+	target_temperature = temperature_
+
+
 func update_temperature(delta):
 	temperature = target_temperature
 	#temperature = lerp(temperature, target_temperature, 1.0 - exp(-temperature_speed * delta))

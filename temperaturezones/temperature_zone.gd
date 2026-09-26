@@ -1,4 +1,5 @@
 extends Area2D
+class_name temperature_zone
 
 @export var temperature = 24.0
 

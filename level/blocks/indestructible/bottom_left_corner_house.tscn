@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bp3qb06rwpxxw"]
 
-[ext_resource type="PackedScene" uid="uid://cvkfpgiu18nsh" path="res://level/static_sprite_collider_base.tscn" id="1_pm46q"]
+[ext_resource type="PackedScene" uid="uid://cvkfpgiu18nsh" path="res://level/blocks/indestructible/static_sprite_collider_base.tscn" id="1_pm46q"]
 [ext_resource type="Texture2D" uid="uid://ctwey75w28udh" path="res://art/h3.png" id="2_py5ye"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y02mv"]

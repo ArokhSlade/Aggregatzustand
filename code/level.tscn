@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="1_dgv1k"]
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://code/level.gd" id="1_hnu4n"]
-[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://code/temperature_zone.tscn" id="3_hnu4n"]
-[ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/bottom_left_corner_house.tscn" id="5_0twir"]
-[ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/top_left_corner_house.tscn" id="6_3lw5y"]
-[ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/bottom_right_corner_house.tscn" id="7_0twir"]
-[ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/top_right_corner_house.tscn" id="8_3lw5y"]
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="3_hnu4n"]
+[ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="5_0twir"]
+[ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="6_3lw5y"]
+[ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="7_0twir"]
+[ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="8_3lw5y"]
 
 [node name="Level" type="Node2D" unique_id=893623266]
 script = ExtResource("1_hnu4n")
