@@ -3,31 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="1_dgv1k"]
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://code/level.gd" id="1_hnu4n"]
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://code/temperature_zone.tscn" id="3_hnu4n"]
-[ext_resource type="Texture2D" uid="uid://dvwsgtyy325im" path="res://art/h2.png" id="4_0twir"]
-[ext_resource type="Texture2D" uid="uid://dnyh2ndsd8uht" path="res://art/h1.png" id="5_3lw5y"]
-[ext_resource type="Texture2D" uid="uid://ctwey75w28udh" path="res://art/h3.png" id="6_s6jbq"]
-[ext_resource type="Texture2D" uid="uid://ttc6f7ui2lyo" path="res://art/h4.png" id="7_3vnv7"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j1xdp"]
-size = Vector2(245.49983, 134.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3w1k"]
-size = Vector2(112.00006, 88.125046)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4j7i"]
-size = Vector2(139, 101)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5qj0"]
-size = Vector2(65.5, 73)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqul0"]
-size = Vector2(198, 169)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wt2rc"]
-size = Vector2(68.5, 86.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6m5dq"]
-size = Vector2(312, 134)
+[ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/bottom_left_corner_house.tscn" id="5_0twir"]
+[ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/top_left_corner_house.tscn" id="6_3lw5y"]
+[ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/bottom_right_corner_house.tscn" id="7_0twir"]
+[ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/top_right_corner_house.tscn" id="8_3lw5y"]
 
 [node name="Level" type="Node2D" unique_id=893623266]
 script = ExtResource("1_hnu4n")
@@ -48,71 +27,21 @@ position = Vector2(576, 502)
 temperature = 100.0
 
 [node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("1_dgv1k")]
-position = Vector2(525, 474)
+position = Vector2(256, 437)
 can_sleep = false
 
-[node name="TopRightCorner" type="Sprite2D" parent="." unique_id=1461625435]
-position = Vector2(764, 37)
-scale = Vector2(0.30639994, 0.30639994)
-texture = ExtResource("4_0twir")
-centered = false
+[node name="BottomLeftCornerHouse" parent="." unique_id=1612557856 instance=ExtResource("5_0twir")]
+position = Vector2(-1.9999847, 371)
+scale = Vector2(0.23651452, 0.23651454)
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="TopRightCorner" unique_id=749080119]
-scale = Vector2(3.263708, 3.263708)
+[node name="TopLeftCornerHouse" parent="." unique_id=1193251732 instance=ExtResource("6_3lw5y")]
+position = Vector2(2.0000305, 39)
+scale = Vector2(0.2301481, 0.23014806)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TopRightCorner/StaticBody2D2" unique_id=131750532]
-position = Vector2(262.75006, 67.87503)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_j1xdp")
+[node name="BottomRightCornerHouse" parent="." unique_id=208061691 instance=ExtResource("7_0twir")]
+position = Vector2(922.00006, 341.05173)
+scale = Vector2(0.21585457, 0.21585456)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="TopRightCorner/StaticBody2D2" unique_id=646771109]
-position = Vector2(85.99994, 37.9375)
-scale = Vector2(0.99999946, 0.99999946)
-shape = SubResource("RectangleShape2D_y3w1k")
-
-[node name="BottemRightCorner" type="Sprite2D" parent="." unique_id=365825511]
-position = Vector2(989, 420)
-scale = Vector2(0.15162365, 0.15162365)
-texture = ExtResource("5_3lw5y")
-centered = false
-
-[node name="StaticBody2D" type="StaticBody2D" parent="BottemRightCorner" unique_id=1369856201]
-scale = Vector2(6.5952773, 6.5952773)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BottemRightCorner/StaticBody2D" unique_id=424599099]
-position = Vector2(88, 121)
-shape = SubResource("RectangleShape2D_l4j7i")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BottemRightCorner/StaticBody2D" unique_id=620312503]
-position = Vector2(125.25, 57)
-shape = SubResource("RectangleShape2D_g5qj0")
-
-[node name="BottemLeftCorner" type="Sprite2D" parent="." unique_id=1415678213]
-position = Vector2(-1, 368)
-scale = Vector2(0.23686966, 0.23686968)
-texture = ExtResource("6_s6jbq")
-centered = false
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="BottemLeftCorner" unique_id=229170608]
-scale = Vector2(4.221731, 4.2217307)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BottemLeftCorner/StaticBody2D3" unique_id=1488498861]
-position = Vector2(99, 144)
-shape = SubResource("RectangleShape2D_oqul0")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BottemLeftCorner/StaticBody2D3" unique_id=1739331900]
-position = Vector2(209, 184.5)
-shape = SubResource("RectangleShape2D_wt2rc")
-
-[node name="TopLeftCorner" type="Sprite2D" parent="." unique_id=1480906535]
-position = Vector2(2, 34)
-scale = Vector2(0.23351279, 0.23351279)
-texture = ExtResource("7_3vnv7")
-centered = false
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="TopLeftCorner" unique_id=1869735882]
-scale = Vector2(4.2824206, 4.2824206)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TopLeftCorner/StaticBody2D4" unique_id=882863420]
-position = Vector2(157, 72)
-shape = SubResource("RectangleShape2D_6m5dq")
+[node name="TopRightCornerHouse" parent="." unique_id=797471661 instance=ExtResource("8_3lw5y")]
+position = Vector2(778, 31.000008)
+scale = Vector2(0.29119998, 0.2912)
