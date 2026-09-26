@@ -11,7 +11,14 @@ var states = {
 
 
 func _ready():
+	enter_initial_state()
+
+
+func enter_initial_state():
+	level.hide()
+	states.in_game.on_exit()
 	current_state = states.in_menu
+	current_state.on_enter()
 
 
 func _input(event : InputEvent):
@@ -59,6 +66,7 @@ class InGame extends State:
 	
 	func on_enter():
 		owner.level.unpause()
+		owner.level.show()
 		PokiSDK.gameplay_start()
 	
 	

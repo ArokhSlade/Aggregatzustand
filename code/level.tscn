@@ -27,8 +27,7 @@ position = Vector2(576, 502)
 temperature = 100.0
 
 [node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("1_dgv1k")]
-position = Vector2(256, 437)
-can_sleep = false
+position = Vector2(617, 528)
 
 [node name="BottomLeftCornerHouse" parent="." unique_id=1612557856 instance=ExtResource("5_0twir")]
 position = Vector2(-1.9999847, 371)
