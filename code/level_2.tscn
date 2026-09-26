@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://ctflcdeut6w5y" path="res://code/mikrobcore.tscn" id="6_0usgv"]
 [ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://code/exchange_color_to_scrolling.gdshader" id="7_rs6fp"]
 [ext_resource type="Texture2D" uid="uid://d0050u7vlico7" path="res://art/mikrobcore.jpg" id="8_3i03a"]
+[ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="9_lyjvx"]
+[ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="10_y1f75"]
+[ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="11_fr2qc"]
+[ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="12_7x48y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0usgv"]
 shader = ExtResource("7_rs6fp")
@@ -67,3 +71,17 @@ modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(899, 626.99994)
 scale = Vector2(0.14612031, 2.4744563)
 temperature = 70.0
+
+[node name="BottomLeftCornerHouse" parent="." unique_id=651454461 instance=ExtResource("9_lyjvx")]
+position = Vector2(-167, 387.99997)
+scale = Vector2(0.7345394, 0.7345394)
+
+[node name="BottomRightCornerHouse" parent="." unique_id=499149973 instance=ExtResource("10_y1f75")]
+position = Vector2(1540.9999, 387.99997)
+scale = Vector2(0.57852536, 0.57852536)
+
+[node name="TopLeftCornerHouse" parent="." unique_id=1405337909 instance=ExtResource("11_fr2qc")]
+position = Vector2(-106, -474)
+
+[node name="TopRightCornerHouse" parent="." unique_id=1737531266 instance=ExtResource("12_7x48y")]
+position = Vector2(1256, -207)
