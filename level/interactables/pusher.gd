@@ -24,5 +24,6 @@ func push():
 func _on_click_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("click"):
 		is_pushing = true
+		$AudioStreamPlayer2D.play(0)
 	if event.is_action_released("click"):
 		is_pushing = false

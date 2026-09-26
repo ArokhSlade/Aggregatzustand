@@ -1,0 +1,23 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://dep4m11k7ldxh"]
+
+[ext_resource type="AudioStream" uid="uid://bnqy21lmrmyjp" path="res://sound/schnuffi/Schnuffi-001.wav" id="1_lcmbj"]
+[ext_resource type="AudioStream" uid="uid://1m0krf5j0nym" path="res://sound/schnuffi/Schnuffi-002.wav" id="2_o7hh6"]
+[ext_resource type="AudioStream" uid="uid://b8txa7juaoqrk" path="res://sound/schnuffi/Schnuffi-003.wav" id="3_v5bq2"]
+[ext_resource type="AudioStream" uid="uid://cff0qrxu3cc0" path="res://sound/schnuffi/Schnuffi-004.wav" id="4_bfr0u"]
+[ext_resource type="AudioStream" uid="uid://ciy6cx767j1ld" path="res://sound/schnuffi/Schnuffi-005.wav" id="5_hdfru"]
+[ext_resource type="AudioStream" uid="uid://dbr42nuwtwiih" path="res://sound/schnuffi/Schnuffi-006.wav" id="6_indta"]
+[ext_resource type="AudioStream" uid="uid://cqk2xnephvqnu" path="res://sound/schnuffi/Schnuffi-007.wav" id="7_52e6u"]
+[ext_resource type="AudioStream" uid="uid://cp3gf56js0p2r" path="res://sound/schnuffi/Schnuffi-008.wav" id="8_mal8s"]
+
+[resource]
+random_pitch = 1.185435
+random_volume_offset_db = 2.94
+streams_count = 8
+stream_0/stream = ExtResource("1_lcmbj")
+stream_1/stream = ExtResource("2_o7hh6")
+stream_2/stream = ExtResource("3_v5bq2")
+stream_3/stream = ExtResource("4_bfr0u")
+stream_4/stream = ExtResource("5_hdfru")
+stream_5/stream = ExtResource("6_indta")
+stream_6/stream = ExtResource("7_52e6u")
+stream_7/stream = ExtResource("8_mal8s")

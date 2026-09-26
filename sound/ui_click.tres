@@ -1,0 +1,23 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://uefcqyhyctom"]
+
+[ext_resource type="AudioStream" uid="uid://bc3soefflg8tv" path="res://sound/ui_click/UI_click-001.wav" id="1_t1348"]
+[ext_resource type="AudioStream" uid="uid://cyq2oqfs58fbo" path="res://sound/ui_click/UI_click-002.wav" id="2_5kuh8"]
+[ext_resource type="AudioStream" uid="uid://cqfrjyge60m06" path="res://sound/ui_click/UI_click-003.wav" id="3_6iaax"]
+[ext_resource type="AudioStream" uid="uid://cwjcnt6dtnqyv" path="res://sound/ui_click/UI_click-004.wav" id="4_jtqac"]
+[ext_resource type="AudioStream" uid="uid://30kjjjmuqtm8" path="res://sound/ui_click/UI_click-005.wav" id="5_kh8ew"]
+[ext_resource type="AudioStream" uid="uid://ca54le1ty4s7n" path="res://sound/ui_click/UI_click-006.wav" id="6_pg5hf"]
+[ext_resource type="AudioStream" uid="uid://otslk3e2h3pk" path="res://sound/ui_click/UI_click-007.wav" id="7_vhb8s"]
+[ext_resource type="AudioStream" uid="uid://cw8esq6tb10qe" path="res://sound/ui_click/UI_click-008.wav" id="8_yh2vn"]
+
+[resource]
+random_pitch = 1.185435
+random_volume_offset_db = 2.94
+streams_count = 8
+stream_0/stream = ExtResource("1_t1348")
+stream_1/stream = ExtResource("2_5kuh8")
+stream_2/stream = ExtResource("3_6iaax")
+stream_3/stream = ExtResource("4_jtqac")
+stream_4/stream = ExtResource("5_kh8ew")
+stream_5/stream = ExtResource("6_pg5hf")
+stream_6/stream = ExtResource("7_vhb8s")
+stream_7/stream = ExtResource("8_yh2vn")

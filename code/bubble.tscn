@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqfsum7vwqwnx"]
 
 [ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://code/bubble.gd" id="1_0h62n"]
-[ext_resource type="Texture2D" uid="uid://cjvsvrs22jlfd" path="res://art/water_bubble.png" id="1_2t160"]
+[ext_resource type="Texture2D" uid="uid://cjvsvrs22jlfd" path="res://art/textures/water_bubble.png" id="1_2t160"]
 [ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://code/temperature_sensor.gd" id="3_mddvq"]
 
 [sub_resource type="Gradient" id="Gradient_0h62n"]
@@ -36,4 +36,4 @@ script = ExtResource("3_mddvq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TemperatureSensor" unique_id=238846473]
 shape = SubResource("CircleShape2D_l4j7i")
 
-[connection signal="temperature_changed" from="TemperatureSensor" to="." method="_on_temperature_sensor_temperature_changed"]
+[connection signal="aggregate_changed" from="TemperatureSensor" to="." method="_on_temperature_sensor_aggregate_changed"]
