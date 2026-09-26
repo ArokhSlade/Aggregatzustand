@@ -1,0 +1,12 @@
+[gd_resource type="Theme" format=3 uid="uid://uvqox3r7ciry"]
+
+[ext_resource type="StyleBox" uid="uid://b72vrhaf31600" path="res://ui/button/button_normal_stylebox.tres" id="2_bp0j3"]
+
+[resource]
+Button/constants/outline_size = 7
+Button/font_sizes/font_size = 42
+Button/styles/focus = ExtResource("2_bp0j3")
+Button/styles/hover = ExtResource("2_bp0j3")
+Button/styles/normal = ExtResource("2_bp0j3")
+Button/styles/pressed = ExtResource("2_bp0j3")
+VBoxContainer/constants/separation = 32
