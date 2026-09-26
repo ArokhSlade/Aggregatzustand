@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bofup41sljli8"]
+
+[ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://level/level.gd" id="1_d8qi5"]
+[ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="2_j7wmq"]
+[ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="3_tvde0"]
+
+[node name="Level_Base" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start")]
+script = ExtResource("1_d8qi5")
+player_scene = ExtResource("2_j7wmq")
+level_start = NodePath("LevelStart")
+
+[node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("3_tvde0")]
+position = Vector2(543, 692)
+
+[connection signal="player_spawned" from="LevelStart" to="." method="_on_level_start_player_spawned"]
