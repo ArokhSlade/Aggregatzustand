@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="5_y4stb"]
 [ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="6_hienj"]
 [ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="7_d764s"]
+[ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="8_f8pxk"]
 
 [node name="Level" type="Node2D" unique_id=893623266]
 script = ExtResource("1_sh0jh")
@@ -44,3 +45,6 @@ scale = Vector2(0.21585457, 0.21585456)
 [node name="TopRightCornerHouse" parent="." unique_id=797471661 instance=ExtResource("7_d764s")]
 position = Vector2(778, 31.000008)
 scale = Vector2(0.29119998, 0.2912)
+
+[node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("8_f8pxk")]
+position = Vector2(500, 288)
