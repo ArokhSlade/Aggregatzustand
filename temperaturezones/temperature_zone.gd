@@ -1,7 +1,7 @@
 extends Area2D
 class_name temperature_zone
 
-@export var aggregate_state := AggregateStates.Type.WATER
+@export var aggregate_state := AggregateStateProfile.Type.WATER
 
 # DEPRECATED
 func _physics_process(_delta):

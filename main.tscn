@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drv3pyrh45wog" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dbccd3v8jd5ih" path="res://level/level_0.tscn" id="2_1bvp3"]
-[ext_resource type="Resource" uid="uid://mn5f7fwwl6q1" path="res://temperaturezones/aggregate_states.tres" id="3_1bvp3"]
+[ext_resource type="Resource" uid="uid://mn5f7fwwl6q1" path="res://temperaturezones/defaullt_aggregate_states_profile.tres" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://xrq1cjmrcqd0" path="res://ui/menu.tscn" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://c5tvo5vgmmjs4" path="res://sound/physics-lesson.wav" id="5_7mycd"]
 [ext_resource type="Script" uid="uid://bk2owcjyym13i" path="res://sound/loop_track.gd" id="6_272bh"]

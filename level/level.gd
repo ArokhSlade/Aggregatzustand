@@ -5,10 +5,10 @@ signal level_finished
 @export var player_scene : PackedScene
 @export var level_start : Node2D
 
-@export var DEBUG_aggregate_rules : AggregateStates
+@export var DEBUG_aggregate_state_profile : AggregateStateProfile
 
 ## external dependency that must be initialize()'d
-var aggregate_rules : AggregateStates
+var aggregate_state_profile : AggregateStateProfile
 
 var current_state : State
 var player
@@ -26,11 +26,11 @@ func _ready():
 		DEBUG_fallback_initialize()
 	
 
-func initialize(aggregate_rules_):
-	aggregate_rules = aggregate_rules_
+func initialize(aggregate_state_profile_):
+	aggregate_state_profile = aggregate_state_profile_
 	
 	if level_start:
-		level_start.initialize(player_scene, aggregate_rules)
+		level_start.initialize(player_scene, aggregate_state_profile)
 		level_start.spawn()
 	
 	initialized = true
@@ -51,7 +51,7 @@ func switch_state_to(new_state):
 
 
 func DEBUG_fallback_initialize():
-	initialize(DEBUG_aggregate_rules)
+	initialize(DEBUG_aggregate_state_profile)
 
 
 @abstract class State:

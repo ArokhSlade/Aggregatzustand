@@ -7,14 +7,14 @@ const MAX_TEMP = 100
 @export var max_speed = 100.0
 
 ## Fallback. should be initialize()'d instead
-@export var DEBUG_aggregate_rules = preload("uid://mn5f7fwwl6q1")
+@export var DEBUG_aggregate_state_profile = preload("uid://mn5f7fwwl6q1")
 
 @onready var sprite_2d = $Sprite2D
 
 # initialize()'able dependency
-var aggregate_rules : AggregateStates
+var aggregate_state_profile : AggregateStateProfile
 
-var aggregate_state : AggregateStates.Type
+var aggregate_state : AggregateStateProfile.Type
 var temperature = 0.0
 var speed_scale = 1.0
 var target_temperature = 0.0
@@ -23,19 +23,19 @@ var initialized = false
 
 func _ready():
 	if not initialized:
-		push_warning("Bubble: aggregate_rules not initialized. loading fallback aggregate_rules.")
-		initialize(AggregateStates.Type.WATER, DEBUG_aggregate_rules)
+		push_warning("Bubble: aggregate_state_profile not initialized. loading fallback aggregate_state_profile.")
+		initialize(AggregateStateProfile.Type.WATER, DEBUG_aggregate_state_profile)
 
 
-func initialize(aggregte_state_, aggregate_rules_):
-	aggregate_rules = aggregate_rules_
+func initialize(aggregte_state_, aggregate_state_profile_):
+	aggregate_state_profile = aggregate_state_profile_
 	apply_aggregate_state(aggregte_state_)
 	initialized = true
 
 
 func apply_aggregate_state(aggregate_state_):
 	aggregate_state = aggregate_state_
-	temperature = aggregate_rules.map_agg_state_to_temp(aggregate_state)
+	temperature = aggregate_state_profile.map_agg_state_to_temp(aggregate_state)
 	apply_temperature_immediately(temperature)
 
 
@@ -60,11 +60,11 @@ func update_temperature(_delta):
 
 # DEPRECATED
 func temp_to_speed_scale(temp):
-	speed_scale = aggregate_rules.map_temperature_to_gravity_scale(temp)
+	speed_scale = aggregate_state_profile.map_temperature_to_gravity_scale(temp)
 
 
 func temp_to_gravity_scale(temp):
-	gravity_scale = aggregate_rules.map_temperature_to_gravity_scale(temp)
+	gravity_scale = aggregate_state_profile.map_temperature_to_gravity_scale(temp)
 
 
 func update_color():

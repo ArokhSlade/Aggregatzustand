@@ -4,7 +4,7 @@ extends Node
 @export var level_scene : PackedScene
 
 ## Resource that defines balancing values for aggregate states
-@export var aggregate_states_resoure : AggregateStates
+@export var aggregate_states_resoure : AggregateStateProfile
 
 @onready var level_parent = $LevelParent
 @onready var menu = $Menu

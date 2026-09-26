@@ -1,5 +1,5 @@
 extends Resource
-class_name AggregateStates
+class_name AggregateStateProfile
 
 enum Type {
 	NONE = 0,
