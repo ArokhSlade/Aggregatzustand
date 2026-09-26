@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://2n5qcpk0onw1"]
+
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="1_5uq6h"]
+[ext_resource type="Script" uid="uid://cd7kggw6735d8" path="res://temperaturezones/movable_temperature_zone.gd" id="2_jnetu"]
+
+[node name="MovableTemperatureZone" unique_id=198987449 instance=ExtResource("1_5uq6h")]
+script = ExtResource("2_jnetu")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
