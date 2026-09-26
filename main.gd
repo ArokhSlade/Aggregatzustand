@@ -1,8 +1,10 @@
 extends Node
 
-@onready var menu = $Menu
-@onready var level = $Level
+@export var level_scene : PackedScene
+@onready var level_parent = $LevelParent
 
+var level
+@onready var menu = $Menu
 var current_state : State
 var states = {
 	"in_game" : InGame.new(self),
@@ -11,7 +13,13 @@ var states = {
 
 
 func _ready():
+	load_level()
 	enter_initial_state()
+
+
+func load_level():
+	level = level_scene.instantiate()
+	level_parent.add_child(level)
 
 
 func enter_initial_state():
