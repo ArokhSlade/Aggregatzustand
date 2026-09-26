@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://biaayea07sh1x"]
+
+[ext_resource type="Script" uid="uid://dal7ba1ucyyir" path="res://level/key_points/level_goal.gd" id="1_3ihj2"]
+[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="2_og24c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mswc"]
+size = Vector2(127, 125)
+
+[node name="LevelGoal" type="Area2D" unique_id=1453480285]
+script = ExtResource("1_3ihj2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=539955112]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_1mswc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=625172652]
+modulate = Color(1, 1, 0, 1)
+texture = ExtResource("2_og24c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
