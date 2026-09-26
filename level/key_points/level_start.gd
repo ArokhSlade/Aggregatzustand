@@ -14,3 +14,4 @@ func spawn():
 	player = player_scene.instantiate()
 	player_spawned.emit(player)
 	player.global_position = global_position
+	player.apply_temperature_immediately(start_temperature)

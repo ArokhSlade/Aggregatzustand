@@ -46,6 +46,7 @@ position = Vector2(778, 31.000008)
 scale = Vector2(0.29119998, 0.2912)
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("8_f8pxk")]
-position = Vector2(474, 505)
+position = Vector2(543, 692)
+start_temperature = 100
 
 [connection signal="player_spawned" from="LevelStart" to="." method="_on_level_start_player_spawned"]
