@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="1_dgv1k"]
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://code/level.gd" id="1_hnu4n"]
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://code/temperature_zone.tscn" id="3_hnu4n"]
+[ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/bottom_left_corner_house.tscn" id="5_0twir"]
+[ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/top_left_corner_house.tscn" id="6_3lw5y"]
+[ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/bottom_right_corner_house.tscn" id="7_0twir"]
+[ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/top_right_corner_house.tscn" id="8_3lw5y"]
 
 [node name="Level" type="Node2D" unique_id=893623266]
 script = ExtResource("1_hnu4n")
@@ -23,5 +27,21 @@ position = Vector2(576, 502)
 temperature = 100.0
 
 [node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("1_dgv1k")]
-position = Vector2(525, 474)
+position = Vector2(256, 437)
 can_sleep = false
+
+[node name="BottomLeftCornerHouse" parent="." unique_id=1612557856 instance=ExtResource("5_0twir")]
+position = Vector2(-1.9999847, 371)
+scale = Vector2(0.23651452, 0.23651454)
+
+[node name="TopLeftCornerHouse" parent="." unique_id=1193251732 instance=ExtResource("6_3lw5y")]
+position = Vector2(2.0000305, 39)
+scale = Vector2(0.2301481, 0.23014806)
+
+[node name="BottomRightCornerHouse" parent="." unique_id=208061691 instance=ExtResource("7_0twir")]
+position = Vector2(922.00006, 341.05173)
+scale = Vector2(0.21585457, 0.21585456)
+
+[node name="TopRightCornerHouse" parent="." unique_id=797471661 instance=ExtResource("8_3lw5y")]
+position = Vector2(778, 31.000008)
+scale = Vector2(0.29119998, 0.2912)

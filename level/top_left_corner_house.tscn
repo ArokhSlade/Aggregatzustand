@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://chle5ge3afpuy"]
+
+[ext_resource type="PackedScene" uid="uid://cvkfpgiu18nsh" path="res://level/static_sprite_collider_base.tscn" id="1_aqhkp"]
+[ext_resource type="Texture2D" uid="uid://ttc6f7ui2lyo" path="res://art/h4.png" id="2_du5e2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ittg1"]
+size = Vector2(1357, 567)
+
+[node name="TopLeftCornerHouse" unique_id=651454461 instance=ExtResource("1_aqhkp")]
+texture = ExtResource("2_du5e2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" parent_id_path=PackedInt32Array(638979589) index="0" unique_id=215399190]
+position = Vector2(663.5, 266.5)
+shape = SubResource("RectangleShape2D_ittg1")
