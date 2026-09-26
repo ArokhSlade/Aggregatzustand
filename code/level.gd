@@ -1,11 +1,47 @@
 extends Node2D
 
+var current_state : State
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var states = {
+	"paused" : Paused.new(self),
+	"playing" : Playing.new(self)
+}
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _ready():
+	current_state = states.paused
+
+
+func pause():
+	process_mode = Node.PROCESS_MODE_DISABLED
+	switch_state_to(states.paused)
+
+
+func unpause():
+	process_mode = Node.PROCESS_MODE_PAUSABLE
+	switch_state_to(states.playing)
+
+
+func switch_state_to(new_state):
+	current_state = new_state
+
+
+@abstract class State:
+	var owner 
+	
+	@abstract func on_process()
+	
+	func _init(owner_):
+		owner = owner_
+
+
+class Playing extends State:
+	
+	func on_process():
+		pass
+
+
+class  Paused extends State:
+	
+	func on_process():
+		return

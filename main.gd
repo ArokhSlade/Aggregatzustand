@@ -1,11 +1,66 @@
 extends Node
 
+@onready var menu = $Menu
+@onready var level = $Level
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var current_state : State
+var states = {
+	"in_game" : InGame.new(self),
+	"in_menu" : InMenu.new(self)
+}
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _ready():
+	current_state = states.in_menu
+
+
+func _input(event : InputEvent):
+	if event is InputEventAction:
+		print("action!")
+	current_state.on_input(event)
+
+
+func switch_state_to(state_):
+	current_state.on_exit()
+	current_state = state_
+	current_state.on_enter()
+
+
+@abstract class State:
+	var owner
+	
+	@abstract func on_input(_event)
+	@abstract func on_enter()
+	@abstract func on_exit()
+	
+	func _init(owner_):
+		owner = owner_
+
+
+class InGame extends State:
+	func on_input(event):
+		if event.is_action_released("ui_cancel"):
+			owner.switch_state_to(owner.states.in_menu)
+	
+	
+	func on_enter():
+		owner.level.show()
+		owner.level.unpause()
+	
+	
+	func on_exit():
+		owner.level.hide()
+		owner.level.pause()
+
+
+class InMenu extends State:
+	func on_input(event : InputEvent):
+		if event.is_action_released("ui_cancel"):
+			owner.switch_state_to(owner.states.in_game)
+	
+	
+	func on_enter():
+		owner.menu.open()
+	
+	func on_exit():
+		owner.menu.close()

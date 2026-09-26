@@ -9,6 +9,7 @@
 script = ExtResource("1_h2yge")
 
 [node name="PokiTest" parent="." unique_id=361775869 instance=ExtResource("1_ig7tw")]
+visible = false
 
 [node name="Level" parent="." unique_id=893623266 instance=ExtResource("3_1bvp3")]
 visible = false

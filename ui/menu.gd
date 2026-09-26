@@ -1,5 +1,12 @@
 extends PanelContainer
 
+func open():
+	show()
+
+
+func close():
+	hide()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
