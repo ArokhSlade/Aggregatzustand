@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="3_qlut8"]
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="5_0usgv"]
 [ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://code/ground_prototype.tscn" id="5_3i03a"]
-[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://code/temperature_zone.tscn" id="5_b4ril"]
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="5_b4ril"]
 [ext_resource type="PackedScene" uid="uid://ctflcdeut6w5y" path="res://code/mikrobcore.tscn" id="6_0usgv"]
 [ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://code/exchange_color_to_scrolling.gdshader" id="7_rs6fp"]
 [ext_resource type="Texture2D" uid="uid://d0050u7vlico7" path="res://art/mikrobcore.jpg" id="8_3i03a"]
