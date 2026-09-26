@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dyv3nobje675e"]
 
-[ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://code/level.gd" id="1_b4ril"]
+[ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://level/level.gd" id="1_b4ril"]
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="3_qlut8"]
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="5_0usgv"]
 [ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://code/ground_prototype.tscn" id="5_3i03a"]
@@ -31,7 +31,7 @@ shader_parameter/strengthScale = 100.0
 shader_parameter/interval = 0.9
 shader_parameter/detail = 1.0
 
-[node name="Level" type="Node2D" unique_id=893623266]
+[node name="Level2" type="Node2D" unique_id=893623266]
 script = ExtResource("1_b4ril")
 
 [node name="Bubble" parent="." unique_id=1361995442 instance=ExtResource("3_qlut8")]

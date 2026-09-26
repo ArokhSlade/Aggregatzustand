@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgcytwrdn6r6u"]
 
-[ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://code/level.gd" id="1_sh0jh"]
+[ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://level/level.gd" id="1_sh0jh"]
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="2_b3kng"]
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="3_no88w"]
 [ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="4_i0isw"]
