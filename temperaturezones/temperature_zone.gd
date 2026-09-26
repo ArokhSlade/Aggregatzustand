@@ -6,5 +6,15 @@ class_name temperature_zone
 func _physics_process(_delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
-		if body.has_method("apply_temperature"):
-			body.apply_temperature(temperature)
+		#try_apply_temperature(body, temperature)
+		pass
+
+
+func _on_body_entered(body):
+	try_apply_temperature(body, temperature)
+
+
+func try_apply_temperature(body_, temperature_):
+	if body_.has_method("apply_temperature"):
+		body_.apply_temperature(temperature_)
+		#body_.update_color()
