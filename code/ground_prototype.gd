@@ -28,12 +28,13 @@ func _process(delta):
 		print(step)
 		$Ground/Hexagon.modulate = flash_color
 		$Ground/Hexagon.modulate.a = lerp(1, 0, desolve_curve.sample(step))
+		$Ground/StaticBody2D/CollisionPolygon2D.disabled = true
 
 		if step > 0.9:
 			$Ground/Area2D.monitoring = false
 			current_dissolve_state = false
 			$Ground/Hexagon.modulate.a = 0
-			$Ground/StaticBody2D/CollisionPolygon2D.disabled = true
+
 
 func _on_area_2d_mouse_entered():
 	is_mouse_over_object = true
