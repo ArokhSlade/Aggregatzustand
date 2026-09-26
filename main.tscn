@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://xrq1cjmrcqd0" path="res://ui/menu.tscn" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://c5tvo5vgmmjs4" path="res://sound/physics-lesson.wav" id="5_7mycd"]
 [ext_resource type="Script" uid="uid://bk2owcjyym13i" path="res://sound/loop_track.gd" id="6_272bh"]
+[ext_resource type="AudioStream" uid="uid://dep4m11k7ldxh" path="res://sound/schnuffi_audio.tres" id="7_272bh"]
 
 [node name="Main" type="Node" unique_id=1820909058]
 script = ExtResource("1_h2yge")
@@ -22,6 +23,13 @@ volume_db = -4.745
 autoplay = true
 script = ExtResource("6_272bh")
 
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1478496449]
+stream = ExtResource("7_272bh")
+volume_db = -4.745
+autoplay = true
+script = ExtResource("6_272bh")
+
 [connection signal="play_requested" from="Menu" to="." method="_on_menu_play_requested"]
 [connection signal="quit_requested" from="Menu" to="." method="_on_menu_quit_requested"]
 [connection signal="finished" from="PhysicsLesson" to="PhysicsLesson" method="_on_finished"]
+[connection signal="finished" from="SFX" to="SFX" method="_on_finished"]
