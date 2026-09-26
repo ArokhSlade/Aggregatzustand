@@ -46,7 +46,7 @@ visible = false
 polygon = PackedVector2Array(-2, -122, 104, -58, 103, 63, 1, 124, -110, 60, -106, -58)
 
 [node name="Hexagon" type="Sprite2D" parent="Ground" unique_id=1689384322]
-modulate = Color(0.8825135, 0.7091521, 0.9914027, 1)
+modulate = Color(0.7247292, 0.7393957, 0.710091, 1)
 material = SubResource("ShaderMaterial_ljaxg")
 texture = ExtResource("2_ljaxg")
 
