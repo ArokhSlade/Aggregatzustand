@@ -27,6 +27,11 @@ window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom="uid://uvqox3r7ciry"
+theme/custom_font="uid://dpm3moae2m0qb"
+
 [input]
 
 click={

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://xrq1cjmrcqd0"]
+
+[ext_resource type="Script" uid="uid://cfc0yjir4cne1" path="res://ui/menu.gd" id="1_udkah"]
+[ext_resource type="PackedScene" uid="uid://cvdnxotlm6dod" path="res://ui/button/button.tscn" id="2_4c782"]
+
+[sub_resource type="Gradient" id="Gradient_1bvp3"]
+colors = PackedColorArray(0.17, 0.17, 0.17, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l4j7i"]
+gradient = SubResource("Gradient_1bvp3")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j1xdp"]
+texture = SubResource("GradientTexture2D_l4j7i")
+
+[node name="Menu" type="PanelContainer" unique_id=1073757890]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_j1xdp")
+script = ExtResource("1_udkah")
+
+[node name="Panel" type="Panel" parent="." unique_id=119744297]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=770483494]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.5
+offset_top = -110.5
+offset_right = 114.5
+offset_bottom = 110.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" parent="Panel/VBoxContainer" unique_id=143977451 instance=ExtResource("2_4c782")]
+layout_mode = 2
+text = "Play"
+
+[node name="QuitButton" parent="Panel/VBoxContainer" unique_id=220340952 instance=ExtResource("2_4c782")]
+layout_mode = 2
+text = "Quit"
