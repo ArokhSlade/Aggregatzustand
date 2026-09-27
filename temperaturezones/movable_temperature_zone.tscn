@@ -2,9 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="1_5uq6h"]
 [ext_resource type="Script" uid="uid://cd7kggw6735d8" path="res://temperaturezones/movable_temperature_zone.gd" id="2_jnetu"]
+[ext_resource type="Texture2D" uid="uid://nqi0xcwqu2qq" path="res://art/textures/hand.png" id="4_epw0w"]
 
-[node name="MovableTemperatureZone" unique_id=198987449 instance=ExtResource("1_5uq6h")]
+[node name="MovableTemperatureZone" unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("1_5uq6h")]
 script = ExtResource("2_jnetu")
+particles_map = {
+0: null,
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
+}
+
+[node name="ColdParticles" parent="Particles" parent_id_path=PackedInt32Array(1723134710) index="0" unique_id=1989054374]
+visible = true
+
+[node name="Hand" type="Sprite2D" parent="." index="3" unique_id=330828268]
+position = Vector2(-3.8146973e-06, 7.9999695)
+scale = Vector2(0.6328125, 0.6328125)
+texture = ExtResource("4_epw0w")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
