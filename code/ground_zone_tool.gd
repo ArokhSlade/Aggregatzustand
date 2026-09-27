@@ -1,3 +1,4 @@
+@tool
 extends Polygon2D
 
 @export var object_to_spawn: PackedScene
@@ -9,8 +10,17 @@ extends Polygon2D
 @export var max_offset_y: float = 8.0
 
 func _ready():
-	spawn_in_rows()
+	respawn_tiles()
 	color.a = 0
+
+@export_tool_button("Refresh Ground", "Reload") var refresh_ground = respawn_tiles
+
+func respawn_tiles():
+	for child in get_children():
+		child.queue_free()
+	
+	spawn_in_rows()
+
 
 func spawn_in_rows():
 	if polygon.size() < 3 || object_to_spawn == null:

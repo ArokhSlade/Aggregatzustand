@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://vgq4nwnu64hn"]
 
 [ext_resource type="Script" uid="uid://x218h1map1hp" path="res://code/ground_prototype.gd" id="1_0nssk"]
-[ext_resource type="Texture2D" uid="uid://drjt04jlen7iy" path="res://art/textures/hexagon.png" id="2_ljaxg"]
 [ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://art/shaders/exchange_color_to_scrolling.gdshader" id="2_v00rn"]
 [ext_resource type="Texture2D" uid="uid://bwcrxmbb8bfy6" path="res://art/textures/ground_gradient.png" id="3_v00rn"]
+[ext_resource type="Texture2D" uid="uid://7tlbgxa8u8fu" path="res://art/textures/ground.png" id="4_v00rn"]
 [ext_resource type="AudioStream" uid="uid://cby4vor5umia1" path="res://sound/remove_dirt.tres" id="5_v57n8"]
 
 [sub_resource type="Curve" id="Curve_0nssk"]
@@ -47,9 +47,8 @@ visible = false
 polygon = PackedVector2Array(-2, -122, 104, -58, 103, 63, 1, 124, -110, 60, -106, -58)
 
 [node name="Hexagon" type="Sprite2D" parent="Ground" unique_id=1689384322]
-modulate = Color(0.7247292, 0.7393957, 0.710091, 1)
 material = SubResource("ShaderMaterial_ljaxg")
-texture = ExtResource("2_ljaxg")
+texture = ExtResource("4_v00rn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=638917455]
 stream = ExtResource("5_v57n8")
