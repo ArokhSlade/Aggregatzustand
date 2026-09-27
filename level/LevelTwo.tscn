@@ -177,6 +177,7 @@ position = Vector2(1093, 825)
 strength = 2.0
 
 [node name="Level2Foreground" type="Sprite2D" parent="." unique_id=1403244123]
+z_index = -2
 position = Vector2(959, 551)
 texture = ExtResource("12_75ndb")
 
