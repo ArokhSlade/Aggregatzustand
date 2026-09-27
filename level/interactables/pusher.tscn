@@ -8,7 +8,7 @@
 size = Vector2(373, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1mswc"]
-size = Vector2(205, 128)
+size = Vector2(205, 166)
 
 [node name="Pusher" type="Node2D" unique_id=1242537064]
 script = ExtResource("1_264uv")
@@ -29,6 +29,7 @@ shape = SubResource("RectangleShape2D_1mswc")
 stream = ExtResource("3_ojm6e")
 
 [node name="Schnuffi" parent="." unique_id=540018220 instance=ExtResource("3_3t8bo")]
+scale = Vector2(0.6256389, 0.63125)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
