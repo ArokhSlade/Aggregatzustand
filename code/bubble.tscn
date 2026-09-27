@@ -18,15 +18,27 @@ radius = 44.04543
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0gtg6"]
 shader = ExtResource("4_wldps")
-shader_parameter/Color1 = Color(0, 0, 0, 1)
-shader_parameter/Color2 = Color(0.724862, 0.843428, 0.907204, 1)
+shader_parameter/EdgeColor = Color(0, 0, 0, 1)
+shader_parameter/InnerColor = Color(0.724862, 0.843428, 0.907204, 1)
+shader_parameter/InnerColor2 = Color(0.171434, 0.747961, 0.916494, 1)
+shader_parameter/GradientPos = 1.0
+shader_parameter/HotTemperatureTint = Color(0.90316, 0.308518, 0.344717, 1)
+shader_parameter/TintIntensity = 0.0
+shader_parameter/Speed = 1.0
+shader_parameter/FaceDistortion = 0.0
 shader_parameter/Face_Texture = ExtResource("5_xbqve")
 shader_parameter/outlineWidth = -0.95
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a07is"]
 shader = ExtResource("4_wldps")
-shader_parameter/Color1 = Color(0, 0, 0, 1)
-shader_parameter/Color2 = Color(0, 0.44631815, 0.9121688, 1)
+shader_parameter/EdgeColor = Color(0, 0, 0, 1)
+shader_parameter/InnerColor = Color(0.724862, 0.843428, 0.907204, 1)
+shader_parameter/InnerColor2 = Color(0.171434, 0.747961, 0.916494, 1)
+shader_parameter/GradientPos = 1.0
+shader_parameter/HotTemperatureTint = Color(0.90316, 0.308518, 0.344717, 1)
+shader_parameter/TintIntensity = 0.0
+shader_parameter/Speed = 1.0
+shader_parameter/FaceDistortion = 0.0
 shader_parameter/Face_Texture = ExtResource("5_xbqve")
 shader_parameter/outlineWidth = -0.95
 
@@ -43,12 +55,13 @@ colors = SubResource("GradientTexture1D_0h62n")
 shape = SubResource("CircleShape2D_j1xdp")
 
 [node name="gas_2d_character" parent="." unique_id=393402349 instance=ExtResource("3_0gtg6")]
+visible = false
 top_level = true
 material = SubResource("ShaderMaterial_0gtg6")
 scale = Vector2(0.28906253, 0.28906253)
 
 [node name="water_charcter" parent="." unique_id=1276259596 instance=ExtResource("3_0gtg6")]
-top_level = true
+visible = false
 material = SubResource("ShaderMaterial_a07is")
 position = Vector2(-2, -2.9802322e-08)
 scale = Vector2(0.3011627, 0.29530334)
