@@ -16,7 +16,7 @@ func update_amount():
 func set_rect_extents(w,h):
 	emission_rect_extents.x = w
 	emission_rect_extents.y = h
-	
+
 
 func _ready():
 	update_amount()

@@ -25,7 +25,6 @@ func _process(delta):
 	if current_dissolve_state:
 		current_desolve_time += delta
 		var step = current_desolve_time / desolve_time
-		print(step)
 		$Ground/Hexagon.modulate = flash_color
 		$Ground/Hexagon.modulate.a = lerp(1, 0, desolve_curve.sample(step))
 		$Ground/StaticBody2D/CollisionPolygon2D.disabled = true

@@ -19,7 +19,7 @@ func _ready():
 func respawn_tiles():
 	for child in get_children():
 		child.queue_free()
-	
+
 	spawn_in_rows()
 
 

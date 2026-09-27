@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b4mgdml2rywlk"]
 
 [ext_resource type="Texture2D" uid="uid://ddknoxiuh2hwu" path="res://art/textures/schnuffi_spritesheet.png" id="1_qq2ae"]
+[ext_resource type="Script" uid="uid://qjmqce3fwljx" path="res://art/scenes/schnuffi_animation.gd" id="2_d1dsy"]
 
 [sub_resource type="Animation" id="Animation_d1dsy"]
 length = 0.001
@@ -19,7 +20,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_johkp"]
 resource_name = "pusten"
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -42,6 +42,9 @@ _data = {
 [node name="Schnuffi" type="Sprite2D" unique_id=540018220]
 texture = ExtResource("1_qq2ae")
 hframes = 4
+script = ExtResource("2_d1dsy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1468690994]
 libraries/ = SubResource("AnimationLibrary_13vla")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

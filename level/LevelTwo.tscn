@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://level/level.gd" id="1_75ndb"]
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="2_8phxg"]
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="3_eu45k"]
-[ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://code/ground_prototype.tscn" id="4_1aqf6"]
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="5_wdsnq"]
 [ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="6_au7bg"]
 [ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="7_dmhul"]
@@ -21,7 +20,6 @@ level_start = NodePath("LevelStart")
 [node name="ground_zone_tool" parent="." unique_id=1615348414 instance=ExtResource("3_eu45k")]
 position = Vector2(123, 949)
 polygon = PackedVector2Array(-145, 40, 1748, 40, 1743, -632, 1355.044, -617.3393, 918.0737, -896.71375, 294.85376, -853.73303, -120.62622, -746.2814)
-object_to_spawn = ExtResource("4_1aqf6")
 row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0

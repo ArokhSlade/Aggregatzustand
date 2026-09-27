@@ -28,10 +28,9 @@ func _on_click_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 		$Schnuffi/AnimationPlayer.play("pusten")
 	if event.is_action_released("click"):
 		is_pushing = false
-		$Schnuffi/AnimationPlayer.play("RESET")
+		#$Schnuffi/AnimationPlayer.play("RESET")
 
 
 func _on_click_area_mouse_exited() -> void:
 	is_pushing = false
-	$Schnuffi/AnimationPlayer.play("RESET")
-
+	#$Schnuffi/AnimationPlayer.play("RESET")
