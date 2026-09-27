@@ -9,8 +9,6 @@ const MAX_TEMP = 100
 ## Fallback. should be initialize()'d instead
 @export var DEBUG_aggregate_state_profile = preload("uid://mn5f7fwwl6q1")
 
-@onready var sprite_2d = $Sprite2D
-
 # initialize()'able dependency
 var aggregate_state_profile : AggregateStateProfile
 
@@ -21,29 +19,19 @@ var target_temperature = 0.0
 var temperature_speed = 0.5
 var initialized = false
 
-func _enter_tree():
+func _ready():
 	if not initialized:
-		push_warning("Bubble: aggregate_state_profile not initialized. Loading fallback aggregate_state_profile.")
+		push_warning("Bubble: aggregate_state_profile not initialized. loading fallback aggregate_state_profile.")
 		initialize(AggregateStateProfile.Type.WATER, DEBUG_aggregate_state_profile)
 
 
 func initialize(aggregte_state_, aggregate_state_profile_):
-	aggregate_state_profile = aggregate_state_profile_ if aggregate_state_profile_ else DEBUG_aggregate_state_profile
-	if not aggregate_state_profile:
-		push_error("Bubble: no AggregateStateProfile is available.")
-		return
-
+	aggregate_state_profile = aggregate_state_profile_
 	apply_aggregate_state(aggregte_state_)
 	initialized = true
 
 
 func apply_aggregate_state(aggregate_state_):
-	if not aggregate_state_profile:
-		aggregate_state_profile = DEBUG_aggregate_state_profile
-	if not aggregate_state_profile:
-		push_error("Bubble: cannot apply aggregate state without an AggregateStateProfile.")
-		return
-
 	aggregate_state = aggregate_state_
 	temperature = aggregate_state_profile.map_agg_state_to_temp(aggregate_state)
 	apply_temperature_immediately(temperature)
@@ -85,13 +73,19 @@ func temp_to_gravity_scale(temp):
 
 
 func update_color():
-	sprite_2d.self_modulate = sample_gradient_texture(temperature)
+	# sprite_2d.self_modulate = sample_gradient_texture(temperature)
+	pass
 
 
 func sample_gradient_texture(temperature_):
 	var sample_pos = remap(temperature_, MIN_TEMP, MAX_TEMP, 0, colors.gradient.get_point_count()-1)
 	var color = colors.gradient.get_color(sample_pos)
 	return color
+
+
+func _process(_delta):
+	$gas_2d_character.global_position = global_position
+	$water_charcter.global_position = global_position
 
 
 func _physics_process(delta):
