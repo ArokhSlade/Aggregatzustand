@@ -8,7 +8,7 @@ point_count = 3
 offsets = PackedFloat32Array(0.016736401, 0.53556484, 0.9958159)
 colors = PackedColorArray(0.6849926, 0.19901547, 0.03569829, 1, 1.5112375, 0.8924656, 0.13562568, 1, 0.79677385, 0.5453524, 1.92523e-07, 0)
 
-[node name="hot_particles" type="CPUParticles2D" unique_id=792782090]
+[node name="HotParticles" type="CPUParticles2D" unique_id=792782090]
 amount = 30
 lifetime = 13.62
 lifetime_randomness = 0.36
