@@ -13,19 +13,34 @@
 [node name="LevelStart" parent="." index="0" unique_id=1790299339]
 start_aggregate_state = 2
 
-[node name="ColdTemperatureZone3" parent="." index="2" unique_id=198987449 instance=ExtResource("2_b3kng")]
+[node name="ColdTemperatureZone3" parent="." index="2" unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_b3kng")]
 modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
 position = Vector2(575, 129)
+aggregate_state = 1
+particles_map = {
+0: null,
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
+}
 
-[node name="MediumTemperatureZone2" parent="." index="3" unique_id=1285429976 instance=ExtResource("2_b3kng")]
+[node name="MediumTemperatureZone2" parent="." index="3" unique_id=1285429976 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_b3kng")]
 modulate = Color(0.74424416, 0.59822375, 0.27655464, 1)
 position = Vector2(575, 316)
 aggregate_state = 0
+particles_map = {
+0: null,
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
+}
 
-[node name="HotTemperatureZone" parent="." index="4" unique_id=852862410 instance=ExtResource("2_b3kng")]
+[node name="HotTemperatureZone" parent="." index="4" unique_id=852862410 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_b3kng")]
 modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(576, 502)
-aggregate_state = 2
+particles_map = {
+0: null,
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
+}
 
 [node name="BottomLeftCornerHouse" parent="." index="5" unique_id=651454461 instance=ExtResource("4_i0isw")]
 position = Vector2(-1.9999847, 371)

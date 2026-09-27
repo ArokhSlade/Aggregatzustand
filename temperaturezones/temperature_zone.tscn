@@ -17,15 +17,17 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_ekn2d")
 
 [node name="TemperatureZone" type="Area2D" unique_id=198987449 node_paths=PackedStringArray("particles_map")]
+position = Vector2(891, 348)
 gravity_space_override = 3
 script = ExtResource("1_ekn2d")
+aggregate_state = 2
 temperature_materials_map = Dictionary[int, Material]({
 0: ExtResource("2_maum8"),
 1: ExtResource("2_d6bvp"),
 2: ExtResource("4_po8cf")
 })
 particles_map = {
-0: NodePath(""),
+0: null,
 1: NodePath("Particles/ColdParticles"),
 2: NodePath("Particles/HotParticles")
 }
@@ -42,8 +44,11 @@ texture = SubResource("GradientTexture2D_l4j7i")
 
 [node name="ColdParticles" parent="Particles" unique_id=1989054374 instance=ExtResource("5_ypdqv")]
 visible = false
+amount = 1
 
 [node name="HotParticles" parent="Particles" unique_id=792782090 instance=ExtResource("6_hqkjc")]
 visible = false
+amount = 1
+lifetime = 1.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

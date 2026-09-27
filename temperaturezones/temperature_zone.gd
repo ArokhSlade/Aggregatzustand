@@ -19,6 +19,9 @@ func update_particles():
 		particles.hide()
 	var particles = particles_map.get(aggregate_state)
 	if particles:
+		var width = .5 * $CollisionShape2D.shape.size.x
+		var height = .5 * $CollisionShape2D.shape.size.y
+		particles.set_rect_extents(width, height)
 		particles.show()
 
 

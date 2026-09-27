@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://7aprsunnbd7"]
 
 [ext_resource type="Texture2D" uid="uid://bwbla6tro5wrq" path="res://textures/tex_snowflake.png" id="1_pb4xk"]
+[ext_resource type="Script" uid="uid://ddmb33ad6mqdr" path="res://art/particles/particles.gd" id="2_34lye"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g6dyp"]
 
@@ -13,7 +14,7 @@ colors = PackedColorArray(0.31353855, 0.84363365, 0.99999994, 1, 1, 1, 1, 1)
 
 [node name="ColdParticles" type="CPUParticles2D" unique_id=1989054374]
 material = SubResource("CanvasItemMaterial_g6dyp")
-amount = 25
+amount = 32
 texture = ExtResource("1_pb4xk")
 lifetime = 13.62
 explosiveness = 0.47
@@ -33,3 +34,5 @@ scale_amount_min = 0.15
 scale_amount_max = 0.25
 scale_amount_curve = SubResource("Curve_4sys0")
 color_ramp = SubResource("Gradient_m07cm")
+script = ExtResource("2_34lye")
+particle_density = 0.0008
