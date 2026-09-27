@@ -77,17 +77,21 @@ func on_retry_selected() -> void:
 func on_next_level_selected() -> void:
 	level.queue_free()
 	level_index += 1
+
+	if level_index >= level_scenes.size():
+		level_index = 0
+
 	load_level()
 	switch_state_to(states.in_game)
 
 
 @abstract class State:
 	var owner
-	
+
 	@abstract func on_input(_event)
 	@abstract func on_enter()
 	@abstract func on_exit()
-	
+
 	func _init(owner_):
 		owner = owner_
 
@@ -96,14 +100,14 @@ class InGame extends State:
 	func on_input(event):
 		if event.is_action_released("ui_cancel"):
 			owner.switch_state_to(owner.states.in_menu)
-	
-	
+
+
 	func on_enter():
 		owner.level.unpause()
 		owner.level.show()
 		PokiSDK.gameplay_start()
-	
-	
+
+
 	func on_exit():
 		owner.level.pause()
 		PokiSDK.gameplay_stop()
@@ -114,11 +118,11 @@ class InMenu extends State:
 	func on_input(event : InputEvent):
 		if event.is_action_released("ui_cancel"):
 			owner.switch_state_to(owner.states.in_game)
-	
-	
+
+
 	func on_enter():
 		owner.menu.open()
-	
+
 	func on_exit():
 		owner.menu.close()
 
@@ -127,6 +131,6 @@ class InEndScreen extends State:
 		pass
 	func on_enter():
 		owner.endscreen.open()
-	
+
 	func on_exit():
 		owner.endscreen.close()
