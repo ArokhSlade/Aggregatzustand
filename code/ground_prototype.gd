@@ -34,7 +34,7 @@ func _process(delta):
 			$Ground/Area2D.monitoring = false
 			current_dissolve_state = false
 			$Ground/Hexagon.modulate.a = 0
-
+			$AudioStreamPlayer.play()
 
 func _on_area_2d_mouse_entered():
 	is_mouse_over_object = true
