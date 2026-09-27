@@ -6,6 +6,9 @@
 [sub_resource type="VisualShaderNodeRemap" id="VisualShaderNodeRemap_j1xic"]
 default_input_values = [1, -1.0, 2, 1.0, 3, 1.24, 4, 1.48]
 
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_bo1d2"]
+function = 18
+
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_53w6d"]
 default_input_values = [0, 0.0, 1, 1.46]
 operator = 2
@@ -356,6 +359,9 @@ default_input_values = [0, 0.0, 1, 0.095]
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_6tde6"]
 default_input_values = [0, 0.0, 1, 0.095]
 
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_wvn2h"]
+input_name = "time"
+
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_uugph"]
 default_input_values = [0, 0.0, 1, 0.35]
 
@@ -386,6 +392,11 @@ default_value = -0.95
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_71u85"]
 default_input_values = [0, 0.0, 1, 0.195]
 operator = 2
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_ejyd0"]
+parameter_name = "ColorParameter"
+default_value_enabled = true
+default_value = Color(0.65415, 0.62299997, 0.89, 1)
 
 [sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_xbl8s"]
 function = 31
@@ -646,6 +657,33 @@ function = 31
 default_input_values = [1, Vector2(1.465, 1.25), 2, Vector2(0.5, 0.5)]
 function = 1
 
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_8wkve"]
+default_input_values = [1, Vector2(10, 10), 2, Vector2(0, 0)]
+function = 1
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_wwilp"]
+default_input_values = [0, Vector2(0, 0)]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_da1jl"]
+function = 17
+
+[sub_resource type="VisualShaderNodeStep" id="VisualShaderNodeStep_ahwih"]
+default_input_values = [0, 0.1, 1, 0.0]
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_spcup"]
+function = 17
+
+[sub_resource type="VisualShaderNodeStep" id="VisualShaderNodeStep_6aefd"]
+default_input_values = [0, 0.1, 1, 0.0]
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_4udbt"]
+output_port_for_preview = 0
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorOp" id="VisualShaderNodeColorOp_urj1w"]
+output_port_for_preview = 0
+
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_nultj"]
 default_input_values = [0, 0.0, 1, 1.0]
 operator = 2
@@ -660,6 +698,11 @@ function = 18
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_necb8"]
 default_input_values = [0, 0.0, 1, 1.4]
 operator = 2
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_0fhtj"]
+parameter_name = "gridSize2"
+default_value_enabled = true
+default_value = 10.0
 
 [sub_resource type="VisualShaderNodeRemap" id="VisualShaderNodeRemap_vgtrn"]
 default_input_values = [1, -1.0, 2, 1.0, 3, 2.725, 4, 4.12]
@@ -882,11 +925,111 @@ default_input_values = [1, Vector2(1, 1), 2, Vector2(-0.245, 0)]
 default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]
 op_type = 0
 
+[sub_resource type="VisualShaderNodeRemap" id="VisualShaderNodeRemap_71u85"]
+default_input_values = [1, -1.0, 2, 1.0, 3, 1.24, 4, 1.48]
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_rnnln"]
+function = 18
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_o6y1m"]
+function = 0
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_iiey1"]
+default_input_values = [0, 0.0, 1, 0.475]
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_ccdyv"]
+default_input_values = [1, Vector2(1.465, 1.25), 2, Vector2(0.5, 0.5)]
+function = 1
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_lgyew"]
+default_input_values = [1, Vector2(10, 10), 2, Vector2(0, 0)]
+function = 1
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_p16wp"]
+default_input_values = [0, Vector2(0, 0)]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_avcg1"]
+function = 17
+
+[sub_resource type="VisualShaderNodeStep" id="VisualShaderNodeStep_s1uls"]
+default_input_values = [0, 0.1, 1, 0.0]
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_1th7m"]
+function = 17
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_qga6n"]
+default_input_values = [0, 0.0, 1, 1.0]
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_g5tq4"]
+default_input_values = [0, 0.0, 1, 1.7]
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_qhpb5"]
+parameter_name = "gridSize"
+default_value_enabled = true
+default_value = 10.0
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_pqayi"]
+function = 0
+
+[sub_resource type="VisualShaderNodeRemap" id="VisualShaderNodeRemap_lsh55"]
+default_input_values = [1, -1.0, 2, 1.0, 3, 0.925, 4, 1.25, 0, 0.0]
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_ijmlj"]
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_kk8f2"]
+default_input_values = [1, Vector2(1.465, 1.25), 2, Vector2(0.5, 0.5)]
+function = 1
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_p2sc5"]
+default_input_values = [1, Vector2(1, 1), 2, Vector2(0.255, 0.11)]
+
 [resource]
 mode = 1
 flags/light_only = false
 nodes/vertex/0/position = Vector2(600, -460)
+nodes/vertex/3/node = SubResource("VisualShaderNodeUVFunc_ccdyv")
+nodes/vertex/3/position = Vector2(-1731.8533, -486.06628)
+nodes/vertex/5/node = SubResource("VisualShaderNodeFloatFunc_pqayi")
+nodes/vertex/5/position = Vector2(-2451.8533, -466.06628)
+nodes/vertex/6/node = SubResource("VisualShaderNodeRemap_lsh55")
+nodes/vertex/6/position = Vector2(-2251.8533, -486.06628)
+nodes/vertex/7/node = SubResource("VisualShaderNodeUVFunc_ijmlj")
+nodes/vertex/7/position = Vector2(-2011.8533, -586.0663)
+nodes/vertex/8/node = SubResource("VisualShaderNodeUVFunc_kk8f2")
+nodes/vertex/8/position = Vector2(-1731.8533, -186.06628)
+nodes/vertex/9/node = SubResource("VisualShaderNodeUVFunc_p2sc5")
+nodes/vertex/9/position = Vector2(-2011.8533, -286.06628)
+nodes/vertex/10/node = SubResource("VisualShaderNodeRemap_71u85")
+nodes/vertex/10/position = Vector2(-2231.8533, -166.06628)
+nodes/vertex/14/node = SubResource("VisualShaderNodeFloatFunc_o6y1m")
+nodes/vertex/14/position = Vector2(-2451.8533, -146.06628)
+nodes/vertex/15/node = SubResource("VisualShaderNodeFloatOp_iiey1")
+nodes/vertex/15/position = Vector2(-2871.8533, -166.06628)
+nodes/vertex/30/node = SubResource("VisualShaderNodeUVFunc_lgyew")
+nodes/vertex/30/position = Vector2(-1611.8533, -1466.0663)
+nodes/vertex/31/node = SubResource("VisualShaderNodeVectorDecompose_p16wp")
+nodes/vertex/31/position = Vector2(-1311.8533, -1446.0663)
+nodes/vertex/32/node = SubResource("VisualShaderNodeFloatFunc_avcg1")
+nodes/vertex/32/position = Vector2(-1091.8533, -1406.0663)
+nodes/vertex/33/node = SubResource("VisualShaderNodeStep_s1uls")
+nodes/vertex/33/position = Vector2(-871.8533, -1406.0663)
+nodes/vertex/34/node = SubResource("VisualShaderNodeFloatFunc_1th7m")
+nodes/vertex/34/position = Vector2(-1091.8533, -1286.0663)
+nodes/vertex/38/node = SubResource("VisualShaderNodeFloatOp_qga6n")
+nodes/vertex/38/position = Vector2(-2671.8533, -466.06628)
+nodes/vertex/39/node = SubResource("VisualShaderNodeFloatOp_g5tq4")
+nodes/vertex/39/position = Vector2(-2671.8533, -186.06628)
+nodes/vertex/41/node = SubResource("VisualShaderNodeFloatParameter_qhpb5")
+nodes/vertex/41/position = Vector2(-1971.8533, -1346.0663)
+nodes/vertex/100/node = SubResource("VisualShaderNodeFloatFunc_rnnln")
+nodes/vertex/100/position = Vector2(-431.85327, -1326.0663)
+nodes/vertex/connections = PackedInt32Array(30, 0, 31, 0, 41, 0, 30, 1, 31, 0, 32, 0, 31, 1, 34, 0, 32, 0, 33, 1, 5, 0, 6, 0, 38, 0, 5, 0, 6, 0, 3, 1, 7, 0, 3, 0, 9, 0, 8, 0, 14, 0, 10, 0, 10, 0, 8, 1, 39, 0, 14, 0, 15, 0, 39, 0)
 nodes/fragment/0/position = Vector2(1840, -400)
+nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_ejyd0")
+nodes/fragment/2/position = Vector2(-339.97656, -1513.7094)
 nodes/fragment/3/node = SubResource("VisualShaderNodeUVFunc_0io1w")
 nodes/fragment/3/position = Vector2(-1599.9766, -953.70935)
 nodes/fragment/4/node = SubResource("VisualShaderNodeFloatFunc_skbyq")
@@ -941,12 +1084,30 @@ nodes/fragment/28/node = SubResource("VisualShaderNodeStep_ptr5j")
 nodes/fragment/28/position = Vector2(-799.97656, -373.70935)
 nodes/fragment/29/node = SubResource("VisualShaderNodeFloatFunc_6jdc4")
 nodes/fragment/29/position = Vector2(-619.97656, -353.70935)
+nodes/fragment/30/node = SubResource("VisualShaderNodeUVFunc_8wkve")
+nodes/fragment/30/position = Vector2(-1479.9766, -1933.7094)
+nodes/fragment/31/node = SubResource("VisualShaderNodeVectorDecompose_wwilp")
+nodes/fragment/31/position = Vector2(-1179.9766, -1913.7094)
+nodes/fragment/32/node = SubResource("VisualShaderNodeFloatFunc_da1jl")
+nodes/fragment/32/position = Vector2(-959.97656, -1873.7094)
+nodes/fragment/33/node = SubResource("VisualShaderNodeStep_ahwih")
+nodes/fragment/33/position = Vector2(-739.97656, -1873.7094)
+nodes/fragment/34/node = SubResource("VisualShaderNodeFloatFunc_spcup")
+nodes/fragment/34/position = Vector2(-959.97656, -1753.7094)
+nodes/fragment/35/node = SubResource("VisualShaderNodeStep_6aefd")
+nodes/fragment/35/position = Vector2(-739.97656, -1713.7094)
+nodes/fragment/36/node = SubResource("VisualShaderNodeFloatOp_4udbt")
+nodes/fragment/36/position = Vector2(-539.97656, -1873.7094)
+nodes/fragment/37/node = SubResource("VisualShaderNodeColorOp_urj1w")
+nodes/fragment/37/position = Vector2(60.023438, -1753.7094)
 nodes/fragment/38/node = SubResource("VisualShaderNodeFloatOp_nultj")
 nodes/fragment/38/position = Vector2(-2760, -920)
 nodes/fragment/39/node = SubResource("VisualShaderNodeFloatOp_lyg42")
 nodes/fragment/39/position = Vector2(-2539.9766, -653.70935)
 nodes/fragment/40/node = SubResource("VisualShaderNodeFloatOp_necb8")
 nodes/fragment/40/position = Vector2(-2499.9766, -333.70935)
+nodes/fragment/41/node = SubResource("VisualShaderNodeFloatParameter_0fhtj")
+nodes/fragment/41/position = Vector2(-1839.9766, -1813.7094)
 nodes/fragment/42/node = SubResource("VisualShaderNodeRemap_vgtrn")
 nodes/fragment/42/position = Vector2(-2099.9766, -33.70935)
 nodes/fragment/43/node = SubResource("VisualShaderNodeUVFunc_kq8x0")
@@ -1063,6 +1224,8 @@ nodes/fragment/98/node = SubResource("VisualShaderNodeUVFunc_nqx0f")
 nodes/fragment/98/position = Vector2(-1879.9766, -453.70935)
 nodes/fragment/99/node = SubResource("VisualShaderNodeVectorOp_4hbe0")
 nodes/fragment/99/position = Vector2(-279.97656, -873.70935)
+nodes/fragment/100/node = SubResource("VisualShaderNodeFloatFunc_bo1d2")
+nodes/fragment/100/position = Vector2(-299.97656, -1793.7094)
 nodes/fragment/101/node = SubResource("VisualShaderNodeFloatOp_53w6d")
 nodes/fragment/101/position = Vector2(460, -1620)
 nodes/fragment/102/node = SubResource("VisualShaderNodeTexture_16pqj")
@@ -1243,6 +1406,8 @@ nodes/fragment/190/node = SubResource("VisualShaderNodeFloatOp_16or7")
 nodes/fragment/190/position = Vector2(-4360, 3500)
 nodes/fragment/191/node = SubResource("VisualShaderNodeFloatOp_6tde6")
 nodes/fragment/191/position = Vector2(-4400, 3840)
+nodes/fragment/192/node = SubResource("VisualShaderNodeInput_wvn2h")
+nodes/fragment/192/position = Vector2(-4940, 3500)
 nodes/fragment/193/node = SubResource("VisualShaderNodeFloatOp_uugph")
 nodes/fragment/193/position = Vector2(-4380, 4200)
 nodes/fragment/194/node = SubResource("VisualShaderNodeMix_3qv4p")
@@ -1375,4 +1540,4 @@ nodes/fragment/265/node = SubResource("VisualShaderNodeFloatParameter_4qarb")
 nodes/fragment/265/position = Vector2(360, -420)
 nodes/fragment/266/node = SubResource("VisualShaderNodeVectorOp_cn2e3")
 nodes/fragment/266/position = Vector2(680, -580)
-nodes/fragment/connections = PackedInt32Array(7, 0, 3, 0, 9, 0, 8, 0, 98, 0, 11, 0, 99, 0, 13, 0, 14, 0, 10, 0, 3, 0, 18, 0, 21, 0, 20, 0, 19, 0, 21, 1, 18, 0, 19, 0, 24, 0, 25, 0, 22, 0, 24, 1, 23, 0, 22, 0, 26, 0, 28, 1, 27, 0, 26, 0, 8, 0, 23, 0, 11, 0, 27, 0, 17, 0, 12, 0, 5, 0, 6, 0, 38, 0, 5, 0, 15, 0, 39, 0, 39, 0, 14, 0, 16, 0, 40, 0, 40, 0, 17, 0, 12, 0, 11, 1, 43, 0, 44, 0, 46, 0, 47, 1, 45, 0, 46, 0, 44, 0, 45, 0, 49, 0, 42, 0, 51, 0, 50, 0, 50, 0, 49, 0, 42, 0, 44, 1, 53, 0, 54, 0, 57, 0, 58, 0, 56, 0, 57, 1, 55, 0, 56, 0, 54, 0, 55, 0, 59, 0, 52, 0, 61, 0, 60, 0, 60, 0, 59, 0, 52, 0, 54, 1, 93, 0, 64, 0, 67, 0, 71, 0, 66, 0, 67, 1, 65, 0, 66, 0, 64, 0, 65, 0, 68, 0, 63, 0, 70, 0, 69, 0, 69, 0, 68, 0, 63, 0, 64, 1, 72, 0, 96, 0, 96, 0, 13, 1, 103, 0, 102, 2, 102, 0, 91, 1, 102, 4, 101, 0, 80, 0, 74, 0, 77, 0, 81, 0, 76, 0, 77, 1, 75, 0, 76, 0, 74, 0, 75, 0, 78, 0, 73, 0, 97, 0, 79, 0, 79, 0, 78, 0, 73, 0, 74, 1, 58, 0, 62, 0, 48, 0, 72, 1, 47, 0, 48, 0, 29, 0, 72, 0, 28, 0, 29, 0, 25, 0, 99, 1, 20, 0, 99, 0, 13, 0, 4, 0, 92, 0, 83, 0, 86, 0, 90, 0, 85, 0, 86, 1, 84, 0, 85, 0, 83, 0, 84, 0, 87, 0, 82, 0, 89, 0, 88, 0, 88, 0, 87, 0, 82, 0, 83, 1, 90, 0, 94, 1, 81, 0, 94, 0, 71, 0, 62, 1, 62, 0, 95, 0, 94, 0, 95, 1, 95, 0, 96, 1, 108, 0, 105, 0, 110, 0, 109, 0, 181, 0, 112, 0, 182, 0, 114, 0, 115, 0, 111, 0, 105, 0, 117, 0, 120, 0, 119, 0, 118, 0, 120, 1, 117, 0, 118, 0, 123, 0, 124, 0, 121, 0, 123, 1, 122, 0, 121, 0, 125, 0, 127, 1, 126, 0, 125, 0, 109, 0, 122, 0, 112, 0, 126, 0, 116, 0, 113, 0, 106, 0, 107, 0, 185, 0, 106, 0, 186, 0, 129, 0, 129, 0, 115, 0, 187, 0, 130, 0, 130, 0, 116, 0, 132, 0, 133, 0, 135, 0, 136, 1, 134, 0, 135, 0, 133, 0, 134, 0, 138, 0, 131, 0, 188, 0, 139, 0, 139, 0, 138, 0, 141, 0, 142, 0, 145, 0, 146, 0, 144, 0, 145, 1, 143, 0, 144, 0, 142, 0, 143, 0, 147, 0, 140, 0, 189, 0, 148, 0, 148, 0, 147, 0, 177, 0, 151, 0, 154, 0, 157, 0, 153, 0, 154, 1, 152, 0, 153, 0, 151, 0, 152, 0, 155, 0, 150, 0, 190, 0, 156, 0, 156, 0, 155, 0, 158, 0, 180, 0, 180, 0, 114, 1, 166, 0, 160, 0, 163, 0, 167, 0, 162, 0, 163, 1, 161, 0, 162, 0, 160, 0, 161, 0, 164, 0, 159, 0, 191, 0, 165, 0, 165, 0, 164, 0, 146, 0, 149, 0, 137, 0, 158, 1, 136, 0, 137, 0, 128, 0, 158, 0, 127, 0, 128, 0, 124, 0, 182, 1, 119, 0, 182, 0, 114, 0, 184, 0, 176, 0, 169, 0, 172, 0, 175, 0, 171, 0, 172, 1, 170, 0, 171, 0, 169, 0, 170, 0, 173, 0, 168, 0, 193, 0, 174, 0, 174, 0, 173, 0, 175, 0, 178, 1, 167, 0, 178, 0, 157, 0, 149, 1, 149, 0, 179, 0, 178, 0, 179, 1, 179, 0, 180, 1, 195, 0, 194, 0, 6, 0, 3, 1, 198, 0, 197, 1, 199, 0, 109, 1, 198, 0, 199, 1, 200, 0, 112, 1, 198, 0, 200, 1, 201, 0, 133, 1, 198, 0, 201, 1, 202, 0, 142, 1, 198, 0, 202, 1, 203, 0, 151, 1, 198, 0, 203, 1, 204, 0, 160, 1, 205, 0, 169, 1, 198, 0, 204, 1, 198, 0, 205, 1, 194, 0, 91, 0, 207, 0, 206, 0, 210, 0, 207, 2, 212, 0, 213, 0, 213, 0, 206, 1, 214, 0, 212, 1, 197, 0, 105, 1, 10, 0, 8, 1, 150, 0, 219, 0, 219, 0, 203, 0, 150, 0, 220, 0, 221, 0, 220, 1, 220, 0, 219, 1, 222, 0, 224, 1, 224, 0, 223, 1, 140, 0, 224, 0, 223, 0, 202, 0, 140, 0, 223, 0, 225, 0, 227, 1, 227, 0, 226, 1, 131, 0, 227, 0, 131, 0, 226, 0, 226, 0, 201, 0, 228, 0, 230, 1, 230, 0, 229, 1, 229, 0, 197, 0, 107, 0, 229, 0, 107, 0, 230, 0, 231, 0, 233, 1, 233, 0, 232, 1, 111, 0, 233, 0, 111, 0, 232, 0, 232, 0, 199, 0, 234, 0, 236, 1, 236, 0, 235, 1, 113, 0, 236, 0, 113, 0, 235, 0, 235, 0, 200, 0, 237, 0, 239, 1, 239, 0, 238, 1, 238, 0, 204, 0, 159, 0, 238, 0, 159, 0, 239, 0, 240, 0, 242, 1, 242, 0, 241, 1, 168, 0, 242, 0, 168, 0, 241, 0, 241, 0, 205, 0, 101, 0, 243, 0, 243, 0, 91, 2, 246, 0, 244, 1, 196, 0, 244, 0, 4, 0, 243, 1, 245, 2, 249, 2, 249, 0, 244, 2, 248, 0, 249, 1, 250, 0, 251, 1, 104, 0, 251, 0, 251, 0, 97, 0, 251, 0, 70, 0, 251, 0, 61, 0, 251, 0, 51, 0, 251, 0, 16, 0, 251, 0, 15, 0, 251, 0, 38, 0, 251, 0, 89, 0, 251, 0, 185, 0, 251, 0, 186, 0, 251, 0, 187, 0, 251, 0, 188, 0, 251, 0, 189, 0, 251, 0, 190, 0, 251, 0, 191, 0, 251, 0, 193, 0, 254, 0, 253, 2, 184, 0, 0, 1, 91, 0, 0, 0, 206, 0, 255, 0, 255, 0, 102, 0, 256, 0, 258, 0, 258, 0, 255, 3, 257, 0, 259, 0, 259, 0, 255, 4, 260, 0, 259, 1, 260, 0, 258, 1, 263, 0, 194, 2, 4, 0, 263, 0, 244, 0, 264, 0, 262, 0, 266, 0, 265, 0, 266, 1, 266, 0, 264, 1, 264, 0, 194, 1)
+nodes/fragment/connections = PackedInt32Array(7, 0, 3, 0, 9, 0, 8, 0, 98, 0, 11, 0, 99, 0, 13, 0, 14, 0, 10, 0, 3, 0, 18, 0, 21, 0, 20, 0, 19, 0, 21, 1, 18, 0, 19, 0, 24, 0, 25, 0, 22, 0, 24, 1, 23, 0, 22, 0, 26, 0, 28, 1, 27, 0, 26, 0, 8, 0, 23, 0, 11, 0, 27, 0, 17, 0, 12, 0, 30, 0, 31, 0, 31, 0, 32, 0, 32, 0, 33, 1, 31, 1, 34, 0, 34, 0, 35, 1, 33, 0, 36, 0, 35, 0, 36, 1, 36, 0, 100, 0, 2, 0, 37, 1, 5, 0, 6, 0, 38, 0, 5, 0, 15, 0, 39, 0, 39, 0, 14, 0, 16, 0, 40, 0, 40, 0, 17, 0, 10, 0, 8, 1, 12, 0, 11, 1, 41, 0, 30, 1, 43, 0, 44, 0, 46, 0, 47, 1, 45, 0, 46, 0, 44, 0, 45, 0, 49, 0, 42, 0, 51, 0, 50, 0, 50, 0, 49, 0, 42, 0, 44, 1, 53, 0, 54, 0, 57, 0, 58, 0, 56, 0, 57, 1, 55, 0, 56, 0, 54, 0, 55, 0, 59, 0, 52, 0, 61, 0, 60, 0, 60, 0, 59, 0, 52, 0, 54, 1, 93, 0, 64, 0, 67, 0, 71, 0, 66, 0, 67, 1, 65, 0, 66, 0, 64, 0, 65, 0, 68, 0, 63, 0, 70, 0, 69, 0, 69, 0, 68, 0, 63, 0, 64, 1, 72, 0, 96, 0, 96, 0, 13, 1, 100, 0, 37, 0, 103, 0, 102, 2, 102, 0, 91, 1, 102, 4, 101, 0, 101, 0, 91, 2, 80, 0, 74, 0, 77, 0, 81, 0, 76, 0, 77, 1, 75, 0, 76, 0, 74, 0, 75, 0, 78, 0, 73, 0, 97, 0, 79, 0, 79, 0, 78, 0, 73, 0, 74, 1, 58, 0, 62, 0, 48, 0, 72, 1, 47, 0, 48, 0, 29, 0, 72, 0, 28, 0, 29, 0, 25, 0, 99, 1, 20, 0, 99, 0, 13, 0, 4, 0, 92, 0, 83, 0, 86, 0, 90, 0, 85, 0, 86, 1, 84, 0, 85, 0, 83, 0, 84, 0, 87, 0, 82, 0, 89, 0, 88, 0, 88, 0, 87, 0, 82, 0, 83, 1, 90, 0, 94, 1, 81, 0, 94, 0, 71, 0, 62, 1, 62, 0, 95, 0, 94, 0, 95, 1, 95, 0, 96, 1, 104, 0, 38, 0, 104, 0, 15, 0, 104, 0, 16, 0, 104, 0, 51, 0, 104, 0, 61, 0, 104, 0, 70, 0, 104, 0, 97, 0, 104, 0, 89, 0, 108, 0, 105, 0, 110, 0, 109, 0, 181, 0, 112, 0, 182, 0, 114, 0, 115, 0, 111, 0, 105, 0, 117, 0, 120, 0, 119, 0, 118, 0, 120, 1, 117, 0, 118, 0, 123, 0, 124, 0, 121, 0, 123, 1, 122, 0, 121, 0, 125, 0, 127, 1, 126, 0, 125, 0, 109, 0, 122, 0, 112, 0, 126, 0, 116, 0, 113, 0, 106, 0, 107, 0, 185, 0, 106, 0, 186, 0, 129, 0, 129, 0, 115, 0, 187, 0, 130, 0, 130, 0, 116, 0, 132, 0, 133, 0, 135, 0, 136, 1, 134, 0, 135, 0, 133, 0, 134, 0, 138, 0, 131, 0, 188, 0, 139, 0, 139, 0, 138, 0, 141, 0, 142, 0, 145, 0, 146, 0, 144, 0, 145, 1, 143, 0, 144, 0, 142, 0, 143, 0, 147, 0, 140, 0, 189, 0, 148, 0, 148, 0, 147, 0, 177, 0, 151, 0, 154, 0, 157, 0, 153, 0, 154, 1, 152, 0, 153, 0, 151, 0, 152, 0, 155, 0, 150, 0, 190, 0, 156, 0, 156, 0, 155, 0, 158, 0, 180, 0, 180, 0, 114, 1, 166, 0, 160, 0, 163, 0, 167, 0, 162, 0, 163, 1, 161, 0, 162, 0, 160, 0, 161, 0, 164, 0, 159, 0, 191, 0, 165, 0, 165, 0, 164, 0, 146, 0, 149, 0, 137, 0, 158, 1, 136, 0, 137, 0, 128, 0, 158, 0, 127, 0, 128, 0, 124, 0, 182, 1, 119, 0, 182, 0, 114, 0, 184, 0, 176, 0, 169, 0, 172, 0, 175, 0, 171, 0, 172, 1, 170, 0, 171, 0, 169, 0, 170, 0, 173, 0, 168, 0, 193, 0, 174, 0, 174, 0, 173, 0, 175, 0, 178, 1, 167, 0, 178, 0, 157, 0, 149, 1, 149, 0, 179, 0, 178, 0, 179, 1, 179, 0, 180, 1, 192, 0, 185, 0, 192, 0, 186, 0, 192, 0, 187, 0, 192, 0, 188, 0, 192, 0, 189, 0, 192, 0, 190, 0, 192, 0, 191, 0, 192, 0, 193, 0, 184, 0, 0, 1, 4, 0, 194, 2, 196, 0, 194, 1, 195, 0, 194, 0, 6, 0, 3, 1, 107, 0, 197, 0, 197, 0, 105, 1, 198, 0, 197, 1, 111, 0, 199, 0, 199, 0, 109, 1, 198, 0, 199, 1, 113, 0, 200, 0, 200, 0, 112, 1, 198, 0, 200, 1, 131, 0, 201, 0, 201, 0, 133, 1, 198, 0, 201, 1, 140, 0, 202, 0, 202, 0, 142, 1, 198, 0, 202, 1, 150, 0, 203, 0, 203, 0, 151, 1, 198, 0, 203, 1, 159, 0, 204, 0, 204, 0, 160, 1, 168, 0, 205, 0, 205, 0, 169, 1, 198, 0, 204, 1, 198, 0, 205, 1, 194, 0, 91, 0, 91, 0, 0, 0, 206, 0, 102, 0, 207, 0, 206, 0, 210, 0, 207, 2, 212, 0, 213, 0, 213, 0, 206, 1, 214, 0, 212, 1, 150, 0, 219, 0, 219, 0, 203, 0, 150, 0, 220, 0, 221, 0, 220, 1, 220, 0, 219, 1, 222, 0, 224, 1, 224, 0, 223, 1, 140, 0, 224, 0, 223, 0, 202, 0, 140, 0, 223, 0, 225, 0, 227, 1, 227, 0, 226, 1, 131, 0, 227, 0, 131, 0, 226, 0, 226, 0, 201, 0, 228, 0, 230, 1, 230, 0, 229, 1, 229, 0, 197, 0, 107, 0, 229, 0, 107, 0, 230, 0, 231, 0, 233, 1, 233, 0, 232, 1, 111, 0, 233, 0, 111, 0, 232, 0, 232, 0, 199, 0, 234, 0, 236, 1, 236, 0, 235, 1, 113, 0, 236, 0, 113, 0, 235, 0, 235, 0, 200, 0, 237, 0, 239, 1, 239, 0, 238, 1, 238, 0, 204, 0, 159, 0, 238, 0, 159, 0, 239, 0, 240, 0, 242, 1, 242, 0, 241, 1, 168, 0, 242, 0, 168, 0, 241, 0, 241, 0, 205, 0, 101, 0, 243, 0, 243, 0, 91, 2, 246, 0, 244, 1, 196, 0, 244, 0, 4, 0, 243, 1, 245, 2, 249, 2, 249, 0, 244, 2, 248, 0, 249, 1, 250, 0, 251, 1, 104, 0, 251, 0, 251, 0, 97, 0, 251, 0, 70, 0, 251, 0, 61, 0, 251, 0, 51, 0, 251, 0, 16, 0, 251, 0, 15, 0, 251, 0, 38, 0, 251, 0, 89, 0, 251, 0, 185, 0, 251, 0, 186, 0, 251, 0, 187, 0, 251, 0, 188, 0, 251, 0, 189, 0, 251, 0, 190, 0, 251, 0, 191, 0, 251, 0, 193, 0, 254, 0, 253, 2, 206, 0, 255, 0, 255, 0, 102, 0, 256, 0, 258, 0, 258, 0, 255, 3, 257, 0, 259, 0, 259, 0, 255, 4, 260, 0, 259, 1, 260, 0, 258, 1, 263, 0, 194, 2, 4, 0, 263, 0, 244, 0, 264, 0, 262, 0, 266, 0, 265, 0, 266, 1, 266, 0, 264, 1, 264, 0, 194, 1)

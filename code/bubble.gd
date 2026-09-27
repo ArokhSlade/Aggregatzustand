@@ -21,19 +21,29 @@ var target_temperature = 0.0
 var temperature_speed = 0.5
 var initialized = false
 
-func _ready():
+func _enter_tree():
 	if not initialized:
-		push_warning("Bubble: aggregate_state_profile not initialized. loading fallback aggregate_state_profile.")
+		push_warning("Bubble: aggregate_state_profile not initialized. Loading fallback aggregate_state_profile.")
 		initialize(AggregateStateProfile.Type.WATER, DEBUG_aggregate_state_profile)
 
 
 func initialize(aggregte_state_, aggregate_state_profile_):
-	aggregate_state_profile = aggregate_state_profile_
+	aggregate_state_profile = aggregate_state_profile_ if aggregate_state_profile_ else DEBUG_aggregate_state_profile
+	if not aggregate_state_profile:
+		push_error("Bubble: no AggregateStateProfile is available.")
+		return
+
 	apply_aggregate_state(aggregte_state_)
 	initialized = true
 
 
 func apply_aggregate_state(aggregate_state_):
+	if not aggregate_state_profile:
+		aggregate_state_profile = DEBUG_aggregate_state_profile
+	if not aggregate_state_profile:
+		push_error("Bubble: cannot apply aggregate state without an AggregateStateProfile.")
+		return
+
 	aggregate_state = aggregate_state_
 	temperature = aggregate_state_profile.map_agg_state_to_temp(aggregate_state)
 	apply_temperature_immediately(temperature)
