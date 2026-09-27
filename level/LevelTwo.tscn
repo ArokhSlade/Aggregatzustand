@@ -26,17 +26,20 @@ row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
 
-[node name="ColdTemperatureZone3" parent="." unique_id=333579844 instance=ExtResource("5_wdsnq")]
+[node name="ColdTemperatureZone3" parent="." unique_id=333579844 node_paths=PackedStringArray("particles_map") instance=ExtResource("5_wdsnq")]
 modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
 position = Vector2(945.00006, 2)
 scale = Vector2(1.5950036, 0.5)
-temperature = 0.0
+aggregate_state = 1
+temperature_materials_map = Dictionary[int, Material]({})
+particles_map = Dictionary[int, Material]({})
 
-[node name="HotTemperatureZone" parent="." unique_id=357884235 instance=ExtResource("5_wdsnq")]
+[node name="HotTemperatureZone" parent="." unique_id=357884235 node_paths=PackedStringArray("particles_map") instance=ExtResource("5_wdsnq")]
 modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(952.00006, 1064)
 scale = Vector2(1.68, 0.545)
-temperature = 100.0
+temperature_materials_map = Dictionary[int, Material]({})
+particles_map = Dictionary[int, Material]({})
 
 [node name="BottomLeftCornerHouse" parent="." unique_id=1612557856 instance=ExtResource("6_au7bg")]
 position = Vector2(1459, 558)
@@ -119,7 +122,6 @@ scale = Vector2(0.045825325, 0.49004295)
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("10_4qypv")]
 position = Vector2(83, 104)
-start_temperature = 0
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("11_xvf0a")]
 position = Vector2(1788, 667)
