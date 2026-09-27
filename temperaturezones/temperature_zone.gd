@@ -2,15 +2,27 @@ extends Area2D
 class_name temperature_zone
 
 @export var aggregate_state := AggregateStateProfile.Type.WATER
-@export var temperature_materials : Dictionary[AggregateStateProfile.Type, Material]
+@export var temperature_materials_map : Dictionary[AggregateStateProfile.Type, Material]
+@export var particles_map : Dictionary[AggregateStateProfile.Type, NodePath]
 
 func _ready():
 	update_visuals()
 
 
 func update_visuals():
-	$Sprite2D.material = temperature_materials.get(aggregate_state)
-	
+	$Sprite2D.material = temperature_materials_map.get(aggregate_state)
+	update_particles()
+
+
+func update_particles():
+	for particles in $Particles.get_children():
+		particles.hide()
+	var particles = particles_map.get(aggregate_state)
+	if particles:
+		particles = get_node(particles)
+		if particles:
+			particles.show()
+
 
 # DEPRECATED
 func _physics_process(_delta):

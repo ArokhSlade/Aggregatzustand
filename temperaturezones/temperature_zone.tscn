@@ -4,6 +4,8 @@
 [ext_resource type="Material" uid="uid://8dn7h4hrvgn2" path="res://art/materials/cold_distortion_material.tres" id="2_d6bvp"]
 [ext_resource type="Material" uid="uid://b7xpfrej47bk4" path="res://art/materials/neutral_distortion_material.tres" id="2_maum8"]
 [ext_resource type="Material" uid="uid://bwe0k7ukshinh" path="res://art/materials/heat_distortion_material.tres" id="4_po8cf"]
+[ext_resource type="PackedScene" uid="uid://7aprsunnbd7" path="res://art/particles/cold_particles.tscn" id="5_ypdqv"]
+[ext_resource type="PackedScene" uid="uid://bq4nyvyjob0ew" path="res://art/particles/hot_particles.tscn" id="6_hqkjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1xdp"]
 size = Vector2(1150, 182)
@@ -17,10 +19,15 @@ gradient = SubResource("Gradient_ekn2d")
 [node name="TemperatureZone" type="Area2D" unique_id=198987449]
 gravity_space_override = 3
 script = ExtResource("1_ekn2d")
-temperature_materials = Dictionary[int, Material]({
+temperature_materials_map = Dictionary[int, Material]({
 0: ExtResource("2_maum8"),
 1: ExtResource("2_d6bvp"),
 2: ExtResource("4_po8cf")
+})
+particles_map = Dictionary[int, NodePath]({
+0: NodePath(""),
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
 })
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=959544231]
@@ -30,5 +37,13 @@ shape = SubResource("RectangleShape2D_j1xdp")
 position = Vector2(-1, 0)
 scale = Vector2(17.906248, 2.9375)
 texture = SubResource("GradientTexture2D_l4j7i")
+
+[node name="Particles" type="Node2D" parent="." unique_id=1723134710]
+
+[node name="ColdParticles" parent="Particles" unique_id=1989054374 instance=ExtResource("5_ypdqv")]
+visible = false
+
+[node name="HotParticles" parent="Particles" unique_id=792782090 instance=ExtResource("6_hqkjc")]
+visible = false
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
