@@ -3,7 +3,7 @@ class_name temperature_zone
 
 @export var aggregate_state := AggregateStateProfile.Type.WATER
 @export var temperature_materials_map : Dictionary[AggregateStateProfile.Type, Material]
-@export var particles_map : Dictionary[AggregateStateProfile.Type, NodePath]
+@export var particles_map : Dictionary[AggregateStateProfile.Type, Node]
 
 func _ready():
 	update_visuals()
@@ -19,9 +19,7 @@ func update_particles():
 		particles.hide()
 	var particles = particles_map.get(aggregate_state)
 	if particles:
-		particles = get_node(particles)
-		if particles:
-			particles.show()
+		particles.show()
 
 
 # DEPRECATED

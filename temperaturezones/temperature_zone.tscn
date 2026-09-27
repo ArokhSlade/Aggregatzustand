@@ -16,7 +16,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_l4j7i"]
 gradient = SubResource("Gradient_ekn2d")
 
-[node name="TemperatureZone" type="Area2D" unique_id=198987449]
+[node name="TemperatureZone" type="Area2D" unique_id=198987449 node_paths=PackedStringArray("particles_map")]
 gravity_space_override = 3
 script = ExtResource("1_ekn2d")
 temperature_materials_map = Dictionary[int, Material]({
@@ -24,11 +24,11 @@ temperature_materials_map = Dictionary[int, Material]({
 1: ExtResource("2_d6bvp"),
 2: ExtResource("4_po8cf")
 })
-particles_map = Dictionary[int, NodePath]({
+particles_map = {
 0: NodePath(""),
 1: NodePath("Particles/ColdParticles"),
 2: NodePath("Particles/HotParticles")
-})
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=959544231]
 shape = SubResource("RectangleShape2D_j1xdp")
