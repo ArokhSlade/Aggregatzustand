@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bj0mbhkrywpas"]
+
+[ext_resource type="Script" uid="uid://fefgsinsx1pk" path="res://ui/level_finish.gd" id="1_47wru"]
+[ext_resource type="FontFile" uid="uid://dpm3moae2m0qb" path="res://ui/font/Dividente-ExtraBoldCondensed.otf" id="1_yg3r3"]
+[ext_resource type="PackedScene" uid="uid://cvdnxotlm6dod" path="res://ui/button/button.tscn" id="2_47wru"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1mswc"]
+font = ExtResource("1_yg3r3")
+font_size = 100
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7pql1"]
+font_size = 60
+
+[node name="LevelFinish" type="PanelContainer" unique_id=1959270472]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_47wru")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=155674136]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer" unique_id=964266291]
+custom_minimum_size = Vector2(600, 900)
+layout_mode = 2
+color = Color(0.46963003, 0.7432059, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/ColorRect" unique_id=455755471]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/ColorRect/MarginContainer" unique_id=1195559439]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=699117672]
+layout_mode = 2
+size_flags_vertical = 0
+text = "YOU WIN"
+label_settings = SubResource("LabelSettings_1mswc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=902103520]
+layout_mode = 2
+size_flags_vertical = 2
+text = "Well Done"
+label_settings = SubResource("LabelSettings_7pql1")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=530347836]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 1
+
+[node name="RetryButton" parent="CenterContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=98489973 instance=ExtResource("2_47wru")]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Retry"
+
+[node name="NextLevelButton" parent="CenterContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=143977451 instance=ExtResource("2_47wru")]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Next Level"
+
+[connection signal="pressed" from="CenterContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="CenterContainer/ColorRect/MarginContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
