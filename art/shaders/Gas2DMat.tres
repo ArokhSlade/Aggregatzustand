@@ -585,12 +585,12 @@ initialized = true
 script = ExtResource("2_fhikb")
 
 [sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_emk8g"]
-default_input_values = [0, 3.3449999999999998, 1, 0.605]
+default_input_values = [0, 3.345, 1, 0.605]
 initialized = true
 script = ExtResource("1_ved5v")
 
 [sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_gay1c"]
-default_input_values = [0, 3.3449999999999998, 1, 3.635]
+default_input_values = [0, 3.345, 1, 3.635]
 initialized = true
 script = ExtResource("1_ved5v")
 

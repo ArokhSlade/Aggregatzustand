@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ccm8snwmivhkb"]
+
+[ext_resource type="Shader" uid="uid://7vt3xt3t3i6v" path="res://art/shaders/Gas2DMat.tres" id="1_0pvcm"]
+[ext_resource type="Texture2D" uid="uid://o3unwslkmr8a" path="res://textures/tex_CharacterFace.png" id="2_b041b"]
+
+[resource]
+shader = ExtResource("1_0pvcm")
+shader_parameter/EdgeColor = Color(0.72, 0.43488, 0.3312, 1)
+shader_parameter/InnerColor = Color(1, 1, 1, 1)
+shader_parameter/InnerColor2 = Color(1, 0.906, 0.88, 1)
+shader_parameter/GradientPos = 1.0
+shader_parameter/HotTemperatureTint = Color(0.09079481, 0.35735524, 0.40624246, 1)
+shader_parameter/TintIntensity = 0.0
+shader_parameter/Speed = 20.0
+shader_parameter/FaceDistortion = 0.0
+shader_parameter/Face_Texture = ExtResource("2_b041b")
+shader_parameter/outlineWidth = 0.9

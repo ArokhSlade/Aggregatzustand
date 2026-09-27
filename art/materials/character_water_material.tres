@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c2ahrsqpis53p"]
+
+[ext_resource type="Shader" uid="uid://7vt3xt3t3i6v" path="res://art/shaders/Gas2DMat.tres" id="1_xoren"]
+[ext_resource type="Texture2D" uid="uid://o3unwslkmr8a" path="res://textures/tex_CharacterFace.png" id="2_5h22l"]
+
+[resource]
+shader = ExtResource("1_xoren")
+shader_parameter/EdgeColor = Color(0.11900001, 0.1853, 0.34, 1)
+shader_parameter/InnerColor = Color(0.32691136, 0.9180153, 0.9542627, 1)
+shader_parameter/InnerColor2 = Color(0.18170002, 0.7088934, 0.79, 1)
+shader_parameter/GradientPos = 1.0
+shader_parameter/HotTemperatureTint = Color(0.09079481, 0.35735524, 0.40624246, 1)
+shader_parameter/TintIntensity = 0.0
+shader_parameter/Speed = 3.0
+shader_parameter/FaceDistortion = 1.0
+shader_parameter/Face_Texture = ExtResource("2_5h22l")
+shader_parameter/outlineWidth = 0.9

@@ -1,22 +1,23 @@
 [gd_scene format=3 uid="uid://ddg56pnl36rey"]
 
-[ext_resource type="Shader" uid="uid://7vt3xt3t3i6v" path="res://Shaders/Gas2DMat.tres" id="1_fwq8x"]
-[ext_resource type="Texture2D" uid="uid://o3unwslkmr8a" path="res://Textures/tex_CharacterFace.png" id="2_e0k3i"]
+[ext_resource type="Shader" uid="uid://7vt3xt3t3i6v" path="res://art/shaders/Gas2DMat.tres" id="1_fwq8x"]
+[ext_resource type="Texture2D" uid="uid://o3unwslkmr8a" path="res://textures/tex_CharacterFace.png" id="2_e0k3i"]
 [ext_resource type="Texture2D" uid="uid://cl2fyo4junckr" path="res://models/Eye UV.png" id="3_fwq8x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_701ym"]
 shader = ExtResource("1_fwq8x")
 shader_parameter/EdgeColor = Color(0, 0, 0, 1)
 shader_parameter/InnerColor = Color(0.3221705, 0.497499, 1, 1)
-shader_parameter/InnerColor2 = Color(0.45701337, 0.90270543, 0.9376955, 1)
+shader_parameter/InnerColor2 = Color(0.9, 0.84735, 0.81899995, 1)
 shader_parameter/GradientPos = 1.0
-shader_parameter/HotTemperatureTint = Color(0.47944087, 0.23678926, 0.24557656, 1)
-shader_parameter/TintIntensity = 0.0
+shader_parameter/HotTemperatureTint = Color(0.09079481, 0.35735524, 0.40624246, 1)
+shader_parameter/TintIntensity = 0.54400002584
 shader_parameter/Speed = 5.0
-shader_parameter/FaceDistortion = 0.0
+shader_parameter/FaceDistortion = 1.0
 shader_parameter/Face_Texture = ExtResource("2_e0k3i")
 shader_parameter/outlineWidth = 0.9
 
 [node name="Gas2DCharacter" type="Sprite2D" unique_id=393402349]
 material = SubResource("ShaderMaterial_701ym")
+position = Vector2(-13, -13)
 texture = ExtResource("3_fwq8x")
