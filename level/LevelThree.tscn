@@ -136,6 +136,7 @@ rotation = -2.0127978
 scale = Vector2(0.045825325, 0.49004295)
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("10_uqwpn")]
+visible = false
 position = Vector2(379, 845)
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("11_3qk3n")]

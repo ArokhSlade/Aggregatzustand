@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://level/level.gd" id="1_4hv7r"]
 [ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://code/bubble.tscn" id="2_2lr7m"]
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="3_eb33i"]
-[ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://code/ground_prototype.tscn" id="4_l85xm"]
 [ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="6_tlfvw"]
 [ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="7_la70i"]
 [ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="8_pumto"]
@@ -21,7 +20,6 @@ level_start = NodePath("LevelStart")
 [node name="ground_zone_tool" parent="." unique_id=1615348414 instance=ExtResource("3_eb33i")]
 position = Vector2(123, 949)
 polygon = PackedVector2Array(345, -167, -107, -164, -103, 55, 1764, 69, 1758, -433, 1743, -869, 1114, -872, 338, -878, 336, -716)
-object_to_spawn = ExtResource("4_l85xm")
 row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
@@ -111,6 +109,7 @@ rotation = -1.5759529
 scale = Vector2(0.045825325, 0.88921237)
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("10_6pce7")]
+visible = false
 position = Vector2(206, 170)
 start_aggregate_state = 2
 
