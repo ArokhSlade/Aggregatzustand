@@ -55,16 +55,15 @@ colors = SubResource("GradientTexture1D_0h62n")
 shape = SubResource("CircleShape2D_j1xdp")
 
 [node name="gas_2d_character" parent="." unique_id=393402349 instance=ExtResource("3_0gtg6")]
-visible = false
 top_level = true
 material = SubResource("ShaderMaterial_0gtg6")
+position = Vector2(-2, -2.9802322e-08)
 scale = Vector2(0.28906253, 0.28906253)
 
 [node name="water_charcter" parent="." unique_id=1276259596 instance=ExtResource("3_0gtg6")]
-visible = false
 material = SubResource("ShaderMaterial_a07is")
 position = Vector2(-2, -2.9802322e-08)
-scale = Vector2(0.3011627, 0.29530334)
+scale = Vector2(0.28906253, 0.28906253)
 
 [node name="TemperatureSensor" type="Area2D" parent="." unique_id=1416966755]
 script = ExtResource("3_mddvq")
