@@ -1,10 +1,13 @@
 [gd_resource type="StyleBoxTexture" format=3 uid="uid://b72vrhaf31600"]
 
-[ext_resource type="Gradient" uid="uid://0dluacgbv7fb" path="res://ui/button/button_normal_gradient.tres" id="1_tjjgl"]
+[sub_resource type="Gradient" id="Gradient_u5gqq"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.0045454544, 0.009090909, 0.5318182, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.5, 0.5, 0.5, 1, 0.61292, 0.58519995, 0.77, 1, 1, 1, 1, 1, 0.6395539, 0.6137412, 0.78582567, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_nh5jk"]
-gradient = ExtResource("1_tjjgl")
-fill_from = Vector2(1, 1)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yf41w"]
+gradient = SubResource("Gradient_u5gqq")
+fill_to = Vector2(1, 1)
 
 [resource]
-texture = SubResource("GradientTexture2D_nh5jk")
+texture = SubResource("GradientTexture2D_yf41w")
