@@ -10,7 +10,7 @@
 script = ExtResource("1_d8qi5")
 player_scene = ExtResource("2_j7wmq")
 level_start = NodePath("LevelStart")
-DEBUG_aggregate_rules = ExtResource("3_6tqrk")
+DEBUG_aggregate_state_profile = ExtResource("3_6tqrk")
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("3_tvde0")]
 position = Vector2(543, 692)
