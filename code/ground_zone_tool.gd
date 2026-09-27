@@ -8,12 +8,13 @@ extends Polygon2D
 @export var column_spacing: float = 32.0
 @export var max_offset_x: float = 8.0
 @export var max_offset_y: float = 8.0
+@export_tool_button("Refresh Ground", "Reload") var refresh_ground = respawn_tiles
 
 func _ready():
-	respawn_tiles()
-	color.a = 0
+	if not Engine.is_editor_hint():
+		respawn_tiles()
+		color.a = 0
 
-@export_tool_button("Refresh Ground", "Reload") var refresh_ground = respawn_tiles
 
 func respawn_tiles():
 	for child in get_children():
