@@ -21,18 +21,18 @@ var states = {
 
 func _ready():
 	current_state = states.paused
-	
+
 	if not initialized:
 		DEBUG_fallback_initialize()
-	
+
 
 func initialize(aggregate_state_profile_):
 	aggregate_state_profile = aggregate_state_profile_
-	
+
 	if level_start:
 		level_start.initialize(player_scene, aggregate_state_profile)
 		level_start.spawn_player()
-	
+
 	initialized = true
 
 
@@ -55,22 +55,22 @@ func DEBUG_fallback_initialize():
 
 
 @abstract class State:
-	var owner 
-	
+	var owner
+
 	@abstract func on_process()
-	
+
 	func _init(owner_):
 		owner = owner_
 
 
 class Playing extends State:
-	
+
 	func on_process():
 		pass
 
 
 class  Paused extends State:
-	
+
 	func on_process():
 		return
 

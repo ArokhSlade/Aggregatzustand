@@ -19,7 +19,7 @@ enum Type {
 @export var gravity_curve : Curve
 
 func map_agg_state_to_temp(agg_state):
-	
+
 	return temperature_map.get(agg_state, NAN)
 
 func map_temperature_to_gravity_scale(temperature):

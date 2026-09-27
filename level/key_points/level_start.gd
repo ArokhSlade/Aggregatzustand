@@ -9,7 +9,7 @@ var aggregate_state_profile : AggregateStateProfile
 var player_scene : PackedScene
 
 # working variables
-var player 
+var player
 
 func initialize(player_scene_, aggregate_state_profile_):
 	player_scene = player_scene_

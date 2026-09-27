@@ -38,6 +38,13 @@ func apply_aggregate_state(aggregate_state_):
 	temperature = aggregate_state_profile.map_agg_state_to_temp(aggregate_state)
 	apply_temperature_immediately(temperature)
 
+	if aggregate_state == AggregateStateProfile.Type.WATER:
+		$gas_2d_character.visible = false
+		$water_charcter.visible = true
+	else:
+		$gas_2d_character.visible = true
+		$water_charcter.visible = false
+
 
 func apply_temperature_immediately(temperature_):
 	target_temperature = temperature_

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://8645tn3srhxj"]
+
+[sub_resource type="Curve" id="Curve_4sys0"]
+_data = [Vector2(0.00754717, 0), 0.0, 7.7435064, 0, 0, Vector2(0.76226413, 0.2959184), -2.4036276, -2.4036276, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_j647v"]
+offsets = PackedFloat32Array(0.016736401, 0.53556484, 0.9958159)
+colors = PackedColorArray(0.6849926, 0.19901547, 0.03569829, 1, 1.5112375, 0.8924656, 0.13562568, 1, 0.79677385, 0.5453524, 1.92523e-07, 0)
+
+[node name="FireAmber Particle" type="CPUParticles2D" unique_id=42353444]
+amount = 15
+lifetime = 13.62
+lifetime_randomness = 0.36
+emission_shape = 3
+emission_rect_extents = Vector2(15, 15)
+direction = Vector2(1, -90)
+spread = 180.0
+gravity = Vector2(0, -1.675)
+initial_velocity_min = 0.5
+initial_velocity_max = 5.0
+angular_velocity_max = 51.8
+damping_min = 1.439
+damping_max = 3.597
+scale_amount_curve = SubResource("Curve_4sys0")
+color_ramp = SubResource("Gradient_j647v")
