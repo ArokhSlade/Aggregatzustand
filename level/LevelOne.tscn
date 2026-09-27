@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="6_m46nv"]
 [ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="7_gntwc"]
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="8_7qx7p"]
-[ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://code/ground_prototype.tscn" id="9_4twtt"]
 [ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="9_yv26f"]
 [ext_resource type="PackedScene" uid="uid://biaayea07sh1x" path="res://level/key_points/level_goal.tscn" id="10_yv26f"]
 [ext_resource type="PackedScene" uid="uid://b6jm1ruws84qw" path="res://level/interactables/pusher.tscn" id="13_gntwc"]
@@ -21,7 +20,6 @@ level_start = NodePath("LevelStart")
 [node name="ground_zone_tool" parent="." unique_id=1615348414 instance=ExtResource("8_7qx7p")]
 position = Vector2(155, 974)
 polygon = PackedVector2Array(87, -395, 330, -182, 201, -27, -118, -78, -145, 40, 1748, 40, 1743, -632, 1102, -821, 578, -786, 81, -642, -150, -512, -131, -182)
-object_to_spawn = ExtResource("9_4twtt")
 row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
@@ -60,7 +58,7 @@ scale = Vector2(0.62, 0.099)
 [node name="TopLeftCornerHouse3" parent="." unique_id=651454461 instance=ExtResource("5_tl16l")]
 position = Vector2(698.00006, -70.00001)
 rotation = -0.0031841937
-scale = Vector2(0.545, 0.085)
+scale = Vector2(0.88, 0.085)
 
 [node name="TopLeftCornerHouse2" parent="." unique_id=768800721 instance=ExtResource("5_tl16l")]
 position = Vector2(26, 260)
@@ -114,7 +112,7 @@ scale = Vector2(0.045825325, 0.49004295)
 position = Vector2(232, 808)
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("10_yv26f")]
-position = Vector2(1610, 89)
+position = Vector2(1630, 151)
 
 [node name="Pusher" parent="." unique_id=1242537064 instance=ExtResource("13_gntwc")]
 position = Vector2(691, 944)
