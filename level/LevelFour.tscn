@@ -152,3 +152,4 @@ particles_map = {
 }
 
 [connection signal="player_spawned" from="LevelStart" to="." method="_on_level_start_player_spawned"]
+[connection signal="level_goal_reached" from="LevelGoal" to="." method="_on_level_goal_level_goal_reached"]
