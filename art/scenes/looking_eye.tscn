@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cuukm5wdt4p8q"]
+
+[ext_resource type="Shader" uid="uid://cri8rlxwwgd8s" path="res://art/materials/eye_2d_material_01.tres" id="1_i2hu0"]
+[ext_resource type="Texture2D" uid="uid://cl2fyo4junckr" path="res://models/Eye UV.png" id="2_1rsbv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j647v"]
+shader = ExtResource("1_i2hu0")
+shader_parameter/ScleraEdge = 0.3
+shader_parameter/ScleraColor = Color(0.87681943, 0.9348431, 0.8930861, 1)
+shader_parameter/IrisEdge = 0.3
+shader_parameter/Offset = Vector2(0.015, -0.025)
+shader_parameter/IrisColor = Color(0, 0.419746, 0.713059, 1)
+shader_parameter/PupilEdge = 0.1
+shader_parameter/PupilEdge2 = 0.13
+
+[node name="LookingEye" type="Sprite2D" unique_id=393402349]
+material = SubResource("ShaderMaterial_j647v")
+texture = ExtResource("2_1rsbv")
