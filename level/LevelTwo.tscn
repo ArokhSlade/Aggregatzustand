@@ -99,7 +99,7 @@ scale = Vector2(0.0537427, 0.6372748)
 [node name="TopRightCornerHouse5" parent="." unique_id=1721366392 instance=ExtResource("9_qaqfd")]
 position = Vector2(477, 489)
 rotation = 1.2458639
-scale = Vector2(0.0537427, 0.6064557)
+scale = Vector2(0.06362526, 0.50684214)
 
 [node name="TopRightCornerHouse7" parent="." unique_id=335716629 instance=ExtResource("9_qaqfd")]
 position = Vector2(632, 568.99994)
@@ -107,14 +107,14 @@ rotation = 1.9756377
 scale = Vector2(0.0537427, 0.5031024)
 
 [node name="TopRightCornerHouse9" parent="." unique_id=438116006 instance=ExtResource("9_qaqfd")]
-position = Vector2(622, 571)
-rotation = 1.3088319
+position = Vector2(579, 568.0001)
+rotation = 1.1004865
 scale = Vector2(0.0537427, 0.5031024)
 
 [node name="TopRightCornerHouse10" parent="." unique_id=545950546 instance=ExtResource("9_qaqfd")]
-position = Vector2(480, 643)
-rotation = 1.9109792
-scale = Vector2(0.0537427, 0.5031024)
+position = Vector2(462.00003, 664)
+rotation = 2.2074575
+scale = Vector2(0.057725035, 0.3701989)
 
 [node name="TopRightCornerHouse4" parent="." unique_id=2017040047 instance=ExtResource("9_qaqfd")]
 position = Vector2(904, 339.99997)
@@ -124,6 +124,11 @@ scale = Vector2(0.048662547, 1.681695)
 [node name="TopRightCornerHouse2" parent="." unique_id=872683199 instance=ExtResource("9_qaqfd")]
 position = Vector2(1251.0001, 293)
 rotation = -1.0299188
+scale = Vector2(0.045825325, 0.49004295)
+
+[node name="TopRightCornerHouse13" parent="." unique_id=1516777647 instance=ExtResource("9_qaqfd")]
+position = Vector2(1526, 384.00003)
+rotation = 2.0813732
 scale = Vector2(0.045825325, 0.49004295)
 
 [node name="TopRightCornerHouse6" parent="." unique_id=1556428452 instance=ExtResource("9_qaqfd")]
@@ -137,6 +142,7 @@ rotation = 1.2134036
 scale = Vector2(0.045825325, 0.49004295)
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("10_4qypv")]
+visible = false
 position = Vector2(83, 104)
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("11_xvf0a")]
