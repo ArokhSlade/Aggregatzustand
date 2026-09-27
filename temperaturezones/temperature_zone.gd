@@ -2,6 +2,15 @@ extends Area2D
 class_name temperature_zone
 
 @export var aggregate_state := AggregateStateProfile.Type.WATER
+@export var temperature_materials : Dictionary[AggregateStateProfile.Type, Material]
+
+func _ready():
+	update_visuals()
+
+
+func update_visuals():
+	$Sprite2D.material = temperature_materials.get(aggregate_state)
+	
 
 # DEPRECATED
 func _physics_process(_delta):
