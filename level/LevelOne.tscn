@@ -26,17 +26,26 @@ row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
 
-[node name="ColdTemperatureZone3" parent="." unique_id=333579844 instance=ExtResource("2_7qx7p")]
+[node name="ColdTemperatureZone3" parent="." unique_id=333579844 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_7qx7p")]
 modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
 position = Vector2(723, 19)
 scale = Vector2(1.265, 0.5)
-temperature = 0.0
+aggregate_state = 1
+particles_map = {
+0: null,
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
+}
 
-[node name="HotTemperatureZone" parent="." unique_id=357884235 instance=ExtResource("2_7qx7p")]
+[node name="HotTemperatureZone" parent="." unique_id=357884235 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_7qx7p")]
 modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(952.00006, 1064)
 scale = Vector2(1.68, 0.545)
-temperature = 100.0
+particles_map = {
+0: null,
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
+}
 
 [node name="BottomLeftCornerHouse" parent="." unique_id=1612557856 instance=ExtResource("4_yv26f")]
 position = Vector2(610, 279)
@@ -103,7 +112,6 @@ scale = Vector2(0.045825325, 0.49004295)
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("9_yv26f")]
 position = Vector2(232, 808)
-start_temperature = 0
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("10_yv26f")]
 position = Vector2(1610, 89)
