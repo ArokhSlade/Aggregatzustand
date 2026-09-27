@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://biaayea07sh1x" path="res://level/key_points/level_goal.tscn" id="11_xvf0a"]
 [ext_resource type="PackedScene" uid="uid://b6jm1ruws84qw" path="res://level/interactables/pusher.tscn" id="12_p72kc"]
 
-[node name="Level" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start")]
+[node name="Level2" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start")]
 script = ExtResource("1_75ndb")
 player_scene = ExtResource("2_8phxg")
 level_start = NodePath("LevelStart")
@@ -32,14 +32,22 @@ position = Vector2(945.00006, 2)
 scale = Vector2(1.5950036, 0.5)
 aggregate_state = 1
 temperature_materials_map = Dictionary[int, Material]({})
-particles_map = Dictionary[int, Material]({})
+particles_map = {
+0: null,
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
+}
 
 [node name="HotTemperatureZone" parent="." unique_id=357884235 node_paths=PackedStringArray("particles_map") instance=ExtResource("5_wdsnq")]
 modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(952.00006, 1064)
 scale = Vector2(1.68, 0.545)
 temperature_materials_map = Dictionary[int, Material]({})
-particles_map = Dictionary[int, Material]({})
+particles_map = {
+0: null,
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
+}
 
 [node name="BottomLeftCornerHouse" parent="." unique_id=1612557856 instance=ExtResource("6_au7bg")]
 position = Vector2(1459, 558)
@@ -81,8 +89,13 @@ rotation = 1.2663275
 scale = Vector2(0.0537427, 0.9097101)
 
 [node name="TopRightCornerHouse8" parent="." unique_id=842616285 instance=ExtResource("9_qaqfd")]
-position = Vector2(246.00006, 363)
-rotation = 1.8240747
+position = Vector2(-55.00003, 320.00003)
+rotation = -1.1263347
+scale = Vector2(0.0537427, 0.6372748)
+
+[node name="TopRightCornerHouse11" parent="." unique_id=1717172617 instance=ExtResource("9_qaqfd")]
+position = Vector2(201.00003, 363.00003)
+rotation = 1.1861067
 scale = Vector2(0.0537427, 0.6372748)
 
 [node name="TopRightCornerHouse5" parent="." unique_id=1721366392 instance=ExtResource("9_qaqfd")]
@@ -120,6 +133,11 @@ position = Vector2(911.99994, 374.99997)
 rotation = -1.2365776
 scale = Vector2(0.045825325, 0.49004295)
 
+[node name="TopRightCornerHouse12" parent="." unique_id=624758712 instance=ExtResource("9_qaqfd")]
+position = Vector2(1110, 390.0001)
+rotation = 1.2134036
+scale = Vector2(0.045825325, 0.49004295)
+
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("10_4qypv")]
 position = Vector2(83, 104)
 
@@ -135,3 +153,4 @@ position = Vector2(1093, 825)
 strength = 2.0
 
 [connection signal="player_spawned" from="LevelStart" to="." method="_on_level_start_player_spawned"]
+[connection signal="level_goal_reached" from="LevelGoal" to="." method="_on_level_goal_level_goal_reached"]

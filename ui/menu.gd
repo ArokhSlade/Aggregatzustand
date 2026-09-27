@@ -1,6 +1,7 @@
 extends PanelContainer
 
 signal play_requested
+signal reset_requested
 signal quit_requested
 
 func open():
@@ -17,3 +18,7 @@ func _on_play_button_pressed():
 
 func _on_quit_button_pressed():
 	quit_requested.emit()
+
+
+func _on_reset_button_pressed() -> void:
+	reset_requested.emit()

@@ -1,22 +1,27 @@
 [gd_scene format=3 uid="uid://bs6eh0fuifr7b"]
 
 [ext_resource type="Script" uid="uid://drv3pyrh45wog" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://dbccd3v8jd5ih" path="res://level/level_0.tscn" id="2_1bvp3"]
 [ext_resource type="Resource" uid="uid://mn5f7fwwl6q1" path="res://temperaturezones/defaullt_aggregate_states_profile.tres" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://c52xkgs01rcx4" path="res://level/LevelOne.tscn" id="3_efxa6"]
 [ext_resource type="PackedScene" uid="uid://xrq1cjmrcqd0" path="res://ui/menu.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bdfm57bgkcecr" path="res://level/LevelTwo.tscn" id="4_dg77c"]
+[ext_resource type="PackedScene" uid="uid://bj0mbhkrywpas" path="res://ui/level_finish.tscn" id="5_5vw27"]
 [ext_resource type="AudioStream" uid="uid://c5tvo5vgmmjs4" path="res://sound/physics-lesson.wav" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cbsigth2xtqxy" path="res://level/LevelThree.tscn" id="5_ycdy4"]
 [ext_resource type="Script" uid="uid://bk2owcjyym13i" path="res://sound/loop_track.gd" id="6_272bh"]
 [ext_resource type="AudioStream" uid="uid://dep4m11k7ldxh" path="res://sound/schnuffi_audio.tres" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://ctflcdeut6w5y" path="res://level/set_dressing/mikrobcore.tscn" id="8_5vw27"]
 
 [node name="Main" type="Node" unique_id=1820909058]
 script = ExtResource("1_h2yge")
-level_scene = ExtResource("2_1bvp3")
+level_scenes = Array[PackedScene]([ExtResource("4_dg77c"), ExtResource("3_efxa6"), ExtResource("5_ycdy4")])
 aggregate_states_resoure = ExtResource("3_1bvp3")
 
 [node name="LevelParent" type="Node2D" parent="." unique_id=2082978765]
 
 [node name="Menu" parent="." unique_id=1073757890 instance=ExtResource("4_1bvp3")]
+
+[node name="LevelFinish" parent="." unique_id=1959270472 instance=ExtResource("5_5vw27")]
 
 [node name="PhysicsLesson" type="AudioStreamPlayer" parent="." unique_id=508666050]
 stream = ExtResource("5_7mycd")
@@ -34,5 +39,8 @@ position = Vector2(1228, -406)
 
 [connection signal="play_requested" from="Menu" to="." method="_on_menu_play_requested"]
 [connection signal="quit_requested" from="Menu" to="." method="_on_menu_quit_requested"]
+[connection signal="reset_requested" from="Menu" to="." method="on_retry_selected"]
+[connection signal="next_level_selected" from="LevelFinish" to="." method="on_next_level_selected"]
+[connection signal="retry_selected" from="LevelFinish" to="." method="on_retry_selected"]
 [connection signal="finished" from="PhysicsLesson" to="PhysicsLesson" method="_on_finished"]
 [connection signal="finished" from="SFX" to="SFX" method="_on_finished"]
