@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="10_uqwpn"]
 [ext_resource type="PackedScene" uid="uid://biaayea07sh1x" path="res://level/key_points/level_goal.tscn" id="11_3qk3n"]
 [ext_resource type="PackedScene" uid="uid://b6jm1ruws84qw" path="res://level/interactables/pusher.tscn" id="12_3qa3b"]
+[ext_resource type="Texture2D" uid="uid://cv16iislqmgkk" path="res://art/textures/level_3_foreground.png" id="12_o80nu"]
 [ext_resource type="PackedScene" uid="uid://2n5qcpk0onw1" path="res://temperaturezones/movable_temperature_zone.tscn" id="13_8qq7x"]
 [ext_resource type="Texture2D" uid="uid://cv16iislqmgkk" path="res://art/textures/level_3_foreground.png" id="13_o80nu"]
 
@@ -170,6 +171,11 @@ strength = -2.0
 position = Vector2(796, 442)
 scale = Vector2(-1.0399976, 1)
 strength = -2.0
+
+[node name="Level2Foreground" type="Sprite2D" parent="." unique_id=490528525]
+z_index = -2
+position = Vector2(924, 554)
+texture = ExtResource("12_o80nu")
 
 [node name="MovableTemperatureZone" parent="." unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("13_8qq7x")]
 position = Vector2(1108, 530)

@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ccq1inx3eymys" path="res://art/textures/level_1_foreground.png" id="12_gvnvc"]
 [ext_resource type="PackedScene" uid="uid://b6jm1ruws84qw" path="res://level/interactables/pusher.tscn" id="13_gntwc"]
 
-[node name="Level" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start")]
+[node name="Level2" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start")]
 script = ExtResource("1_l7c5h")
 player_scene = ExtResource("2_tl16l")
 level_start = NodePath("LevelStart")
@@ -127,7 +127,7 @@ visible = false
 position = Vector2(232, 808)
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("10_yv26f")]
-position = Vector2(1630, 151)
+position = Vector2(1629, 4)
 
 [node name="Pusher" parent="." unique_id=1242537064 instance=ExtResource("13_gntwc")]
 position = Vector2(691, 944)
@@ -135,7 +135,7 @@ strength = 2.0
 
 [node name="Level1Foreground" type="Sprite2D" parent="." unique_id=1872822433]
 z_index = -2
-position = Vector2(960, 537)
+position = Vector2(956, 541)
 texture = ExtResource("12_gvnvc")
 
 [connection signal="player_spawned" from="LevelStart" to="." method="_on_level_start_player_spawned"]

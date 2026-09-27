@@ -166,7 +166,7 @@ visible = false
 position = Vector2(83, 104)
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("11_xvf0a")]
-position = Vector2(1788, 667)
+position = Vector2(1781, 604)
 
 [node name="Pusher" parent="." unique_id=1242537064 instance=ExtResource("12_p72kc")]
 position = Vector2(631, 191)
@@ -178,7 +178,7 @@ strength = 2.0
 
 [node name="Level2Foreground" type="Sprite2D" parent="." unique_id=1403244123]
 z_index = -2
-position = Vector2(959, 551)
+position = Vector2(962, 550)
 texture = ExtResource("12_75ndb")
 
 [connection signal="player_spawned" from="LevelStart" to="." method="_on_level_start_player_spawned"]
