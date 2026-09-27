@@ -49,6 +49,7 @@ particles_map = {
 modulate = Color(0.275326, 0.31628942, 0.76869035, 0.67058825)
 position = Vector2(756, 98.00001)
 scale = Vector2(2.4661202, 1.1771753)
+aggregate_state = 1
 particles_map = {
 0: null,
 1: NodePath("Particles/ColdParticles"),
