@@ -1,6 +1,6 @@
 extends Area2D
 
-signal temperature_changed(temperature)
+signal aggregate_changed(aggregate_state)
 
-func apply_temperature(temperature_):
-	temperature_changed.emit(temperature_)
+func apply_aggregate_state(aggregate_state_):
+	aggregate_changed.emit(aggregate_state_)

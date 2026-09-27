@@ -1,20 +1,23 @@
 [gd_scene format=3 uid="uid://b6jm1ruws84qw"]
 
-[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="1_4nkvo"]
 [ext_resource type="Script" uid="uid://sx801yh5d8ac" path="res://level/interactables/pusher.gd" id="1_264uv"]
+[ext_resource type="Texture2D" uid="uid://dt4dhpcfs110f" path="res://art/textures/schnuffi.png" id="2_ojm6e"]
+[ext_resource type="AudioStream" uid="uid://dep4m11k7ldxh" path="res://sound/schnuffi_audio.tres" id="3_ojm6e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_264uv"]
 size = Vector2(373, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1mswc"]
-size = Vector2(128, 128)
+size = Vector2(205, 128)
 
 [node name="Pusher" type="Node2D" unique_id=1242537064]
 script = ExtResource("1_264uv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=449973684]
 modulate = Color(0, 1, 1, 0.753)
-texture = ExtResource("1_4nkvo")
+position = Vector2(-39, -17)
+scale = Vector2(0.23505324, 0.23505324)
+texture = ExtResource("2_ojm6e")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=548822845]
 
@@ -25,7 +28,11 @@ shape = SubResource("RectangleShape2D_264uv")
 [node name="ClickArea" type="Area2D" parent="." unique_id=495805994]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=211478701]
+position = Vector2(-38.5, 0)
 shape = SubResource("RectangleShape2D_1mswc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2122710144]
+stream = ExtResource("3_ojm6e")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

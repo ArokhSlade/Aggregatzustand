@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://vgq4nwnu64hn"]
 
 [ext_resource type="Script" uid="uid://x218h1map1hp" path="res://code/ground_prototype.gd" id="1_0nssk"]
-[ext_resource type="Texture2D" uid="uid://drjt04jlen7iy" path="res://art/hexagon.png" id="2_ljaxg"]
-[ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://code/exchange_color_to_scrolling.gdshader" id="2_v00rn"]
-[ext_resource type="Texture2D" uid="uid://bwcrxmbb8bfy6" path="res://art/ground_gradient.png" id="3_v00rn"]
+[ext_resource type="Texture2D" uid="uid://drjt04jlen7iy" path="res://art/textures/hexagon.png" id="2_ljaxg"]
+[ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://art/shaders/exchange_color_to_scrolling.gdshader" id="2_v00rn"]
+[ext_resource type="Texture2D" uid="uid://bwcrxmbb8bfy6" path="res://art/textures/ground_gradient.png" id="3_v00rn"]
+[ext_resource type="AudioStream" uid="uid://cby4vor5umia1" path="res://sound/remove_dirt.tres" id="5_v57n8"]
 
 [sub_resource type="Curve" id="Curve_0nssk"]
 _data = [Vector2(0, 0), 0.0, 1.4, 0, 0, Vector2(0.58, 0.5393259), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -15,8 +16,8 @@ shader_parameter/color_to_replace = Color(1, 1, 1, 1)
 shader_parameter/pattern_texture = ExtResource("3_v00rn")
 shader_parameter/feather_range = 1.0
 shader_parameter/tilemap_offset = Vector2(0, 0)
-shader_parameter/scroll_speed = 0.00800000038
-shader_parameter/pattern_scale = 0.4
+shader_parameter/scroll_speed = 0.0
+shader_parameter/pattern_scale = 1.0
 shader_parameter/scroll_dir = Vector2(0, 1)
 shader_parameter/ankered_top = false
 shader_parameter/heightOffset = 0.0
@@ -49,6 +50,10 @@ polygon = PackedVector2Array(-2, -122, 104, -58, 103, 63, 1, 124, -110, 60, -106
 modulate = Color(0.7247292, 0.7393957, 0.710091, 1)
 material = SubResource("ShaderMaterial_ljaxg")
 texture = ExtResource("2_ljaxg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=638917455]
+stream = ExtResource("5_v57n8")
+volume_db = -1.993
 
 [connection signal="input_event" from="Ground/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Ground/Area2D" to="." method="_on_area_2d_mouse_entered"]

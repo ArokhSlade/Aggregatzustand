@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbwhhvmdb3w3o"]
 
 [ext_resource type="PackedScene" uid="uid://cvkfpgiu18nsh" path="res://level/blocks/indestructible/static_sprite_collider_base.tscn" id="1_spoy0"]
-[ext_resource type="Texture2D" uid="uid://dnyh2ndsd8uht" path="res://art/h1.png" id="2_w4ekj"]
+[ext_resource type="Texture2D" uid="uid://dnyh2ndsd8uht" path="res://art/shaders/h1.png" id="2_w4ekj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvttp"]
 size = Vector2(958.5, 730.5)

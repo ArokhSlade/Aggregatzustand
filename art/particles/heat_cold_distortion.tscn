@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dns3x1p4xppco"]
+
+[ext_resource type="Shader" uid="uid://citiutijc64tw" path="res://art/shaders/2DHeatColdDistortion.gdshader" id="1_0vwcq"]
+[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="2_w1wto"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4sys0"]
+shader = ExtResource("1_0vwcq")
+shader_parameter/temperatureRange = 1.0
+shader_parameter/hotColor = Color(0.8260885, 0.23890513, 0.11386197, 0.6509804)
+shader_parameter/coldColor = Color(0.35099998, 0.63464993, 0.9, 0.5254902)
+shader_parameter/heatAmplitude = 0.0610000028975
+shader_parameter/heatPeriod = 20.0
+shader_parameter/heatPhaseShift = 20.0
+shader_parameter/heatUpperLimit = 10.0
+shader_parameter/coldFractureCount = 15.985
+shader_parameter/divide = -0.05
+shader_parameter/blur = 0.485
+shader_parameter/fade_width = 0.38
+
+[node name="heat_cold_distortion" type="Sprite2D" unique_id=920189255]
+material = SubResource("ShaderMaterial_4sys0")
+scale = Vector2(1.96, 1.56)
+texture = ExtResource("2_w1wto")
