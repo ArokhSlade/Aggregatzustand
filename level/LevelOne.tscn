@@ -58,7 +58,7 @@ scale = Vector2(0.62, 0.099)
 [node name="TopLeftCornerHouse3" parent="." unique_id=651454461 instance=ExtResource("5_tl16l")]
 position = Vector2(698.00006, -70.00001)
 rotation = -0.0031841937
-scale = Vector2(0.545, 0.085)
+scale = Vector2(0.88, 0.085)
 
 [node name="TopLeftCornerHouse2" parent="." unique_id=768800721 instance=ExtResource("5_tl16l")]
 position = Vector2(26, 260)
@@ -112,7 +112,7 @@ scale = Vector2(0.045825325, 0.49004295)
 position = Vector2(232, 808)
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("10_yv26f")]
-position = Vector2(1610, 89)
+position = Vector2(1630, 151)
 
 [node name="Pusher" parent="." unique_id=1242537064 instance=ExtResource("13_gntwc")]
 position = Vector2(691, 944)
