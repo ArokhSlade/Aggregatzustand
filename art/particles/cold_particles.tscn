@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7aprsunnbd7"]
 
-[ext_resource type="Texture2D" uid="uid://bwbla6tro5wrq" path="res://Textures/tex_snowflake.png" id="1_pb4xk"]
+[ext_resource type="Texture2D" uid="uid://bwbla6tro5wrq" path="res://textures/tex_snowflake.png" id="1_pb4xk"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g6dyp"]
 
