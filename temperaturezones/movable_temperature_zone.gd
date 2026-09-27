@@ -28,4 +28,5 @@ func _on_mouse_entered() -> void:
 
 
 func _on_mouse_exited() -> void:
+	is_dragged = false
 	is_mouse_inside = false

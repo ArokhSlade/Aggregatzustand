@@ -25,5 +25,11 @@ func _on_click_area_input_event(viewport: Node, event: InputEvent, shape_idx: in
 	if event.is_action_pressed("click"):
 		is_pushing = true
 		$AudioStreamPlayer2D.play(0)
+		$Schnuffi/AnimationPlayer.play("pusten")
 	if event.is_action_released("click"):
 		is_pushing = false
+		$Schnuffi/AnimationPlayer.play("RESET")
+
+
+func _on_click_area_mouse_exited() -> void:
+	is_pushing = false

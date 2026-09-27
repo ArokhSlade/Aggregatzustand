@@ -17,7 +17,6 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_ekn2d")
 
 [node name="TemperatureZone" type="Area2D" unique_id=198987449 node_paths=PackedStringArray("particles_map")]
-position = Vector2(891, 348)
 gravity_space_override = 3
 script = ExtResource("1_ekn2d")
 aggregate_state = 2

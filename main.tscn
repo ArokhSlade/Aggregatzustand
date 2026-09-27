@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bdfm57bgkcecr" path="res://level/LevelTwo.tscn" id="4_dg77c"]
 [ext_resource type="PackedScene" uid="uid://bj0mbhkrywpas" path="res://ui/level_finish.tscn" id="5_5vw27"]
 [ext_resource type="AudioStream" uid="uid://c5tvo5vgmmjs4" path="res://sound/physics-lesson.wav" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cxvv21cwl85e4" path="res://level/LevelFour.tscn" id="5_dg77c"]
 [ext_resource type="PackedScene" uid="uid://cbsigth2xtqxy" path="res://level/LevelThree.tscn" id="5_ycdy4"]
 [ext_resource type="Script" uid="uid://bk2owcjyym13i" path="res://sound/loop_track.gd" id="6_272bh"]
 [ext_resource type="AudioStream" uid="uid://dep4m11k7ldxh" path="res://sound/schnuffi_audio.tres" id="7_272bh"]
@@ -14,7 +15,7 @@
 
 [node name="Main" type="Node" unique_id=1820909058]
 script = ExtResource("1_h2yge")
-level_scenes = Array[PackedScene]([ExtResource("4_dg77c"), ExtResource("3_efxa6"), ExtResource("5_ycdy4")])
+level_scenes = Array[PackedScene]([ExtResource("3_efxa6"), ExtResource("4_dg77c"), ExtResource("5_ycdy4"), ExtResource("5_dg77c")])
 aggregate_states_resoure = ExtResource("3_1bvp3")
 
 [node name="LevelParent" type="Node2D" parent="." unique_id=2082978765]

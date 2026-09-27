@@ -21,6 +21,7 @@ level_start = NodePath("LevelStart")
 
 [node name="ground_zone_tool" parent="." unique_id=1615348414 instance=ExtResource("3_o80nu")]
 position = Vector2(123, 949)
+color = Color(1, 0.36078432, 1, 0)
 polygon = PackedVector2Array(-112, -696, -103, -381, 429, -394, 416, -22, -107, -9, -103, 55, 1764, 69, 1758, -433, 1743, -869, 1114, -872, 338, -878, 336, -716)
 object_to_spawn = ExtResource("4_ms0gl")
 row_spacing = 50.0
@@ -155,7 +156,7 @@ strength = -2.0
 
 [node name="MovableTemperatureZone" parent="." unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("13_8qq7x")]
 position = Vector2(1108, 530)
-scale = Vector2(0.33, 0.435)
+scale = Vector2(0.435, 0.435)
 particles_map = {
 0: null,
 1: NodePath("Particles/ColdParticles"),
