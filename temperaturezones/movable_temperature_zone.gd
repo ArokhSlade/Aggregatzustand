@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 		global_position.x = get_global_mouse_position().x - drag_offset
 
 
-	
+
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("click") and is_mouse_inside:

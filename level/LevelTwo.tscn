@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="9_qaqfd"]
 [ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="10_4qypv"]
 [ext_resource type="PackedScene" uid="uid://biaayea07sh1x" path="res://level/key_points/level_goal.tscn" id="11_xvf0a"]
+[ext_resource type="Texture2D" uid="uid://dbowepxm5ru6d" path="res://art/textures/level_2_foreground.png" id="12_75ndb"]
 [ext_resource type="PackedScene" uid="uid://b6jm1ruws84qw" path="res://level/interactables/pusher.tscn" id="12_p72kc"]
 
 [node name="Level2" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start")]
@@ -51,95 +52,114 @@ particles_map = {
 position = Vector2(1459, 558)
 rotation = 0.004035865
 scale = Vector2(0.0592224, 0.19771759)
+texture = null
 
 [node name="BottomLeftCornerHouse2" parent="." unique_id=651454461 instance=ExtResource("6_au7bg")]
 position = Vector2(1468, 831.99994)
 rotation = 0.004035865
 scale = Vector2(0.0592224, 0.27884674)
+texture = null
 
 [node name="TopLeftCornerHouse" parent="." unique_id=1193251732 instance=ExtResource("7_dmhul")]
 position = Vector2(423.99997, 561)
 rotation = -1.5940917
 scale = Vector2(0.62, 0.099)
+texture = null
 
 [node name="TopLeftCornerHouse3" parent="." unique_id=2060306741 instance=ExtResource("7_dmhul")]
 position = Vector2(429, -70)
 rotation = -0.0031841937
 scale = Vector2(1.2126017, 0.0710427)
+texture = null
 
 [node name="TopLeftCornerHouse2" parent="." unique_id=768800721 instance=ExtResource("7_dmhul")]
 position = Vector2(8, -28.000008)
 rotation = 1.5592912
 scale = Vector2(0.815, 0.11)
+texture = null
 
 [node name="BottomRightCornerHouse" parent="." unique_id=208061691 instance=ExtResource("8_phoj0")]
 position = Vector2(1940.9999, -98.00001)
 scale = Vector2(-0.059, 1.032)
+texture = null
 
 [node name="BottomRightCornerHouse2" parent="." unique_id=529788377 instance=ExtResource("8_phoj0")]
 position = Vector2(2084, 1115)
 rotation = 1.5762771
 scale = Vector2(-0.026856503, 1.8811471)
+texture = null
 
 [node name="TopRightCornerHouse3" parent="." unique_id=141624959 instance=ExtResource("9_qaqfd")]
 position = Vector2(1860.0001, 471.99997)
 rotation = 1.2663275
 scale = Vector2(0.0537427, 0.9097101)
+texture = null
 
 [node name="TopRightCornerHouse8" parent="." unique_id=842616285 instance=ExtResource("9_qaqfd")]
 position = Vector2(-55.00003, 320.00003)
 rotation = -1.1263347
 scale = Vector2(0.0537427, 0.6372748)
+texture = null
 
 [node name="TopRightCornerHouse11" parent="." unique_id=1717172617 instance=ExtResource("9_qaqfd")]
 position = Vector2(201.00003, 363.00003)
 rotation = 1.1861067
 scale = Vector2(0.0537427, 0.6372748)
+texture = null
 
 [node name="TopRightCornerHouse5" parent="." unique_id=1721366392 instance=ExtResource("9_qaqfd")]
 position = Vector2(477, 489)
 rotation = 1.2458639
 scale = Vector2(0.06362526, 0.50684214)
+texture = null
 
 [node name="TopRightCornerHouse7" parent="." unique_id=335716629 instance=ExtResource("9_qaqfd")]
 position = Vector2(632, 568.99994)
 rotation = 1.9756377
 scale = Vector2(0.0537427, 0.5031024)
+texture = null
 
 [node name="TopRightCornerHouse9" parent="." unique_id=438116006 instance=ExtResource("9_qaqfd")]
 position = Vector2(579, 568.0001)
 rotation = 1.1004865
 scale = Vector2(0.0537427, 0.5031024)
+texture = null
 
 [node name="TopRightCornerHouse10" parent="." unique_id=545950546 instance=ExtResource("9_qaqfd")]
 position = Vector2(462.00003, 664)
 rotation = 2.2074575
 scale = Vector2(0.057725035, 0.3701989)
+texture = null
 
 [node name="TopRightCornerHouse4" parent="." unique_id=2017040047 instance=ExtResource("9_qaqfd")]
 position = Vector2(904, 339.99997)
 rotation = 0.0028820038
 scale = Vector2(0.048662547, 1.681695)
+texture = null
 
 [node name="TopRightCornerHouse2" parent="." unique_id=872683199 instance=ExtResource("9_qaqfd")]
 position = Vector2(1251.0001, 293)
 rotation = -1.0299188
 scale = Vector2(0.045825325, 0.49004295)
+texture = null
 
 [node name="TopRightCornerHouse13" parent="." unique_id=1516777647 instance=ExtResource("9_qaqfd")]
 position = Vector2(1526, 384.00003)
 rotation = 2.0813732
 scale = Vector2(0.045825325, 0.49004295)
+texture = null
 
 [node name="TopRightCornerHouse6" parent="." unique_id=1556428452 instance=ExtResource("9_qaqfd")]
 position = Vector2(911.99994, 374.99997)
 rotation = -1.2365776
 scale = Vector2(0.045825325, 0.49004295)
+texture = null
 
 [node name="TopRightCornerHouse12" parent="." unique_id=624758712 instance=ExtResource("9_qaqfd")]
 position = Vector2(1110, 390.0001)
 rotation = 1.2134036
 scale = Vector2(0.045825325, 0.49004295)
+texture = null
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("10_4qypv")]
 visible = false
@@ -155,6 +175,11 @@ strength = 2.0
 [node name="Pusher2" parent="." unique_id=1864730958 instance=ExtResource("12_p72kc")]
 position = Vector2(1093, 825)
 strength = 2.0
+
+[node name="Level2Foreground" type="Sprite2D" parent="." unique_id=1403244123]
+z_index = -2
+position = Vector2(959, 551)
+texture = ExtResource("12_75ndb")
 
 [connection signal="player_spawned" from="LevelStart" to="." method="_on_level_start_player_spawned"]
 [connection signal="level_goal_reached" from="LevelGoal" to="." method="_on_level_goal_level_goal_reached"]
