@@ -43,10 +43,12 @@ texture = SubResource("GradientTexture2D_l4j7i")
 
 [node name="ColdParticles" parent="Particles" unique_id=1989054374 instance=ExtResource("5_ypdqv")]
 visible = false
+z_index = 7
 amount = 1
 
 [node name="HotParticles" parent="Particles" unique_id=792782090 instance=ExtResource("6_hqkjc")]
 visible = false
+z_index = 3
 amount = 1
 lifetime = 1.0
 
