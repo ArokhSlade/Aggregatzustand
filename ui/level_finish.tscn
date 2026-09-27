@@ -1,13 +1,8 @@
 [gd_scene format=3 uid="uid://bj0mbhkrywpas"]
 
 [ext_resource type="Script" uid="uid://fefgsinsx1pk" path="res://ui/level_finish.gd" id="1_47wru"]
-[ext_resource type="FontFile" uid="uid://dpm3moae2m0qb" path="res://ui/font/Dividente-ExtraBoldCondensed.otf" id="1_yg3r3"]
 [ext_resource type="PackedScene" uid="uid://cvdnxotlm6dod" path="res://ui/button/button.tscn" id="2_47wru"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_1mswc"]
-font = ExtResource("1_yg3r3")
-font_size = 100
-font_color = Color(1, 1, 0, 1)
+[ext_resource type="Theme" uid="uid://uvqox3r7ciry" path="res://ui/ui_theme.tres" id="3_112l6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7pql1"]
 font_size = 60
@@ -26,7 +21,7 @@ layout_mode = 2
 [node name="ColorRect" type="ColorRect" parent="CenterContainer" unique_id=964266291]
 custom_minimum_size = Vector2(600, 900)
 layout_mode = 2
-color = Color(0.46963003, 0.7432059, 1, 1)
+color = Color(0.1634, 0.19949996, 0.38, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/ColorRect" unique_id=455755471]
 layout_mode = 1
@@ -46,15 +41,16 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CenterContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=699117672]
 layout_mode = 2
 size_flags_vertical = 0
+theme = ExtResource("3_112l6")
 text = "YOU WIN"
-label_settings = SubResource("LabelSettings_1mswc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="CenterContainer/ColorRect/MarginContainer/VBoxContainer" unique_id=902103520]
 layout_mode = 2
 size_flags_vertical = 2
-text = "Well Done"
+theme = ExtResource("3_112l6")
+text = "Well Done!"
 label_settings = SubResource("LabelSettings_7pql1")
 horizontal_alignment = 1
 
