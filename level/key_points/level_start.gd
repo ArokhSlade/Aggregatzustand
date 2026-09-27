@@ -16,7 +16,7 @@ func initialize(player_scene_, aggregate_state_profile_):
 	aggregate_state_profile = aggregate_state_profile_
 
 
-func spawn():
+func spawn_player():
 	player = player_scene.instantiate()
 	player_spawned.emit(player)
 	player.global_position = global_position

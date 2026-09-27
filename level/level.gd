@@ -31,7 +31,7 @@ func initialize(aggregate_state_profile_):
 	
 	if level_start:
 		level_start.initialize(player_scene, aggregate_state_profile)
-		level_start.spawn()
+		level_start.spawn_player()
 	
 	initialized = true
 
