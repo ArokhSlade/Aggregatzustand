@@ -30,7 +30,6 @@ modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
 position = Vector2(945.00006, 2)
 scale = Vector2(1.5950036, 0.5)
 aggregate_state = 1
-temperature_materials_map = Dictionary[int, Material]({})
 particles_map = {
 0: null,
 1: NodePath("Particles/ColdParticles"),
@@ -41,7 +40,6 @@ particles_map = {
 modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(952.00006, 1064)
 scale = Vector2(1.68, 0.545)
-temperature_materials_map = Dictionary[int, Material]({})
 particles_map = {
 0: null,
 1: NodePath("Particles/ColdParticles"),
