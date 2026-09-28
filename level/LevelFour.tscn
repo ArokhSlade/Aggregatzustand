@@ -115,7 +115,8 @@ position = Vector2(303, 580)
 start_aggregate_state = 2
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("11_8qq17")]
-position = Vector2(1788, 578)
+position = Vector2(1790.9999, 659)
+rotation = -2.8272347
 
 [node name="Pusher2" parent="." unique_id=1497485485 instance=ExtResource("12_ftj2p")]
 position = Vector2(145, 905)
@@ -136,7 +137,11 @@ strength = 2.0
 position = Vector2(888, 23)
 scale = Vector2(0.33, 0.435)
 aggregate_state = 1
-particles_map = {}
+particles_map = {
+0: null,
+1: NodePath("Particles/ColdParticles"),
+2: NodePath("Particles/HotParticles")
+}
 
 [node name="Sprite2D2" type="Sprite2D" parent="MovableTemperatureZone" unique_id=1322126044]
 modulate = Color(0.2688, 0.64008003, 0.84, 0.7411765)

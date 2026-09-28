@@ -16,6 +16,8 @@ var played_sound := false
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		dissolve_and_destroy()
+	elif event is InputEventScreenTouch and event.pressed:
+		dissolve_and_destroy()
 
 func dissolve_and_destroy() -> void:
 	current_dissolve_state = true

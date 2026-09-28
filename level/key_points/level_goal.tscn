@@ -5,13 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://bygmarh4bqxi6" path="res://art/textures/roots.png" id="3_og24c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1mswc"]
-size = Vector2(127, 125)
+size = Vector2(256, 125)
 
 [node name="LevelGoal" type="Area2D" unique_id=1453480285]
 script = ExtResource("1_3ihj2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=539955112]
-position = Vector2(0.5, -1.5)
+position = Vector2(27, -1.5)
 shape = SubResource("RectangleShape2D_1mswc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=625172652]
