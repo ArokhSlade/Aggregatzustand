@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://dej6lwvffedmf"]
 
-[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="1_kjmm1"]
 [ext_resource type="Script" uid="uid://ckysygqelyi8j" path="res://level/key_points/level_start.gd" id="1_lj4in"]
 
 [node name="LevelStart" type="Node2D" unique_id=1790299339]
 script = ExtResource("1_lj4in")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1508675047]
-texture = ExtResource("1_kjmm1")
