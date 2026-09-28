@@ -53,7 +53,7 @@ texture = ExtResource("4_v00rn")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=638917455]
 stream = ExtResource("5_v57n8")
-volume_db = -9.334
+volume_db = -11.781
 
 [connection signal="input_event" from="Ground/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Ground/Area2D" to="." method="_on_area_2d_mouse_entered"]

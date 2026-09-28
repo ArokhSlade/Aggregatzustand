@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="9_qaqfd"]
 [ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="10_4qypv"]
 [ext_resource type="PackedScene" uid="uid://biaayea07sh1x" path="res://level/key_points/level_goal.tscn" id="11_xvf0a"]
+[ext_resource type="Texture2D" uid="uid://5b1ysjodclqp" path="res://art/arrow.png" id="12_8phxg"]
 [ext_resource type="Texture2D" uid="uid://dbowepxm5ru6d" path="res://art/textures/level_2_foreground.png" id="12_75ndb"]
 [ext_resource type="PackedScene" uid="uid://b6jm1ruws84qw" path="res://level/interactables/pusher.tscn" id="12_p72kc"]
 
@@ -171,8 +172,15 @@ position = Vector2(631, 191)
 strength = 2.0
 
 [node name="Pusher3" parent="." unique_id=907616729 instance=ExtResource("12_p72kc")]
-position = Vector2(56, 934)
+position = Vector2(72, 925)
 strength = 2.0
+
+[node name="Arrow2" type="Sprite2D" parent="Pusher3" unique_id=504703430]
+modulate = Color(0.7411765, 0.7411765, 0.7411765, 1)
+position = Vector2(30.99997, -96)
+rotation = 2.2296906
+scale = Vector2(0.405, 0.405)
+texture = ExtResource("12_8phxg")
 
 [node name="Pusher2" parent="." unique_id=1864730958 instance=ExtResource("12_p72kc")]
 position = Vector2(1093, 825)

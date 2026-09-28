@@ -9,6 +9,8 @@ var current_desolve_time := 0.0
 var current_dissolve_state := false
 
 var is_mouse_over_object := false
+var played_sound := false
+
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
@@ -33,7 +35,10 @@ func _process(delta):
 			$Ground/Area2D.monitoring = false
 			current_dissolve_state = false
 			$Ground/Hexagon.modulate.a = 0
-			$AudioStreamPlayer.play()
+
+			if !played_sound:
+				$AudioStreamPlayer.play()
+				played_sound = true
 
 func _on_area_2d_mouse_entered():
 	is_mouse_over_object = true
