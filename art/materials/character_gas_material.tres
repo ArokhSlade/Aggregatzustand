@@ -5,9 +5,9 @@
 
 [resource]
 shader = ExtResource("1_0pvcm")
-shader_parameter/Color1 = Color(0, 0, 0, 1)
-shader_parameter/Color2 = Color(0.724862, 0.843428, 0.907204, 1)
-shader_parameter/InnerColor2 = Color(1, 0.906, 0.88, 1)
+shader_parameter/Color1 = Color(0.9492064, 0.5168609, 0.4648943, 1)
+shader_parameter/Color2 = Color(0.8838783, 0.77026516, 0.96896225, 1)
+shader_parameter/InnerColor2 = Color(0.92842513, 0.938989, 0.8513777, 1)
 shader_parameter/GradientPos = 1.0
 shader_parameter/HotTemperatureTint = Color(0.09079481, 0.35735524, 0.40624246, 1)
 shader_parameter/TintIntensity = 0.0

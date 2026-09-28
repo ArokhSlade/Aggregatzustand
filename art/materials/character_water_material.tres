@@ -5,9 +5,9 @@
 
 [resource]
 shader = ExtResource("1_xoren")
-shader_parameter/EdgeColor = Color(0.11900001, 0.1853, 0.34, 1)
-shader_parameter/InnerColor = Color(0.32691136, 0.9180153, 0.9542627, 1)
-shader_parameter/InnerColor2 = Color(0.18170002, 0.7088934, 0.79, 1)
+shader_parameter/Color1 = Color(0.5411765, 0.95686275, 1, 1)
+shader_parameter/Color2 = Color(1, 1, 1, 1)
+shader_parameter/InnerColor2 = Color(5.7756904e-07, 0.7582615, 0.8562038, 1)
 shader_parameter/GradientPos = 1.0
 shader_parameter/HotTemperatureTint = Color(0.09079481, 0.35735524, 0.40624246, 1)
 shader_parameter/TintIntensity = 0.0

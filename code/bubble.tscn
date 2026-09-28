@@ -5,6 +5,10 @@
 [ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://code/temperature_sensor.gd" id="3_mddvq"]
 [ext_resource type="Material" uid="uid://ccm8snwmivhkb" path="res://art/materials/character_gas_material.tres" id="3_oqodk"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c1qun"]
+friction = 0.82
+bounce = 0.22
+
 [sub_resource type="Gradient" id="Gradient_0h62n"]
 offsets = PackedFloat32Array(0, 0.468, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.27727965, 0.54411334, 0.83408505, 1, 0.8672808, 0.2923065, 0.19177866, 1)
@@ -19,6 +23,7 @@ radius = 44.04543
 radius = 4.0
 
 [node name="Bubble" type="RigidBody2D" unique_id=1361995442 groups=["bubble"]]
+physics_material_override = SubResource("PhysicsMaterial_c1qun")
 gravity_scale = 0.0
 can_sleep = false
 script = ExtResource("1_0h62n")
@@ -35,7 +40,6 @@ position = Vector2(-2, -2.9802322e-08)
 scale = Vector2(0.28906253, 0.28906253)
 
 [node name="water_charcter" parent="." unique_id=1276259596 instance=ExtResource("3_0gtg6")]
-visible = false
 position = Vector2(-2, -2.9802322e-08)
 scale = Vector2(0.28906253, 0.28906253)
 
