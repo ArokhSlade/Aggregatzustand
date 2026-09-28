@@ -20,7 +20,7 @@ level_start = NodePath("LevelStart")
 
 [node name="ground_zone_tool" parent="." unique_id=1615348414 instance=ExtResource("3_eu45k")]
 position = Vector2(123, 949)
-polygon = PackedVector2Array(-145, 40, 1748, 40, 1743, -632, 1355.044, -617.3393, 918.0737, -896.71375, 294.85376, -853.73303, -120.62622, -746.2814)
+polygon = PackedVector2Array(-77, -43, 1748, 40, 1513, -331, 1355.044, -617.3393, 1047, -811, 801, -629, 142, -547)
 row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
@@ -170,6 +170,10 @@ position = Vector2(1781, 604)
 
 [node name="Pusher" parent="." unique_id=1242537064 instance=ExtResource("12_p72kc")]
 position = Vector2(631, 191)
+strength = 2.0
+
+[node name="Pusher3" parent="." unique_id=907616729 instance=ExtResource("12_p72kc")]
+position = Vector2(56, 934)
 strength = 2.0
 
 [node name="Pusher2" parent="." unique_id=1864730958 instance=ExtResource("12_p72kc")]

@@ -22,7 +22,7 @@ level_start = NodePath("LevelStart")
 
 [node name="ground_zone_tool" parent="." unique_id=1615348414 instance=ExtResource("3_o80nu")]
 position = Vector2(123, 949)
-polygon = PackedVector2Array(-112, -696, -103, -381, 429, -394, 416, -22, -107, -9, -103, 55, 1764, 69, 1758, -433, 1743, -869, 1114, -872, 338, -878, 336, -716)
+polygon = PackedVector2Array(-112, -696, -103, -381, 626, -397, 758, -191, 231, -33, -128, 82, 1764, 69, 1758, -433, 1743, -869, 1114, -872, 338, -878, 336, -716)
 row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
@@ -156,8 +156,7 @@ scale = Vector2(0.045825325, 0.49004295)
 texture = null
 
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("10_uqwpn")]
-visible = false
-position = Vector2(379, 845)
+position = Vector2(568, 745)
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("11_3qk3n")]
 position = Vector2(284, 68)
