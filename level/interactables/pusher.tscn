@@ -11,6 +11,43 @@ size = Vector2(373, 166)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1mswc"]
 size = Vector2(205, 166)
 
+[sub_resource type="Animation" id="Animation_3t8bo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-183.99997, -23)]
+}
+
+[sub_resource type="Animation" id="Animation_6gf4v"]
+resource_name = "arrow_idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-183.99997, -23), Vector2(-229, -23), Vector2(-183.99997, -23)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wwges"]
+_data = {
+&"RESET": SubResource("Animation_3t8bo"),
+&"arrow_idle": SubResource("Animation_6gf4v")
+}
+
 [node name="Pusher" type="Node2D" unique_id=1242537064]
 script = ExtResource("1_264uv")
 
@@ -33,11 +70,16 @@ stream = ExtResource("3_ojm6e")
 z_index = 2
 scale = Vector2(0.6256389, 0.63125)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=120525097]
+[node name="Arrow" type="Sprite2D" parent="." unique_id=120525097]
+visible = false
 modulate = Color(0.7411765, 0.7411765, 0.7411765, 1)
 position = Vector2(-183.99997, -23)
 scale = Vector2(0.405, 0.405)
 texture = ExtResource("4_3t8bo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow" unique_id=43723502]
+libraries/ = SubResource("AnimationLibrary_wwges")
+autoplay = &"arrow_idle"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -7,10 +7,12 @@ var is_pushing: bool = false
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is RigidBody2D:
+		$Arrow.visible = false
 		nodes_to_push.erase(body)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is RigidBody2D and nodes_to_push.find(body) == -1:
+		$Arrow.visible = true
 		nodes_to_push.append(body)
 
 func _process(delta: float) -> void:
