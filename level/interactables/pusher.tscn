@@ -67,7 +67,6 @@ shape = SubResource("RectangleShape2D_1mswc")
 stream = ExtResource("3_ojm6e")
 
 [node name="Schnuffi" parent="." unique_id=540018220 instance=ExtResource("3_3t8bo")]
-z_index = 2
 scale = Vector2(0.6256389, 0.63125)
 
 [node name="Arrow" type="Sprite2D" parent="." unique_id=120525097]

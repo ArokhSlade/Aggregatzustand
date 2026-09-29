@@ -47,7 +47,6 @@ visible = false
 polygon = PackedVector2Array(-2, -122, 104, -58, 103, 63, 1, 124, -110, 60, -106, -58)
 
 [node name="Hexagon" type="Sprite2D" parent="Ground" unique_id=1689384322]
-z_index = -3
 material = SubResource("ShaderMaterial_ljaxg")
 texture = ExtResource("4_v00rn")
 

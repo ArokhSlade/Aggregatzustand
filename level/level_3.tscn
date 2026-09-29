@@ -164,7 +164,6 @@ scale = Vector2(0.045825325, 0.49004295)
 texture = null
 
 [node name="Level2Foreground" type="Sprite2D" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="18" unique_id=2110528777]
-z_index = -2
 position = Vector2(924, 554)
 texture = ExtResource("10_510pp")
 

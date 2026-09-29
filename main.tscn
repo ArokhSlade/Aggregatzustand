@@ -18,6 +18,9 @@ script = ExtResource("1_h2yge")
 level_scenes = Array[PackedScene]([ExtResource("2_dg77c"), ExtResource("3_dg77c"), ExtResource("4_dg77c"), ExtResource("5_ycdy4")])
 aggregate_states_resoure = ExtResource("3_1bvp3")
 
+[node name="Mikrobcore_BG" parent="." unique_id=1391745599 instance=ExtResource("8_5vw27")]
+position = Vector2(1228, -406)
+
 [node name="LevelParent" type="Node2D" parent="." unique_id=2082978765]
 
 [node name="Menu" parent="." unique_id=1073757890 instance=ExtResource("4_1bvp3")]
@@ -33,10 +36,6 @@ script = ExtResource("6_272bh")
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1478496449]
 stream = ExtResource("7_272bh")
 volume_db = -4.745
-
-[node name="Mikrobcore_BG" parent="." unique_id=1391745599 instance=ExtResource("8_5vw27")]
-z_index = -10
-position = Vector2(1228, -406)
 
 [connection signal="play_requested" from="Menu" to="." method="_on_menu_play_requested"]
 [connection signal="quit_requested" from="Menu" to="." method="_on_menu_quit_requested"]

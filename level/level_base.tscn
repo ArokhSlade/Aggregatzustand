@@ -35,7 +35,6 @@ player_parent = NodePath("Players")
 DEBUG_aggregate_state_profile = ExtResource("3_6tqrk")
 
 [node name="Mikrobcore" parent="." unique_id=1391745599 instance=ExtResource("4_n27om")]
-z_index = -10
 material = SubResource("ShaderMaterial_aqcur")
 position = Vector2(719, 182.99997)
 scale = Vector2(2.3441787, 2.3441787)
