@@ -17,26 +17,16 @@ size = Vector2(247, 169)
 [node name="Level_Base" unique_id=893623266 instance=ExtResource("1_xee3e")]
 position = Vector2(1, 0)
 
-[node name="ColdTemperatureZone3" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_ejyio")]
+[node name="ColdTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 instance=ExtResource("2_ejyio")]
 modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
 position = Vector2(945.00006, 2)
 scale = Vector2(1.5950036, 0.5)
 aggregate_state = 1
-particles_map = {
-0: null,
-1: NodePath(""),
-2: NodePath("")
-}
 
-[node name="HotTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="1" unique_id=2136459579 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_ejyio")]
+[node name="HotTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="1" unique_id=2136459579 instance=ExtResource("2_ejyio")]
 modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(952.00006, 1064)
 scale = Vector2(1.68, 0.545)
-particles_map = {
-0: null,
-1: NodePath(""),
-2: NodePath("")
-}
 
 [node name="ground_zone_tool" parent="GroundZones" parent_id_path=PackedInt32Array(678743018) index="0" unique_id=1615348414 instance=ExtResource("3_nngw5")]
 position = Vector2(123, 949)

@@ -16,7 +16,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_l4j7i"]
 gradient = SubResource("Gradient_ekn2d")
 
-[node name="TemperatureZone" type="Area2D" unique_id=198987449 node_paths=PackedStringArray("particles_map")]
+[node name="TemperatureZone" type="Area2D" unique_id=198987449]
 gravity_space_override = 3
 script = ExtResource("1_ekn2d")
 aggregate_state = 2
@@ -25,11 +25,10 @@ temperature_materials_map = Dictionary[int, Material]({
 1: ExtResource("2_d6bvp"),
 2: ExtResource("4_po8cf")
 })
-particles_map = {
-0: null,
-1: NodePath("Particles/ColdParticles"),
-2: NodePath("Particles/HotParticles")
-}
+particles_map = Dictionary[int, PackedScene]({
+1: ExtResource("5_ypdqv"),
+2: ExtResource("6_hqkjc")
+})
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=959544231]
 shape = SubResource("RectangleShape2D_j1xdp")
@@ -40,16 +39,5 @@ scale = Vector2(17.906248, 2.9375)
 texture = SubResource("GradientTexture2D_l4j7i")
 
 [node name="Particles" type="Node2D" parent="." unique_id=1723134710]
-
-[node name="ColdParticles" parent="Particles" unique_id=1989054374 instance=ExtResource("5_ypdqv")]
-visible = false
-z_index = 7
-amount = 1
-
-[node name="HotParticles" parent="Particles" unique_id=792782090 instance=ExtResource("6_hqkjc")]
-visible = false
-z_index = 3
-amount = 1
-lifetime = 1.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

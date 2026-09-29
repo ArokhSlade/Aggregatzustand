@@ -15,7 +15,6 @@ modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(746, 961.00006)
 scale = Vector2(2.4661202, 1.1771753)
 particles_map = {
-0: null,
 1: NodePath("Particles/ColdParticles"),
 2: NodePath("Particles/HotParticles")
 }
@@ -68,3 +67,5 @@ position = Vector2(-106, -474)
 
 [node name="TopRightCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="3" unique_id=97941170 instance=ExtResource("11_umpl3")]
 position = Vector2(1256, -207)
+
+[editable path="TemperatureZones/TemperatureZone"]

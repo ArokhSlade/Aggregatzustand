@@ -3,7 +3,8 @@ class_name temperature_zone
 
 @export var aggregate_state := AggregateStateProfile.Type.WATER
 @export var temperature_materials_map : Dictionary[AggregateStateProfile.Type, Material]
-@export var particles_map : Dictionary[AggregateStateProfile.Type, Node]
+@export var particles_map : Dictionary[AggregateStateProfile.Type, PackedScene]
+
 
 func _ready():
 	update_visuals()
@@ -15,14 +16,13 @@ func update_visuals():
 
 
 func update_particles():
-	for particles in $Particles.get_children():
-		particles.hide()
 	var particles = particles_map.get(aggregate_state)
-	if particles:
-		var width = .5 * $CollisionShape2D.shape.size.x
-		var height = .5 * $CollisionShape2D.shape.size.y
-		particles.set_rect_extents(width, height)
-		particles.show()
+	if not particles:
+		return
+	particles = particles.instantiate()
+	var half_extents = .5 * $CollisionShape2D.shape.size
+	particles.set_rect_extents(half_extents.x, half_extents.y)
+	add_child(particles)
 
 
 # DEPRECATED
