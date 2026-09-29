@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://lxei0yg0nkmf"]
+
+[ext_resource type="PackedScene" uid="uid://bofup41sljli8" path="res://level/level_base.tscn" id="1_xee3e"]
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="2_ejyio"]
+[ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="3_nngw5"]
+[ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="4_uivbl"]
+[ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="5_35kkn"]
+[ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="6_qhnra"]
+[ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="7_mdx7b"]
+[ext_resource type="PackedScene" uid="uid://b6jm1ruws84qw" path="res://level/interactables/pusher.tscn" id="9_qg0ee"]
+[ext_resource type="Texture2D" uid="uid://5b1ysjodclqp" path="res://art/arrow.png" id="10_vpspb"]
+[ext_resource type="Texture2D" uid="uid://dbowepxm5ru6d" path="res://art/textures/level_2_foreground.png" id="11_algu2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwbtd"]
+size = Vector2(247, 169)
+
+[node name="Level_Base" unique_id=893623266 instance=ExtResource("1_xee3e")]
+position = Vector2(1, 0)
+
+[node name="ColdTemperatureZone3" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_ejyio")]
+modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
+position = Vector2(945.00006, 2)
+scale = Vector2(1.5950036, 0.5)
+aggregate_state = 1
+particles_map = {
+0: null,
+1: NodePath(""),
+2: NodePath("")
+}
+
+[node name="HotTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="1" unique_id=2136459579 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_ejyio")]
+modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
+position = Vector2(952.00006, 1064)
+scale = Vector2(1.68, 0.545)
+particles_map = {
+0: null,
+1: NodePath(""),
+2: NodePath("")
+}
+
+[node name="ground_zone_tool" parent="GroundZones" parent_id_path=PackedInt32Array(678743018) index="0" unique_id=1615348414 instance=ExtResource("3_nngw5")]
+position = Vector2(123, 949)
+polygon = PackedVector2Array(-77, -43, 1748, 40, 1513, -331, 1355.044, -617.3393, 1047, -811, 801, -629, 142, -547)
+row_spacing = 50.0
+column_spacing = 50.0
+max_offset_x = 15.0
+
+[node name="LevelStart" parent="." index="3" unique_id=1790299339]
+position = Vector2(83, 104)
+
+[node name="LevelGoal" parent="." index="4" unique_id=1453480285]
+position = Vector2(1781, 604)
+
+[node name="CollisionShape2D" parent="LevelGoal" index="0" unique_id=539955112]
+position = Vector2(9.5, 42.5)
+shape = SubResource("RectangleShape2D_dwbtd")
+
+[node name="BottomLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="0" unique_id=651454461 instance=ExtResource("4_uivbl")]
+position = Vector2(1459, 558)
+rotation = 0.004035865
+scale = Vector2(0.059222396, 0.19771759)
+texture = null
+
+[node name="BottomLeftCornerHouse2" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="1" unique_id=435645413 instance=ExtResource("4_uivbl")]
+position = Vector2(1468, 831.99994)
+rotation = 0.004035865
+scale = Vector2(0.059222396, 0.27884674)
+texture = null
+
+[node name="TopLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="2" unique_id=896128469 instance=ExtResource("5_35kkn")]
+position = Vector2(423.99997, 561)
+rotation = -1.5940917
+scale = Vector2(0.62, 0.099)
+texture = null
+
+[node name="TopLeftCornerHouse3" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="3" unique_id=863668987 instance=ExtResource("5_35kkn")]
+position = Vector2(429, -70)
+rotation = -0.003184194
+scale = Vector2(1.2126015, 0.0710427)
+texture = null
+
+[node name="TopLeftCornerHouse2" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="4" unique_id=1027995377 instance=ExtResource("5_35kkn")]
+position = Vector2(8, -28.000008)
+rotation = 1.5592912
+scale = Vector2(0.815, 0.11)
+texture = null
+
+[node name="BottomRightCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="5" unique_id=1060047360 instance=ExtResource("6_qhnra")]
+position = Vector2(1940.9999, -98.00001)
+rotation = 3.1415927
+scale = Vector2(0.059, -1.032)
+texture = null
+
+[node name="BottomRightCornerHouse2" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="6" unique_id=1752221274 instance=ExtResource("6_qhnra")]
+position = Vector2(2084, 1115)
+rotation = -1.5653155
+scale = Vector2(0.0268565, -1.8811471)
+texture = null
+
+[node name="TopRightCornerHouse3" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="7" unique_id=2048155629 instance=ExtResource("7_mdx7b")]
+position = Vector2(1860.0001, 471.99997)
+rotation = 1.2663275
+scale = Vector2(0.0537427, 0.9097101)
+texture = null
+
+[node name="TopRightCornerHouse8" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="8" unique_id=1966969945 instance=ExtResource("7_mdx7b")]
+position = Vector2(-55.00003, 320.00003)
+rotation = -1.1263347
+scale = Vector2(0.0537427, 0.6372748)
+texture = null
+
+[node name="TopRightCornerHouse11" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="9" unique_id=1998064540 instance=ExtResource("7_mdx7b")]
+position = Vector2(201.00003, 363.00003)
+rotation = 1.1861067
+scale = Vector2(0.0537427, 0.6372748)
+texture = null
+
+[node name="TopRightCornerHouse5" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="10" unique_id=650061011 instance=ExtResource("7_mdx7b")]
+position = Vector2(477, 489)
+rotation = 1.2458639
+scale = Vector2(0.06362526, 0.50684214)
+texture = null
+
+[node name="TopRightCornerHouse7" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="11" unique_id=769409761 instance=ExtResource("7_mdx7b")]
+position = Vector2(632, 568.99994)
+rotation = 1.9756377
+scale = Vector2(0.0537427, 0.5031024)
+texture = null
+
+[node name="TopRightCornerHouse9" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="12" unique_id=1346806326 instance=ExtResource("7_mdx7b")]
+position = Vector2(579, 568.0001)
+rotation = 1.1004865
+scale = Vector2(0.0537427, 0.5031024)
+texture = null
+
+[node name="TopRightCornerHouse10" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="13" unique_id=546913819 instance=ExtResource("7_mdx7b")]
+position = Vector2(462.00003, 664)
+rotation = 2.2074575
+scale = Vector2(0.057725035, 0.3701989)
+texture = null
+
+[node name="TopRightCornerHouse4" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="14" unique_id=2059232413 instance=ExtResource("7_mdx7b")]
+position = Vector2(904, 339.99997)
+rotation = 0.002882004
+scale = Vector2(0.048662543, 1.681695)
+texture = null
+
+[node name="TopRightCornerHouse2" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="15" unique_id=416167823 instance=ExtResource("7_mdx7b")]
+position = Vector2(1251.0001, 293)
+rotation = -1.0299188
+scale = Vector2(0.045825325, 0.49004295)
+texture = null
+
+[node name="TopRightCornerHouse13" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="16" unique_id=998255444 instance=ExtResource("7_mdx7b")]
+position = Vector2(1526, 384.00003)
+rotation = 2.0813732
+scale = Vector2(0.045825325, 0.49004298)
+texture = null
+
+[node name="TopRightCornerHouse6" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="17" unique_id=610479445 instance=ExtResource("7_mdx7b")]
+position = Vector2(911.99994, 374.99997)
+rotation = -1.2365776
+scale = Vector2(0.04582532, 0.49004295)
+texture = null
+
+[node name="TopRightCornerHouse12" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="18" unique_id=712530312 instance=ExtResource("7_mdx7b")]
+position = Vector2(1110, 390.0001)
+rotation = 1.2134036
+scale = Vector2(0.045825325, 0.49004295)
+texture = null
+
+[node name="Level2Foreground" type="Sprite2D" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="19" unique_id=1049284626]
+z_index = -2
+position = Vector2(962, 550)
+texture = ExtResource("11_algu2")
+
+[node name="Pusher" parent="." index="7" unique_id=1242537064 instance=ExtResource("9_qg0ee")]
+position = Vector2(631, 191)
+strength = 2.0
+
+[node name="Pusher3" parent="." index="8" unique_id=1083874461 instance=ExtResource("9_qg0ee")]
+position = Vector2(72, 925)
+strength = 3.0
+
+[node name="Arrow2" type="Sprite2D" parent="Pusher3" index="5" unique_id=1933236081]
+modulate = Color(0.7411765, 0.7411765, 0.7411765, 1)
+position = Vector2(30.99997, -96)
+rotation = 2.2296906
+scale = Vector2(0.405, 0.405)
+texture = ExtResource("10_vpspb")
+
+[node name="Pusher2" parent="." index="9" unique_id=684072801 instance=ExtResource("9_qg0ee")]
+position = Vector2(1093, 825)
+strength = 2.0
+
+[editable path="LevelGoal"]
