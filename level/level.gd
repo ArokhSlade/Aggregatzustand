@@ -37,12 +37,12 @@ func initialize(aggregate_state_profile_):
 
 
 func pause():
-	process_mode = Node.PROCESS_MODE_DISABLED
+	set_process_mode.call_deferred(Node.PROCESS_MODE_DISABLED)
 	switch_state_to(states.paused)
 
 
 func unpause():
-	process_mode = Node.PROCESS_MODE_PAUSABLE
+	set_process_mode.call_deferred(Node.PROCESS_MODE_PAUSABLE)
 	switch_state_to(states.playing)
 
 
