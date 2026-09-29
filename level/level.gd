@@ -4,7 +4,7 @@ signal level_finished
 
 @export var player_scene : PackedScene
 @export var level_start : Node2D
-
+@export var player_parent : Node2D
 @export var DEBUG_aggregate_state_profile : AggregateStateProfile
 
 ## external dependency that must be initialize()'d
@@ -44,7 +44,7 @@ func DEBUG_fallback_initialize():
 
 
 func _on_level_start_player_spawned(player_):
-	add_child(player_)
+	player_parent.add_child(player_)
 	player = player_
 
 
