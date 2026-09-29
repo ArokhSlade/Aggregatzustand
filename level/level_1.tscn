@@ -56,6 +56,12 @@ row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
 
+[node name="LevelStart" parent="." index="3" unique_id=1790299339]
+position = Vector2(160, 570)
+
+[node name="LevelGoal" parent="." index="4" unique_id=1453480285]
+position = Vector2(1629, 4)
+
 [node name="BottomLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="0" unique_id=651454461 instance=ExtResource("4_4h366")]
 position = Vector2(610, 279)
 rotation = 0.004035865
