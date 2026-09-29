@@ -42,9 +42,20 @@ func enter_initial_state():
 
 
 func _input(event : InputEvent):
-	if event is InputEventAction:
-		print("action!")
 	current_state.on_input(event)
+	if event.is_action_pressed("toggle_fullscreen"):
+		toggle_fullscreen()
+
+		
+func toggle_fullscreen():
+	const FULLSCREEN = Window.Mode.MODE_FULLSCREEN
+	const WINDOWED = Window.Mode.MODE_WINDOWED
+	var window = get_tree().root
+	match window.mode:
+		FULLSCREEN:
+			window.mode = WINDOWED
+		_:
+			window.mode = FULLSCREEN
 
 
 func switch_state_to(state_):
