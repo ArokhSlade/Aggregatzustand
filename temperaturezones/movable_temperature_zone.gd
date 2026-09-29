@@ -74,7 +74,6 @@ func switch_state(new_state):
 
 @abstract class State:
 	var owner
-	
 	func on_pointer_just_pressed(event : InputEvent):
 		pass
 	func on_pointer_released(event : InputEvent):
@@ -88,7 +87,11 @@ func switch_state(new_state):
 	
 class Default extends State:
 	func on_pointer_just_pressed(event : InputEvent):
-		owner.states.Dragging.initialize(owner.get_local_mouse_position().x)
+		var xformed_offset = owner.get_local_mouse_position()
+		var xform : Transform2D = owner.get_transform()
+		var abs_offset = xform.basis_xform_inv(xformed_offset)
+		
+		owner.states.Dragging.initialize(abs_offset)
 		owner.switch_state(owner.states.Dragging)
 
 
@@ -103,6 +106,5 @@ class Dragging extends State:
 	
 	func on_pointer_moved(event : InputEventMouseMotion):
 		var pos = event.global_position
-		pos.x -= offset
+		pos.x -= offset.x
 		owner.move_to(pos)
-		print("dragging at %s" % [str(event.global_position)])
