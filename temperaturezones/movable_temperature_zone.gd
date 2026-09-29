@@ -20,11 +20,13 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(delta: float) -> void:
+	return
 	if is_dragged:
 		global_position.x = get_global_mouse_position().x - drag_offset
 
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	return
 	print("input")
 	if event.is_action_pressed("click") and is_mouse_inside:
 		print("drag")
@@ -34,21 +36,31 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		print("drop")
 		is_dragged = false
 
-
+func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action_pressed("click"):
+		state.on_pointer_just_pressed(event)
+	
+	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouse:
-		print("mouse")
 		if event is InputEventMouseMotion:
-			print("mouse motion")
 			state.on_pointer_moved(event)
-		
+		elif event is InputEventMouseButton:
+			if event.is_action_released("click"):
+				state.on_pointer_released(event)
+
+# TODO: clamped horizontal movement 
+func move_to(pos_):
+	global_position.x = pos_.x
 
 func _on_mouse_entered() -> void:
+	return
 	print("mouse enter")
 	is_mouse_inside = true
 
 
-func _on_mouse_exited() -> void:
+func _on_mouse_exited() -> void: 
+	return
 	print("mouse exit")
 	is_dragged = false
 	is_mouse_inside = false
@@ -57,17 +69,18 @@ func _on_mouse_exited() -> void:
 func switch_state(new_state):
 	if new_state == state:
 		return
-	state.on_exit()
 	state = new_state
-	state.on_enter()
 
 
 @abstract class State:
 	var owner
 	
-	@abstract func on_pointer_just_pressed(event : InputEvent)
-	@abstract func on_pointer_just_released(event : InputEvent)
-	@abstract func on_pointer_moved(event : InputEventMouseMotion)
+	func on_pointer_just_pressed(event : InputEvent):
+		pass
+	func on_pointer_released(event : InputEvent):
+		pass
+	func on_pointer_moved(event : InputEventMouseMotion):
+		pass
 	
 	func _init(owner_):
 		owner = owner_
@@ -75,22 +88,21 @@ func switch_state(new_state):
 	
 class Default extends State:
 	func on_pointer_just_pressed(event : InputEvent):
+		owner.states.Dragging.initialize(owner.get_local_mouse_position().x)
 		owner.switch_state(owner.states.Dragging)
-		
-	func on_pointer_just_released(event : InputEvent):
-		return
-	
-	func on_pointer_moved(event : InputEventMouseMotion):
-		return
 
 
 class Dragging extends State:
-	func on_pointer_just_pressed(event : InputEvent):
-		var pos
-		owner.move_to(pos)
+	var offset = 0.0
 	
-	func on_pointer_just_released(event : InputEvent):
+	func initialize(offset_):
+		offset = offset_
+	
+	func on_pointer_released(event : InputEvent):
 		owner.switch_state(owner.states.Default)
 	
 	func on_pointer_moved(event : InputEventMouseMotion):
+		var pos = event.global_position
+		pos.x -= offset
+		owner.move_to(pos)
 		print("dragging at %s" % [str(event.global_position)])
