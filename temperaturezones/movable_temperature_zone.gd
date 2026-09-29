@@ -7,6 +7,7 @@ var states = {
 }
 
 func _ready():
+	super()
 	state = states.Default
 
 
