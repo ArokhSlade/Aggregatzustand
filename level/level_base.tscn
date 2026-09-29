@@ -27,10 +27,11 @@ shader_parameter/strengthScale = 100.0
 shader_parameter/interval = 0.9
 shader_parameter/detail = 1.0
 
-[node name="Level_Base" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start")]
+[node name="Level_Base" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start", "player_parent")]
 script = ExtResource("1_d8qi5")
 player_scene = ExtResource("2_j7wmq")
 level_start = NodePath("LevelStart")
+player_parent = NodePath("Players")
 DEBUG_aggregate_state_profile = ExtResource("3_6tqrk")
 
 [node name="Mikrobcore" parent="." unique_id=1391745599 instance=ExtResource("4_n27om")]
