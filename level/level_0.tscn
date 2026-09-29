@@ -3,39 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://bofup41sljli8" path="res://level/level_base.tscn" id="1_cwafv"]
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="2_mytjb"]
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="3_sdpr0"]
-[ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://code/ground_prototype.tscn" id="4_wgbah"]
-[ext_resource type="PackedScene" uid="uid://ctflcdeut6w5y" path="res://level/set_dressing/mikrobcore.tscn" id="5_x05mp"]
-[ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://art/shaders/exchange_color_to_scrolling.gdshader" id="6_3kkxp"]
-[ext_resource type="Texture2D" uid="uid://d0050u7vlico7" path="res://art/textures/mikrobcore.jpg" id="7_2lj7j"]
 [ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="8_deimu"]
 [ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="9_l6gqv"]
 [ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="10_4r11r"]
 [ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="11_umpl3"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_uivbl"]
-shader = ExtResource("6_3kkxp")
-shader_parameter/color_to_replace = Color(0, 0, 0, 1)
-shader_parameter/pattern_texture = ExtResource("7_2lj7j")
-shader_parameter/feather_range = 0.6210000294975
-shader_parameter/tilemap_offset = Vector2(0, 0)
-shader_parameter/scroll_speed = 0.0230000010925
-shader_parameter/pattern_scale = 1.0
-shader_parameter/scroll_dir = Vector2(0.6, -1)
-shader_parameter/ankered_top = true
-shader_parameter/heightOffset = 0.30800001463
-shader_parameter/speed = 0.2
-shader_parameter/minStrength = 0.05
-shader_parameter/maxStrength = 1.0
-shader_parameter/strengthScale = 100.0
-shader_parameter/interval = 0.9
-shader_parameter/detail = 1.0
-
 [node name="Level_Tommy" unique_id=893623266 instance=ExtResource("1_cwafv")]
 
-[node name="LevelStart" parent="." index="0" unique_id=1790299339]
-position = Vector2(251, 171)
-
-[node name="TemperatureZone" parent="." index="1" unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_mytjb")]
+[node name="TemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_mytjb")]
 modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(746, 961.00006)
 scale = Vector2(2.4661202, 1.1771753)
@@ -45,7 +20,7 @@ particles_map = {
 2: NodePath("Particles/HotParticles")
 }
 
-[node name="TemperatureZone2" parent="." index="2" unique_id=2053529676 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_mytjb")]
+[node name="TemperatureZone2" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="1" unique_id=2053529676 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_mytjb")]
 modulate = Color(0.275326, 0.31628942, 0.76869035, 0.67058825)
 position = Vector2(756, 98.00001)
 scale = Vector2(2.4661202, 1.1771753)
@@ -56,24 +31,7 @@ particles_map = {
 2: NodePath("Particles/HotParticles")
 }
 
-[node name="ground_zone_tool" parent="." index="3" unique_id=1615348414 instance=ExtResource("3_sdpr0")]
-position = Vector2(134.99998, 0)
-scale = Vector2(1.3329632, 1.3329632)
-color = Color(0.9843137, 0, 0.99215686, 0.41568628)
-polygon = PackedVector2Array(1261, 143, 1390, 441, 1324, 711, 1010, 749, 659, 779, 638, 524, 1119, 443, 1015, 278, 519, 322, 294, 498, 634, 505, 650, 753, 271, 801, -25, 507, -96, 124, 90, 213, 335, 97)
-object_to_spawn = ExtResource("4_wgbah")
-row_spacing = 65.0
-column_spacing = 65.0
-max_offset_x = 11.0
-max_offset_y = 9.5
-
-[node name="Mikrobcore" parent="." index="4" unique_id=1636845797 instance=ExtResource("5_x05mp")]
-z_index = -10
-material = SubResource("ShaderMaterial_uivbl")
-position = Vector2(719, 182.99997)
-scale = Vector2(2.3441787, 2.3441787)
-
-[node name="TemperatureZone3" parent="." index="5" unique_id=1646494865 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_mytjb")]
+[node name="TemperatureZone3" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="2" unique_id=1646494865 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_mytjb")]
 modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(899, 626.99994)
 scale = Vector2(0.14612031, 2.4744563)
@@ -83,19 +41,30 @@ particles_map = {
 2: NodePath("Particles/HotParticles")
 }
 
-[node name="BottomLeftCornerHouse" parent="." index="6" unique_id=651454461 instance=ExtResource("8_deimu")]
+[node name="ground_zone_tool" parent="GroundZones" parent_id_path=PackedInt32Array(678743018) index="0" unique_id=1615348414 instance=ExtResource("3_sdpr0")]
+position = Vector2(134.99998, 0)
+scale = Vector2(1.3329632, 1.3329632)
+color = Color(0.9843137, 0, 0.99215686, 0)
+polygon = PackedVector2Array(1261, 143, 1390, 441, 1324, 711, 1010, 749, 659, 779, 638, 524, 1119, 443, 1015, 278, 519, 322, 294, 498, 634, 505, 650, 753, 271, 801, -25, 507, -96, 124, 90, 213, 335, 97)
+max_offset_x = 11.0
+max_offset_y = 9.5
+
+[node name="LevelStart" parent="." index="3" unique_id=1790299339]
+position = Vector2(251, 171)
+
+[node name="LevelGoal" parent="." index="4" unique_id=1453480285]
+position = Vector2(1082, 781)
+
+[node name="BottomLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="0" unique_id=651454461 instance=ExtResource("8_deimu")]
 position = Vector2(-167, 387.99997)
 scale = Vector2(0.7345394, 0.7345394)
 
-[node name="BottomRightCornerHouse" parent="." index="7" unique_id=1344844432 instance=ExtResource("9_l6gqv")]
+[node name="BottomRightCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="1" unique_id=1344844432 instance=ExtResource("9_l6gqv")]
 position = Vector2(1540.9999, 387.99997)
 scale = Vector2(0.57852536, 0.57852536)
 
-[node name="TopLeftCornerHouse" parent="." index="8" unique_id=1235117758 instance=ExtResource("10_4r11r")]
+[node name="TopLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="2" unique_id=1235117758 instance=ExtResource("10_4r11r")]
 position = Vector2(-106, -474)
 
-[node name="TopRightCornerHouse" parent="." index="9" unique_id=97941170 instance=ExtResource("11_umpl3")]
+[node name="TopRightCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="3" unique_id=97941170 instance=ExtResource("11_umpl3")]
 position = Vector2(1256, -207)
-
-[node name="LevelGoal" parent="." index="10" unique_id=1453480285]
-position = Vector2(1346, 494)
