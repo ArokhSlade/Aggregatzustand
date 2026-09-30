@@ -33,7 +33,13 @@ func _process(delta: float) -> void:
 
 func push():
 	for node in nodes_to_push:
-		node.apply_force(get_push_vector() * strength)
+		var max_dist = $Area2D/CollisionShape2D.shape.size.x
+		var dist = (node.global_position - global_position).length()
+		var ratio = dist / max_dist
+		var scaled_strength = lerp(strength, 0., ratio)
+		#scaled_strength = clampf(scaled_strength, 0., strength)
+		node.apply_impulse(get_push_vector() * scaled_strength)
+		
 
 
 func get_push_vector():
