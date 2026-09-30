@@ -2,61 +2,59 @@
 
 [ext_resource type="PackedScene" uid="uid://bofup41sljli8" path="res://level/level_base.tscn" id="1_xpanb"]
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="2_b3kng"]
+[ext_resource type="PackedScene" uid="uid://b6jm1ruws84qw" path="res://level/interactables/pusher.tscn" id="3_xpanb"]
 [ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="4_i0isw"]
 [ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="5_y4stb"]
 [ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="6_hienj"]
 [ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="7_d764s"]
-[ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="8_f8pxk"]
 
 [node name="TestLevelGerald" unique_id=893623266 instance=ExtResource("1_xpanb")]
 
-[node name="LevelStart" parent="." index="0" unique_id=1790299339]
-start_aggregate_state = 2
-
-[node name="ColdTemperatureZone3" parent="." index="2" unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_b3kng")]
+[node name="ColdTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 instance=ExtResource("2_b3kng")]
 modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
 position = Vector2(575, 129)
 aggregate_state = 1
-particles_map = {
-0: null,
-1: NodePath("Particles/ColdParticles"),
-2: NodePath("Particles/HotParticles")
-}
 
-[node name="MediumTemperatureZone2" parent="." index="3" unique_id=1285429976 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_b3kng")]
+[node name="MediumTemperatureZone2" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="1" unique_id=1285429976 instance=ExtResource("2_b3kng")]
 modulate = Color(0.74424416, 0.59822375, 0.27655464, 1)
 position = Vector2(575, 316)
 aggregate_state = 0
-particles_map = {
-0: null,
-1: NodePath("Particles/ColdParticles"),
-2: NodePath("Particles/HotParticles")
-}
 
-[node name="HotTemperatureZone" parent="." index="4" unique_id=852862410 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_b3kng")]
+[node name="HotTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="2" unique_id=852862410 instance=ExtResource("2_b3kng")]
 modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(576, 502)
-particles_map = {
-0: null,
-1: NodePath("Particles/ColdParticles"),
-2: NodePath("Particles/HotParticles")
-}
 
-[node name="BottomLeftCornerHouse" parent="." index="5" unique_id=651454461 instance=ExtResource("4_i0isw")]
+[node name="LevelStart" parent="." index="2" unique_id=1790299339]
+position = Vector2(608, 319)
+gizmo_extents = 77.9
+start_aggregate_state = 2
+
+[node name="LevelGoal" parent="." index="3" unique_id=1453480285]
+position = Vector2(1023, 210)
+
+[node name="BottomLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="0" unique_id=651454461 instance=ExtResource("4_i0isw")]
 position = Vector2(-1.9999847, 371)
 scale = Vector2(0.23651452, 0.23651454)
 
-[node name="TopLeftCornerHouse" parent="." index="6" unique_id=1774969381 instance=ExtResource("5_y4stb")]
+[node name="TopLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="1" unique_id=1774969381 instance=ExtResource("5_y4stb")]
 position = Vector2(2.0000305, 39)
 scale = Vector2(0.2301481, 0.23014806)
 
-[node name="BottomRightCornerHouse" parent="." index="7" unique_id=1209140584 instance=ExtResource("6_hienj")]
+[node name="BottomRightCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="2" unique_id=1209140584 instance=ExtResource("6_hienj")]
 position = Vector2(922.00006, 341.05173)
 scale = Vector2(0.21585457, 0.21585456)
 
-[node name="TopRightCornerHouse" parent="." index="8" unique_id=1733609910 instance=ExtResource("7_d764s")]
+[node name="TopRightCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="3" unique_id=1733609910 instance=ExtResource("7_d764s")]
 position = Vector2(778, 31.000008)
 scale = Vector2(0.29119998, 0.2912)
 
-[node name="LevelStart2" parent="." index="9" unique_id=776412558 instance=ExtResource("8_f8pxk")]
-position = Vector2(543, 692)
+[node name="CollisionShape2D" parent="StaticBlockers/LevelBoundaryRight" parent_id_path=PackedInt32Array(1728246806) index="0" unique_id=629829435]
+position = Vector2(-9.194083e-06, -771)
+
+[node name="LevelBoundaryBottom" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="7" unique_id=817199754]
+position = Vector2(960, 595)
+
+[node name="Pusher" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="0" unique_id=1242537064 instance=ExtResource("3_xpanb")]
+position = Vector2(387, 312)
+DEBUG_draw_push_vector = true
+alpha_rad = 0.371
