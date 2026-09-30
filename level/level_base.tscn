@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="3_tvde0"]
 [ext_resource type="PackedScene" uid="uid://biaayea07sh1x" path="res://level/key_points/level_goal.tscn" id="4_j7wmq"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tvde0"]
+
 [node name="Level_Base" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start", "player_parent")]
 script = ExtResource("1_d8qi5")
 player_scene = ExtResource("2_j7wmq")
@@ -24,6 +26,38 @@ position = Vector2(543, 692)
 position = Vector2(1089, 701)
 
 [node name="StaticBlockers" type="Node2D" parent="." unique_id=31184531]
+
+[node name="LevelBoundaryLeft" type="StaticBody2D" parent="StaticBlockers" unique_id=1529181378]
+position = Vector2(0, 540)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBlockers/LevelBoundaryLeft" unique_id=721992056]
+shape = SubResource("WorldBoundaryShape2D_tvde0")
+one_way_collision = true
+
+[node name="LevelBoundaryRight" type="StaticBody2D" parent="StaticBlockers" unique_id=1728246806]
+position = Vector2(1920, 540)
+rotation = 4.712389
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBlockers/LevelBoundaryRight" unique_id=629829435]
+shape = SubResource("WorldBoundaryShape2D_tvde0")
+one_way_collision = true
+
+[node name="LevelBoundaryTop" type="StaticBody2D" parent="StaticBlockers" unique_id=950666850]
+position = Vector2(960, 0)
+rotation = 3.1415927
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBlockers/LevelBoundaryTop" unique_id=1426870932]
+shape = SubResource("WorldBoundaryShape2D_tvde0")
+one_way_collision = true
+
+[node name="LevelBoundaryBottom" type="StaticBody2D" parent="StaticBlockers" unique_id=817199754]
+position = Vector2(960, 1080)
+rotation = 6.2831855
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBlockers/LevelBoundaryBottom" unique_id=681090736]
+shape = SubResource("WorldBoundaryShape2D_tvde0")
+one_way_collision = true
 
 [node name="Schnuffis" type="Node2D" parent="." unique_id=1241823136]
 
