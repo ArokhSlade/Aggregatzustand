@@ -8,6 +8,9 @@ const MAX_TEMP = 100
 
 ## Fallback. should be initialize()'d instead
 @export var DEBUG_aggregate_state_profile = preload("uid://mn5f7fwwl6q1")
+@export var DEBUG_aggregate_state_override : AggregateStateProfile.Type :
+	set(value):
+		apply_aggregate_state(value)
 
 # initialize()'able dependency
 var aggregate_state_profile : AggregateStateProfile
