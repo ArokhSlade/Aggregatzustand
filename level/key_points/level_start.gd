@@ -18,6 +18,6 @@ func initialize(player_scene_, aggregate_state_profile_):
 
 func spawn_player():
 	player = player_scene.instantiate()
-	player_spawned.emit(player)
 	player.global_position = global_position
+	player_spawned.emit(player)
 	player.initialize(start_aggregate_state, aggregate_state_profile)
