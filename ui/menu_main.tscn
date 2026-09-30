@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://werv3eay4ak7"]
+
+[ext_resource type="PackedScene" uid="uid://bqva0gnole73i" path="res://ui/menu_base.tscn" id="1_3jlvx"]
+[ext_resource type="PackedScene" uid="uid://cvdnxotlm6dod" path="res://ui/button/button.tscn" id="2_se6cv"]
+
+[node name="MenuMain" unique_id=1073757890 instance=ExtResource("1_3jlvx")]
+
+[node name="PlayButton" parent="Panel/VBoxContainer" parent_id_path=PackedInt32Array(770483494) index="0" unique_id=143977451 instance=ExtResource("2_se6cv")]
+layout_mode = 2
+text = "Play"
+
+[node name="ResetButton" parent="Panel/VBoxContainer" parent_id_path=PackedInt32Array(770483494) index="1" unique_id=1092224672 instance=ExtResource("2_se6cv")]
+layout_mode = 2
+text = "Reset"
+
+[node name="QuitButton" parent="Panel/VBoxContainer" parent_id_path=PackedInt32Array(770483494) index="2" unique_id=871596095 instance=ExtResource("2_se6cv")]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Panel/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

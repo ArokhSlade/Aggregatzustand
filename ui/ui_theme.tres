@@ -3,6 +3,22 @@
 [ext_resource type="FontFile" uid="uid://d0gahb0nyyn0u" path="res://ui/font/SyneMono-Regular.ttf" id="1_4mq11"]
 [ext_resource type="StyleBox" uid="uid://b72vrhaf31600" path="res://ui/button/button_normal_stylebox.tres" id="2_bp0j3"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1xdp"]
+bg_color = Color(0.59068334, 0.61, 0.37820002, 0.6313726)
+border_width_left = 239
+border_width_top = 100
+border_width_right = 239
+border_width_bottom = 100
+border_color = Color(0.15686275, 0.25490198, 0.47058824, 1)
+border_blend = true
+corner_radius_top_left = 102
+corner_radius_top_right = 102
+corner_radius_bottom_right = 102
+corner_radius_bottom_left = 102
+shadow_color = Color(0, 0, 0, 0.42745098)
+shadow_size = 18
+shadow_offset = Vector2(16.43, 27.86)
+
 [resource]
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/constants/outline_size = 11
@@ -15,4 +31,5 @@ Button/styles/normal = ExtResource("2_bp0j3")
 Button/styles/pressed = ExtResource("2_bp0j3")
 Label/font_sizes/font_size = 120
 Label/fonts/font = ExtResource("1_4mq11")
+Panel/styles/panel = SubResource("StyleBoxFlat_j1xdp")
 VBoxContainer/constants/separation = 32

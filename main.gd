@@ -8,8 +8,8 @@ var level_index = 0
 @export var aggregate_states_resoure : AggregateStateProfile
 
 @onready var level_parent = $LevelParent
-@onready var menu = $Menu
-@onready var endscreen = $LevelFinish
+@onready var menu = $MenuMain
+@onready var endscreen = $MenuLevelFinish
 
 var level
 var current_state : State
