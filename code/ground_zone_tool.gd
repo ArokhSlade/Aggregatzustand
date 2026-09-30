@@ -9,6 +9,7 @@ extends Polygon2D
 @export var max_offset_x: float = 8.0
 @export var max_offset_y: float = 8.0
 @export_tool_button("Refresh Ground", "Reload") var refresh_ground = respawn_tiles
+@export_tool_button("Clear Ground", "Clear") var clear_ground = clear_tiles
 
 const RUNTIME_SPAWN_BATCH_SIZE := 32
 
@@ -31,6 +32,11 @@ func respawn_tiles():
 		spawn_in_rows_immediately()
 	else:
 		spawn_in_rows_batched(current_generation)
+
+
+func clear_tiles():
+	for child in get_children():
+		child.queue_free()
 
 
 func get_spawn_positions() -> Array[Vector2]:
