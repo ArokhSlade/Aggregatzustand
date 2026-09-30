@@ -25,8 +25,7 @@ func respawn_tiles():
 	generation_id += 1
 	var current_generation := generation_id
 
-	for child in get_children():
-		child.queue_free()
+	clear_tiles()
 
 	if Engine.is_editor_hint():
 		spawn_in_rows_immediately()
