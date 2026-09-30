@@ -49,10 +49,10 @@ row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
 
-[node name="LevelStart" parent="." index="3" unique_id=1790299339]
+[node name="LevelStart" parent="." index="2" unique_id=1790299339]
 position = Vector2(568, 745)
 
-[node name="LevelGoal" parent="." index="4" unique_id=1453480285]
+[node name="LevelGoal" parent="." index="3" unique_id=1453480285]
 position = Vector2(284, 68)
 
 [node name="BottomLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="0" unique_id=651454461 instance=ExtResource("6_w5o0a")]
@@ -169,18 +169,17 @@ texture = ExtResource("10_510pp")
 
 [node name="Pusher" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="0" unique_id=1242537064 instance=ExtResource("11_krmuh")]
 position = Vector2(1454, 163)
-rotation = 3.1415927
-scale = Vector2(1.0399976, -1)
-strength = -2.0
+scale = Vector2(-1.04, 1)
+strength = -450.0
 
 [node name="Pusher2" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="1" unique_id=1543508888 instance=ExtResource("11_krmuh")]
 position = Vector2(796, 442)
 rotation = 3.1415927
-scale = Vector2(1.0399976, -1)
-strength = -2.0
+scale = Vector2(1.04, -1)
+strength = -450.0
 
-[node name="LevelStart2" parent="." index="8" unique_id=1811184294 instance=ExtResource("12_b30fa")]
+[node name="LevelStart2" parent="." index="7" unique_id=1811184294 instance=ExtResource("12_b30fa")]
 position = Vector2(568, 745)
 
-[node name="LevelGoal2" parent="." index="9" unique_id=1559790756 instance=ExtResource("13_8s7fs")]
+[node name="LevelGoal2" parent="." index="8" unique_id=1559790756 instance=ExtResource("13_8s7fs")]
 position = Vector2(284, 68)

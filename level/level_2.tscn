@@ -35,10 +35,10 @@ row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
 
-[node name="LevelStart" parent="." index="3" unique_id=1790299339]
+[node name="LevelStart" parent="." index="2" unique_id=1790299339]
 position = Vector2(83, 104)
 
-[node name="LevelGoal" parent="." index="4" unique_id=1453480285]
+[node name="LevelGoal" parent="." index="3" unique_id=1453480285]
 position = Vector2(1781, 604)
 
 [node name="CollisionShape2D" parent="LevelGoal" index="0" unique_id=539955112]
@@ -165,11 +165,10 @@ texture = ExtResource("11_algu2")
 
 [node name="Pusher" parent="." index="7" unique_id=1242537064 instance=ExtResource("9_qg0ee")]
 position = Vector2(631, 191)
-strength = 2.0
+strength = 500.0
 
 [node name="Pusher3" parent="." index="8" unique_id=1083874461 instance=ExtResource("9_qg0ee")]
 position = Vector2(72, 925)
-strength = 3.0
 
 [node name="Arrow2" type="Sprite2D" parent="Pusher3" index="5" unique_id=1933236081]
 modulate = Color(0.7411765, 0.7411765, 0.7411765, 1)
@@ -180,6 +179,6 @@ texture = ExtResource("10_vpspb")
 
 [node name="Pusher2" parent="." index="9" unique_id=684072801 instance=ExtResource("9_qg0ee")]
 position = Vector2(1093, 825)
-strength = 2.0
+strength = 400.0
 
 [editable path="LevelGoal"]

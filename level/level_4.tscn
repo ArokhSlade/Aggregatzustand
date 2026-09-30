@@ -50,11 +50,11 @@ row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
 
-[node name="LevelStart" parent="." index="3" unique_id=1790299339]
+[node name="LevelStart" parent="." index="2" unique_id=1790299339]
 position = Vector2(303, 580)
 start_aggregate_state = 2
 
-[node name="LevelGoal" parent="." index="4" unique_id=1453480285]
+[node name="LevelGoal" parent="." index="3" unique_id=1453480285]
 position = Vector2(1790.9999, 659)
 rotation = -2.8272347
 
@@ -146,14 +146,14 @@ scale = Vector2(0.045825325, 0.8892124)
 [node name="Pusher2" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="0" unique_id=1242537064 instance=ExtResource("9_sdk3c")]
 position = Vector2(145, 905)
 scale = Vector2(1.0800023, 1)
-strength = 2.0
+strength = 40.0
 
 [node name="Pusher3" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="1" unique_id=2014045575 instance=ExtResource("9_sdk3c")]
 position = Vector2(1020, 578)
 scale = Vector2(1.0800023, 1)
-strength = 2.0
+strength = 450.0
 
 [node name="Pusher4" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="2" unique_id=656801492 instance=ExtResource("9_sdk3c")]
 position = Vector2(532, 76)
 scale = Vector2(1.0800023, 1)
-strength = 2.0
+strength = 400.0

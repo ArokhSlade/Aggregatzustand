@@ -55,6 +55,7 @@ position = Vector2(-9.194083e-06, -771)
 position = Vector2(960, 595)
 
 [node name="Pusher" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="0" unique_id=1242537064 instance=ExtResource("3_xpanb")]
-position = Vector2(387, 312)
+position = Vector2(527, 313)
+strength = 1000.0
 DEBUG_draw_push_vector = true
 alpha_rad = 0.371
