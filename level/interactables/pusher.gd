@@ -6,6 +6,7 @@ extends Node2D
 @export var DEBUG_draw_push_vector = false
 @export var alpha_rad = PI * .5
 @export var corner_length = 50.
+@export var arrow_length = 100.
 
 var nodes_to_push: Array[RigidBody2D]
 var is_pushing: bool = false
@@ -36,7 +37,7 @@ func push():
 
 
 func get_push_vector():
-	var push_vector = to_global(Vector2.RIGHT)
+	var push_vector = Vector2.RIGHT
 	return push_vector
 
 
@@ -85,7 +86,7 @@ func _on_click_area_mouse_exited() -> void:
 func _draw():
 	if DEBUG_draw_push_vector:
 		var from = Vector2.ZERO
-		var to = get_push_vector()
+		var to = get_push_vector() * arrow_length
 		draw_arrow(from, to, Color.WHITE)
 
 
