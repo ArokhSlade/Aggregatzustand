@@ -12,9 +12,11 @@
 
 [node name="Level_4" unique_id=893623266 instance=ExtResource("1_84t8h")]
 
-[node name="MovableTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 instance=ExtResource("2_x6ytt")]
+[node name="MovableTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 node_paths=PackedStringArray("left_boundary", "right_boundary") instance=ExtResource("2_x6ytt")]
 position = Vector2(888, 23)
 scale = Vector2(0.33, 0.435)
+left_boundary = NodePath("../../StaticBlockers/LevelBoundaryLeft")
+right_boundary = NodePath("../../StaticBlockers/LevelBoundaryRight")
 aggregate_state = 1
 
 [node name="Sprite2D2" type="Sprite2D" parent="TemperatureZones/MovableTemperatureZone" index="4" unique_id=1891520523]
@@ -28,9 +30,11 @@ position = Vector2(-620.68964, 0)
 scale = Vector2(-1, 1)
 texture = ExtResource("3_b26y2")
 
-[node name="MovableTemperatureZone2" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="1" unique_id=1934562126 instance=ExtResource("2_x6ytt")]
+[node name="MovableTemperatureZone2" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="1" unique_id=1934562126 node_paths=PackedStringArray("left_boundary", "right_boundary") instance=ExtResource("2_x6ytt")]
 position = Vector2(672, 1028)
 scale = Vector2(0.33, 0.435)
+left_boundary = NodePath("../../StaticBlockers/LevelBoundaryLeft")
+right_boundary = NodePath("../../StaticBlockers/LevelBoundaryRight")
 
 [node name="Sprite2D2" type="Sprite2D" parent="TemperatureZones/MovableTemperatureZone2" index="4" unique_id=2023609085]
 modulate = Color(0.84, 0.2688, 0.2688, 0.7411765)

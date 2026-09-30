@@ -27,9 +27,11 @@ modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(952.00006, 1064)
 scale = Vector2(1.68, 0.545)
 
-[node name="MovableTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="2" unique_id=1174667322 instance=ExtResource("3_hrebq")]
+[node name="MovableTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="2" unique_id=1174667322 node_paths=PackedStringArray("left_boundary", "right_boundary") instance=ExtResource("3_hrebq")]
 position = Vector2(1108, 530)
 scale = Vector2(0.435, 0.435)
+left_boundary = NodePath("../../StaticBlockers/LevelBoundaryLeft")
+right_boundary = NodePath("../../StaticBlockers/LevelBoundaryRight")
 
 [node name="Sprite2D2" type="Sprite2D" parent="TemperatureZones/MovableTemperatureZone" index="4" unique_id=1448250726]
 modulate = Color(0.84, 0.2688, 0.2688, 0.7411765)
@@ -44,6 +46,7 @@ texture = ExtResource("4_wcq0y")
 
 [node name="ground_zone_tool" parent="GroundZones" parent_id_path=PackedInt32Array(678743018) index="0" unique_id=1615348414 instance=ExtResource("5_3lca4")]
 position = Vector2(123, 949)
+scale = Vector2(1, 1.0023345)
 polygon = PackedVector2Array(-112, -696, -112, -411, 644, -467, 995, -518, 1357, -446, 1760, -398, 1743, -869, 1114, -872, 338, -878, 336, -716)
 row_spacing = 50.0
 column_spacing = 50.0
