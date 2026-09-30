@@ -1,5 +1,8 @@
 extends temperature_zone
 
+@export var left_boundary : Node2D
+@export var right_boundary : Node2D
+
 var state
 var states = {
 	"Default" : Default.new(self),
@@ -9,10 +12,6 @@ var states = {
 func _ready():
 	super()
 	state = states.Default
-
-
-func _physics_process(delta: float) -> void:
-	super._physics_process(delta)
 
 
 func _input_event(_viewport, event, _shape_idx):
@@ -29,9 +28,18 @@ func _input(event: InputEvent) -> void:
 			if event.is_action_released("click"):
 				state.on_pointer_released(event)
 
-# TODO: clamped horizontal movement 
+
 func move_to(pos_):
 	global_position.x = pos_.x
+	var x_offset = transform.get_scale().x * get_half_extents().x
+	var min_x = left_boundary.global_position.x + x_offset if left_boundary else null
+	var max_x = right_boundary.global_position.x - x_offset if right_boundary else null
+	if left_boundary and right_boundary:
+		global_position.x = clampf(pos_.x, min_x, max_x)
+	elif left_boundary:
+		global_position.x = maxf(pos_.x, min_x)
+	elif right_boundary:
+		global_position.x = minf(pos_.x, max_x)
 
 
 func switch_state(new_state):

@@ -20,17 +20,9 @@ func update_particles():
 	if not particles:
 		return
 	particles = particles.instantiate()
-	var half_extents = .5 * $CollisionShape2D.shape.size
+	var half_extents = get_half_extents()
 	particles.set_rect_extents(half_extents.x, half_extents.y)
 	add_child(particles)
-
-
-# DEPRECATED
-func _physics_process(_delta):
-	var bodies = get_overlapping_bodies()
-	for body in bodies:
-		#try_apply_aggregate_state(body)
-		pass
 
 
 func _on_area_entered(area):
@@ -40,3 +32,8 @@ func _on_area_entered(area):
 func try_apply_aggregate_state(target):
 	if target.has_method("apply_aggregate_state"):
 		target.apply_aggregate_state(aggregate_state)
+ 
+
+func get_half_extents():
+	var half_extents = .5 * $CollisionShape2D.shape.size
+	return half_extents
