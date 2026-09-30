@@ -190,3 +190,8 @@ position = Vector2(568, 745)
 
 [node name="LevelGoal2" parent="." index="8" unique_id=1559790756 instance=ExtResource("13_8s7fs")]
 position = Vector2(284, 68)
+
+[node name="TopLeftCornerHouse" parent="." index="9" unique_id=155352348 instance=ExtResource("7_b3knk")]
+position = Vector2(-127.99999, 180)
+rotation = -0.4654793
+scale = Vector2(0.20323014, 0.20323014)
