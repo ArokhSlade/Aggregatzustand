@@ -1,11 +1,46 @@
 [gd_scene format=3 uid="uid://biaayea07sh1x"]
 
 [ext_resource type="Script" uid="uid://dal7ba1ucyyir" path="res://level/key_points/level_goal.gd" id="1_3ihj2"]
-[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="2_og24c"]
 [ext_resource type="Texture2D" uid="uid://bygmarh4bqxi6" path="res://art/textures/roots.png" id="3_og24c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1mswc"]
 size = Vector2(256, 125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ihj2"]
+atlas = ExtResource("3_og24c")
+region = Rect2(0, 0, 240, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og24c"]
+atlas = ExtResource("3_og24c")
+region = Rect2(240, 0, 240, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bae0r"]
+atlas = ExtResource("3_og24c")
+region = Rect2(480, 0, 240, 310)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjohf"]
+atlas = ExtResource("3_og24c")
+region = Rect2(720, 0, 240, 310)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j1xdp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ihj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og24c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bae0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjohf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="LevelGoal" type="Area2D" unique_id=1453480285]
 script = ExtResource("1_3ihj2")
@@ -14,14 +49,10 @@ script = ExtResource("1_3ihj2")
 position = Vector2(27, -1.5)
 shape = SubResource("RectangleShape2D_1mswc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=625172652]
-visible = false
-modulate = Color(1, 1, 0, 1)
-texture = ExtResource("2_og24c")
-
-[node name="Roots" type="Sprite2D" parent="." unique_id=810271654]
+[node name="Roots" type="AnimatedSprite2D" parent="." unique_id=1006807564]
 position = Vector2(10, 40.2731)
 scale = Vector2(0.68907565, 0.6890756)
-texture = ExtResource("3_og24c")
+sprite_frames = SubResource("SpriteFrames_j1xdp")
+autoplay = "default"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
