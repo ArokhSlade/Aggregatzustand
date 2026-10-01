@@ -17,13 +17,13 @@ DEBUG_aggregate_state_profile = ExtResource("3_6tqrk")
 
 [node name="TemperatureZones" type="Node2D" parent="." unique_id=1149663614]
 
-[node name="GroundZones" type="Node2D" parent="." unique_id=678743018]
-
 [node name="LevelStart" parent="." unique_id=1790299339 instance=ExtResource("3_tvde0")]
 position = Vector2(543, 692)
 
 [node name="LevelGoal" parent="." unique_id=1453480285 instance=ExtResource("4_j7wmq")]
 position = Vector2(1089, 701)
+
+[node name="GroundZones" type="Node2D" parent="." unique_id=678743018]
 
 [node name="StaticBlockers" type="Node2D" parent="." unique_id=31184531]
 
