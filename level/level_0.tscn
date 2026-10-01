@@ -10,35 +10,21 @@
 
 [node name="Level_Tommy" unique_id=893623266 instance=ExtResource("1_cwafv")]
 
-[node name="TemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_mytjb")]
+[node name="TemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 instance=ExtResource("2_mytjb")]
 modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(746, 961.00006)
 scale = Vector2(2.4661202, 1.1771753)
-particles_map = {
-1: NodePath("Particles/ColdParticles"),
-2: NodePath("Particles/HotParticles")
-}
 
-[node name="TemperatureZone2" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="1" unique_id=2053529676 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_mytjb")]
+[node name="TemperatureZone2" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="1" unique_id=2053529676 instance=ExtResource("2_mytjb")]
 modulate = Color(0.275326, 0.31628942, 0.76869035, 0.67058825)
 position = Vector2(756, 98.00001)
 scale = Vector2(2.4661202, 1.1771753)
 aggregate_state = 1
-particles_map = {
-0: null,
-1: NodePath("Particles/ColdParticles"),
-2: NodePath("Particles/HotParticles")
-}
 
-[node name="TemperatureZone3" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="2" unique_id=1646494865 node_paths=PackedStringArray("particles_map") instance=ExtResource("2_mytjb")]
+[node name="TemperatureZone3" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="2" unique_id=1646494865 instance=ExtResource("2_mytjb")]
 modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(899, 626.99994)
 scale = Vector2(0.14612031, 2.4744563)
-particles_map = {
-0: null,
-1: NodePath("Particles/ColdParticles"),
-2: NodePath("Particles/HotParticles")
-}
 
 [node name="ground_zone_tool" parent="GroundZones" parent_id_path=PackedInt32Array(678743018) index="0" unique_id=1615348414 instance=ExtResource("3_sdpr0")]
 position = Vector2(134.99998, 0)
@@ -48,10 +34,10 @@ polygon = PackedVector2Array(1261, 143, 1390, 441, 1324, 711, 1010, 749, 659, 77
 max_offset_x = 11.0
 max_offset_y = 9.5
 
-[node name="LevelStart" parent="." index="3" unique_id=1790299339]
+[node name="LevelStart" parent="." index="2" unique_id=1790299339]
 position = Vector2(251, 171)
 
-[node name="LevelGoal" parent="." index="4" unique_id=1453480285]
+[node name="LevelGoal" parent="." index="3" unique_id=1453480285]
 position = Vector2(1082, 781)
 
 [node name="BottomLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="0" unique_id=651454461 instance=ExtResource("8_deimu")]
