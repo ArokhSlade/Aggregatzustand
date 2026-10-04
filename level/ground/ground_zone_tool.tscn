@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://i85qqaldnt2e"]
 
 [ext_resource type="Script" uid="uid://c4blq6s1cd8uu" path="res://level/ground/ground_zone_tool.gd" id="1_uwjeq"]
-[ext_resource type="PackedScene" uid="uid://vgq4nwnu64hn" path="res://level/ground/ground_prototype.tscn" id="2_ytshm"]
+[ext_resource type="PackedScene" uid="uid://tg4fqgp82yc0" path="res://level/ground/respawnable_ground_prototype.tscn" id="2_8k3lw"]
 
 [node name="GroundZoneTool" type="Polygon2D" unique_id=1615348414]
 color = Color(1, 0.36078432, 1, 0)
 polygon = PackedVector2Array(152, 20, 390, 178, 165, 224, 45, 60)
 script = ExtResource("1_uwjeq")
-object_to_spawn = ExtResource("2_ytshm")
+object_to_spawn = ExtResource("2_8k3lw")
