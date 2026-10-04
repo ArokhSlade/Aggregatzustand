@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="2_5mhvx"]
 [ext_resource type="PackedScene" uid="uid://2n5qcpk0onw1" path="res://temperaturezones/movable_temperature_zone.tscn" id="3_hrebq"]
 [ext_resource type="Texture2D" uid="uid://5b1ysjodclqp" path="res://art/arrow.png" id="4_wcq0y"]
-[ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://code/ground_zone_tool.tscn" id="5_3lca4"]
+[ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://level/ground/ground_zone_tool.tscn" id="5_3lca4"]
 [ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="6_w5o0a"]
 [ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="7_b3knk"]
 [ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="8_e2u7k"]

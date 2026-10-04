@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dqfsum7vwqwnx"]
 
-[ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://code/bubble.gd" id="1_0h62n"]
+[ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://player/bubble.gd" id="1_0h62n"]
 [ext_resource type="PackedScene" uid="uid://ddg56pnl36rey" path="res://art/shaders/gas_2d_character.tscn" id="3_0gtg6"]
-[ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://code/temperature_sensor.gd" id="3_mddvq"]
+[ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://player/temperature_sensor.gd" id="3_mddvq"]
 [ext_resource type="Material" uid="uid://ccm8snwmivhkb" path="res://art/materials/character_gas_material.tres" id="3_oqodk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c1qun"]

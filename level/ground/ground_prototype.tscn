@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vgq4nwnu64hn"]
 
-[ext_resource type="Script" uid="uid://x218h1map1hp" path="res://code/ground_prototype.gd" id="1_0nssk"]
+[ext_resource type="Script" uid="uid://x218h1map1hp" path="res://level/ground/ground_prototype.gd" id="1_0nssk"]
 [ext_resource type="Shader" uid="uid://xhhsqstqg46h" path="res://art/shaders/exchange_color_to_scrolling.gdshader" id="2_v00rn"]
 [ext_resource type="Texture2D" uid="uid://bwcrxmbb8bfy6" path="res://art/textures/ground_gradient.png" id="3_v00rn"]
 [ext_resource type="Texture2D" uid="uid://7tlbgxa8u8fu" path="res://art/textures/ground.png" id="4_v00rn"]
