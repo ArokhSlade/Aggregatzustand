@@ -5,21 +5,28 @@ const MAX_TEMP = 100
 
 @export var colors : GradientTexture1D
 @export var max_speed = 100.0
+@export var settings : Dictionary[AggregateStateProfile.Type,PlayerSettings]
 
+@export_category("Debug")
 ## Fallback. should be initialize()'d instead
 @export var DEBUG_aggregate_state_profile = preload("uid://mn5f7fwwl6q1")
 @export var DEBUG_aggregate_state_override : AggregateStateProfile.Type :
 	set(value):
 		apply_aggregate_state(value)
 
+@onready var sprite_2d: Sprite2D = $Sprite2D
+
 # initialize()'able dependency
 var aggregate_state_profile : AggregateStateProfile
+
+#var state : State
 
 var aggregate_state : AggregateStateProfile.Type
 var temperature = 0.0
 var speed_scale = 1.0
 var target_temperature = 0.0
 var temperature_speed = 0.5
+
 var initialized = false
 
 func _enter_tree():
@@ -27,10 +34,10 @@ func _enter_tree():
 		push_warning("Bubble: aggregate_state_profile not initialized. loading fallback aggregate_state_profile.")
 		initialize(AggregateStateProfile.Type.WATER, DEBUG_aggregate_state_profile)
 
-
+# NOTE: for TDD: initialize methods need to be written in a style that they can be called before _ready(). maybe call them pre_ready_init()?
 func initialize(aggregte_state_, aggregate_state_profile_):
 	aggregate_state_profile = aggregate_state_profile_
-	apply_aggregate_state(aggregte_state_)
+	apply_aggregate_state.call_deferred(aggregte_state_)
 	initialized = true
 
 
@@ -43,14 +50,18 @@ func apply_aggregate_state(aggregate_state_):
 
 	aggregate_state = aggregate_state_
 	temperature = aggregate_state_profile.map_agg_state_to_temp(aggregate_state)
-	apply_temperature_immediately(temperature)
+	temp_to_gravity_scale(temperature)
 
-	if aggregate_state == AggregateStateProfile.Type.WATER:
-		$gas_2d_character.visible = false
-		$water_charcter.visible = true
-	else:
-		$gas_2d_character.visible = true
-		$water_charcter.visible = false
+	apply_settings()
+
+
+func apply_settings():
+	if not settings.has(aggregate_state):
+		push_warning("bubble::apply_settings: no settings exist for aggregate_state %s." % [aggregate_state])
+		return
+	var settings_ = settings[aggregate_state]
+	sprite_2d.material = settings_.material
+	sprite_2d.texture = settings_.texture
 
 
 func apply_temperature_immediately(temperature_):
@@ -61,12 +72,6 @@ func _on_temperature_sensor_aggregate_changed(aggregate_state_):
 	apply_aggregate_state(aggregate_state_)
 
 
-# DEPRECATED
-func apply_temperature(temperature_):
-	target_temperature = temperature_
-
-
-# DEPRECATED
 func update_temperature(_delta):
 	temperature = target_temperature
 	#temperature = lerp(temperature, target_temperature, 1.0 - exp(-temperature_speed * delta))
@@ -93,17 +98,31 @@ func sample_gradient_texture(temperature_):
 
 
 func _process(_delta):
-	$gas_2d_character.global_position = global_position
-	$water_charcter.global_position = global_position
+	sprite_2d.global_position = global_position
 
 
 func _physics_process(delta):
 	update_temperature(delta)
 	#temp_to_speed_scale(temperature)
-	temp_to_gravity_scale(temperature)
+	
 	update_color()
 
 
-func _integrate_forces(_state: PhysicsDirectBodyState2D):
-	#state.linear_velocity.y = speed_scale * max_speed
-	pass
+#class State:
+	#var owner
+	#func _init(owner_):
+		#owner = owner_
+	#func on_process():
+		#owner.sprite.global_position = global_position
+	#func on_physics_process(): 
+		#owner.update_temperature(delta)
+		#pass
+	##func apply_aggregate
+	#func on_enter():
+		#owner.gravity_scale = aggregate_state_profile.map_temperature_to_gravity_scale(temp)
+	#func on_exit():
+		#pass
+#
+#class Watery extends State:
+	##func 
+	#pass

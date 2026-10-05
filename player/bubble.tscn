@@ -1,20 +1,27 @@
 [gd_scene format=3 uid="uid://dqfsum7vwqwnx"]
 
 [ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://player/bubble.gd" id="1_0h62n"]
-[ext_resource type="PackedScene" uid="uid://ddg56pnl36rey" path="res://art/shaders/gas_2d_character.tscn" id="3_0gtg6"]
+[ext_resource type="Script" uid="uid://dxkqvr2gq2co1" path="res://player/PlayerSettings.gd" id="2_vrfta"]
 [ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://player/temperature_sensor.gd" id="3_mddvq"]
+[ext_resource type="Material" uid="uid://c2ahrsqpis53p" path="res://art/materials/character_water_material.tres" id="3_nvuyj"]
 [ext_resource type="Material" uid="uid://ccm8snwmivhkb" path="res://art/materials/character_gas_material.tres" id="3_oqodk"]
+[ext_resource type="Texture2D" uid="uid://cl2fyo4junckr" path="res://models/Eye UV.png" id="4_2eeoj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c1qun"]
 friction = 0.82
 bounce = 0.22
 
-[sub_resource type="Gradient" id="Gradient_0h62n"]
-offsets = PackedFloat32Array(0, 0.468, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.27727965, 0.54411334, 0.83408505, 1, 0.8672808, 0.2923065, 0.19177866, 1)
+[sub_resource type="Resource" id="Resource_xdl5r"]
+script = ExtResource("2_vrfta")
+texture = ExtResource("4_2eeoj")
+material = ExtResource("3_nvuyj")
+metadata/_custom_type_script = "uid://dxkqvr2gq2co1"
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_0h62n"]
-gradient = SubResource("Gradient_0h62n")
+[sub_resource type="Resource" id="Resource_6lgrw"]
+script = ExtResource("2_vrfta")
+texture = ExtResource("4_2eeoj")
+material = ExtResource("3_oqodk")
+metadata/_custom_type_script = "uid://dxkqvr2gq2co1"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j1xdp"]
 radius = 44.04543
@@ -28,19 +35,16 @@ gravity_scale = 0.0
 can_sleep = false
 continuous_cd = 2
 script = ExtResource("1_0h62n")
-colors = SubResource("GradientTexture1D_0h62n")
+settings = Dictionary[int, ExtResource("2_vrfta")]({
+1: SubResource("Resource_xdl5r"),
+2: SubResource("Resource_6lgrw")
+})
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=718959648]
 shape = SubResource("CircleShape2D_j1xdp")
 
-[node name="gas_2d_character" parent="." unique_id=393402349 instance=ExtResource("3_0gtg6")]
-visible = false
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2123568405]
 top_level = true
-material = ExtResource("3_oqodk")
-position = Vector2(-2, -2.9802322e-08)
-scale = Vector2(0.28906253, 0.28906253)
-
-[node name="water_charcter" parent="." unique_id=1276259596 instance=ExtResource("3_0gtg6")]
 position = Vector2(-2, -2.9802322e-08)
 scale = Vector2(0.28906253, 0.28906253)
 
