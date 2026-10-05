@@ -30,14 +30,28 @@ func _enter_tree():
 func initialize(aggregte_state_, aggregate_state_profile_):
 	aggregate_state_profile = aggregate_state_profile_
 	for agg_state in map_prototypes.keys():
+		map_prototypes[agg_state].owner = null # NOTE: to avoid godot warning when we later attach to different parent
 		$Prototypes.remove_child(map_prototypes[agg_state])
-	apply_aggregate_state.call_deferred(aggregte_state_)
+	init_apply_aggregate_state(aggregte_state_)
 	initialized = true
 
 
-func apply_aggregate_state(aggregate_state_):
+func init_apply_aggregate_state(aggregate_state_):
 	if not aggregate_state_profile:
+		if not DEBUG_aggregate_state_profile:
+			push_error("Bubble: cannot apply aggregate state without an AggregateStateProfile.")
+			return
 		aggregate_state_profile = DEBUG_aggregate_state_profile
+
+	aggregate_state = aggregate_state_
+	var temperature = get_temperature()
+	temp_to_gravity_scale(temperature)
+	
+	sprite = map_prototypes[aggregate_state]
+	$SpriteParent.add_child(sprite)
+
+
+func apply_aggregate_state(aggregate_state_):
 	if not aggregate_state_profile:
 		push_error("Bubble: cannot apply aggregate state without an AggregateStateProfile.")
 		return
