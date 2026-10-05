@@ -1,8 +1,5 @@
 extends RigidBody2D
 
-const MIN_TEMP = 0
-const MAX_TEMP = 100
-
 @export var map_prototypes : Dictionary[AggregateStateProfile.Type, Sprite2D]
 
 @export_category("Debug")
