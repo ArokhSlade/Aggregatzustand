@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c5j4qw2tp1hpw"]
+
+[ext_resource type="PackedScene" uid="uid://b3j68ppm3viyo" path="res://player/bubble_base.tscn" id="1_lt6y5"]
+[ext_resource type="Script" uid="uid://plw2xoyr8x1n" path="res://player/bubble_watery.gd" id="2_ab6yw"]
+
+[node name="BubbleWatery" unique_id=1361995442 instance=ExtResource("1_lt6y5")]
+script = ExtResource("2_ab6yw")
