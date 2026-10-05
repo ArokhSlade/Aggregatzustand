@@ -135,8 +135,9 @@ class Watery extends State:
 		target_rotation = rotation_
 	
 	func on_integrate_forces(physics_state : PhysicsDirectBodyState2D):
-		if not rotation_reset:
-			owner.rotation = target_rotation
+		if not rotation_reset: 
+			var cur_pos = physics_state.transform.get_origin()
+			physics_state.transform = Transform2D(0, cur_pos)
 			rotation_reset = true
 
 
