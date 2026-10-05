@@ -6,6 +6,8 @@ const MAX_TEMP = 100
 @export var colors : GradientTexture1D
 @export var max_speed = 100.0
 @export var settings : Dictionary[AggregateStateProfile.Type,PlayerSettings]
+@export var sprites : Dictionary[AggregateStateProfile.Type, PackedScene]
+var sprites_ : Dictionary[AggregateStateProfile.Type, Sprite2D]
 
 @export_category("Debug")
 ## Fallback. should be initialize()'d instead
@@ -15,6 +17,7 @@ const MAX_TEMP = 100
 		apply_aggregate_state(value)
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
+var sprite : Sprite2D
 
 # initialize()'able dependency
 var aggregate_state_profile : AggregateStateProfile
@@ -34,9 +37,12 @@ func _enter_tree():
 		push_warning("Bubble: aggregate_state_profile not initialized. loading fallback aggregate_state_profile.")
 		initialize(AggregateStateProfile.Type.WATER, DEBUG_aggregate_state_profile)
 
+
 # NOTE: for TDD: initialize methods need to be written in a style that they can be called before _ready(). maybe call them pre_ready_init()?
 func initialize(aggregte_state_, aggregate_state_profile_):
 	aggregate_state_profile = aggregate_state_profile_
+	for agg_state in sprites.keys():
+		sprites_[agg_state] = sprites[agg_state].instantiate()
 	apply_aggregate_state.call_deferred(aggregte_state_)
 	initialized = true
 
@@ -51,8 +57,13 @@ func apply_aggregate_state(aggregate_state_):
 	aggregate_state = aggregate_state_
 	temperature = aggregate_state_profile.map_agg_state_to_temp(aggregate_state)
 	temp_to_gravity_scale(temperature)
-
-	apply_settings()
+	
+	$SpriteParent.remove_child(null) # NOTE: testing
+	$SpriteParent.remove_child(sprite)
+	sprite = sprites_[aggregate_state]
+	$SpriteParent.add_child(sprite)
+	
+	#apply_settings()
 
 
 func apply_settings():
@@ -99,6 +110,7 @@ func sample_gradient_texture(temperature_):
 
 func _process(_delta):
 	sprite_2d.global_position = global_position
+	sprite.global_position = global_position
 
 
 func _physics_process(delta):

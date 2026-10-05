@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://player/bubble.gd" id="1_0h62n"]
 [ext_resource type="Script" uid="uid://dxkqvr2gq2co1" path="res://player/PlayerSettings.gd" id="2_vrfta"]
+[ext_resource type="PackedScene" uid="uid://ddg56pnl36rey" path="res://art/shaders/gas_2d_character.tscn" id="3_0gtg6"]
 [ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://player/temperature_sensor.gd" id="3_mddvq"]
 [ext_resource type="Material" uid="uid://c2ahrsqpis53p" path="res://art/materials/character_water_material.tres" id="3_nvuyj"]
 [ext_resource type="Material" uid="uid://ccm8snwmivhkb" path="res://art/materials/character_gas_material.tres" id="3_oqodk"]
 [ext_resource type="Texture2D" uid="uid://cl2fyo4junckr" path="res://models/Eye UV.png" id="4_2eeoj"]
+[ext_resource type="PackedScene" uid="uid://bxirjiw3lqv80" path="res://art/scenes/water_2d_character.tscn" id="6_nvuyj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c1qun"]
 friction = 0.82
@@ -39,12 +41,21 @@ settings = Dictionary[int, ExtResource("2_vrfta")]({
 1: SubResource("Resource_xdl5r"),
 2: SubResource("Resource_6lgrw")
 })
+sprites = Dictionary[int, PackedScene]({
+1: ExtResource("6_nvuyj"),
+2: ExtResource("3_0gtg6")
+})
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=718959648]
 shape = SubResource("CircleShape2D_j1xdp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2123568405]
+visible = false
 top_level = true
+position = Vector2(-2, -2.9802322e-08)
+scale = Vector2(0.28906253, 0.28906253)
+
+[node name="SpriteParent" type="Node2D" parent="." unique_id=173715093]
 position = Vector2(-2, -2.9802322e-08)
 scale = Vector2(0.28906253, 0.28906253)
 
