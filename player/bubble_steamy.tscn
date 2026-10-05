@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dyqtxk3tm1u0o"]
+
+[ext_resource type="PackedScene" uid="uid://b3j68ppm3viyo" path="res://player/bubble_base.tscn" id="1_hbu6f"]
+[ext_resource type="Script" uid="uid://drkugwrkeu2fo" path="res://player/bubble_steamy.gd" id="2_1oujk"]
+
+[node name="BubbleSteamy" unique_id=1361995442 instance=ExtResource("1_hbu6f")]
+gravity_scale = -0.4
+script = ExtResource("2_1oujk")
+revolutions_per_second = 1
+DEBUG_rotation = -3.141592653589793
+
+[node name="Sprite2D" parent="." index="2" unique_id=393402349]
+top_level = false
