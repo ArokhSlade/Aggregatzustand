@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cgqljjuuqjwu8"]
 
 [ext_resource type="Material" uid="uid://ccm8snwmivhkb" path="res://art/materials/character_gas_material.tres" id="1_1dp56"]
+[ext_resource type="Script" uid="uid://b0h6jfid0ynb6" path="res://art/scenes/bubble_sprite.gd" id="2_1dp56"]
 
 [sub_resource type="Gradient" id="Gradient_h8t7v"]
 
@@ -14,3 +15,4 @@ editor_description = "To change the size: prefer to adjust the texture dimension
 top_level = true
 material = ExtResource("1_1dp56")
 texture = SubResource("GradientTexture2D_2eeoj")
+script = ExtResource("2_1dp56")
