@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxirjiw3lqv80"]
 
-[ext_resource type="PackedScene" uid="uid://ddg56pnl36rey" path="res://art/shaders/gas_2d_character.tscn" id="1_tm2vw"]
+[ext_resource type="PackedScene" uid="uid://ddg56pnl36rey" path="res://art/scenes/gas_2d_character.tscn" id="1_tm2vw"]
 [ext_resource type="Material" uid="uid://c2ahrsqpis53p" path="res://art/materials/character_water_material.tres" id="2_7m2j3"]
 
 [node name="Water2DCharacter" unique_id=393402349 instance=ExtResource("1_tm2vw")]
