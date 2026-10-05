@@ -8,6 +8,8 @@ const MAX_TEMP = 100
 @export var settings : Dictionary[AggregateStateProfile.Type,PlayerSettings]
 @export var sprites : Dictionary[AggregateStateProfile.Type, PackedScene]
 var sprites_ : Dictionary[AggregateStateProfile.Type, Sprite2D]
+@export var prototypes : Dictionary[AggregateStateProfile.Type, Sprite2D]
+
 
 @export_category("Debug")
 ## Fallback. should be initialize()'d instead
@@ -58,9 +60,10 @@ func apply_aggregate_state(aggregate_state_):
 	temperature = aggregate_state_profile.map_agg_state_to_temp(aggregate_state)
 	temp_to_gravity_scale(temperature)
 	
-	$SpriteParent.remove_child(null) # NOTE: testing
+	for prototype in $Prototypes.get_children():
+		$Prototypes.remove_child(prototype)
 	$SpriteParent.remove_child(sprite)
-	sprite = sprites_[aggregate_state]
+	sprite = prototypes[aggregate_state]
 	$SpriteParent.add_child(sprite)
 	
 	#apply_settings()
