@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://player/bubble.gd" id="1_0h62n"]
 [ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://player/temperature_sensor.gd" id="3_mddvq"]
 [ext_resource type="Material" uid="uid://c2ahrsqpis53p" path="res://art/materials/character_water_material.tres" id="3_nvuyj"]
+[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="5_xdl5r"]
 [ext_resource type="PackedScene" uid="uid://cgqljjuuqjwu8" path="res://art/scenes/bubble_sprite.tscn" id="9_2eeoj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c1qun"]
@@ -44,6 +45,12 @@ shape = SubResource("CircleShape2D_l4j7i")
 
 [node name="WaterSprite" parent="Prototypes" unique_id=315014616 instance=ExtResource("9_2eeoj")]
 top_level = false
+light_mask = 0
 material = ExtResource("3_nvuyj")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=185632694]
+position = Vector2(120.999985, 0)
+scale = Vector2(0.285, 0.285)
+texture = ExtResource("5_xdl5r")
 
 [connection signal="aggregate_changed" from="TemperatureSensor" to="." method="_on_temperature_sensor_aggregate_changed"]
