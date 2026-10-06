@@ -23,6 +23,12 @@ modulate = Color(0.8587668, 0.3024216, 0.41567445, 1)
 position = Vector2(952.00006, 1064)
 scale = Vector2(1.68, 0.545)
 
+[node name="LevelStart" parent="." index="1" unique_id=1790299339]
+position = Vector2(160, 570)
+
+[node name="LevelGoal" parent="." index="2" unique_id=1453480285]
+position = Vector2(1629, 4)
+
 [node name="ground_zone_tool3" parent="GroundZones" parent_id_path=PackedInt32Array(678743018) index="0" unique_id=1615348414 instance=ExtResource("2_skxlf")]
 position = Vector2(-1153.9999, 1018.99994)
 rotation = -0.053201377
@@ -45,12 +51,6 @@ polygon = PackedVector2Array(1064, 40, 1748, 40, 1743, -632, 1102, -821, 578, -7
 row_spacing = 50.0
 column_spacing = 50.0
 max_offset_x = 15.0
-
-[node name="LevelStart" parent="." index="2" unique_id=1790299339]
-position = Vector2(160, 570)
-
-[node name="LevelGoal" parent="." index="3" unique_id=1453480285]
-position = Vector2(1629, 4)
 
 [node name="BottomLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="0" unique_id=651454461 instance=ExtResource("4_4h366")]
 position = Vector2(610, 279)
