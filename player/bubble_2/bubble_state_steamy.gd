@@ -12,9 +12,8 @@ var phase : Phase
 var rotation_override = 0.0
 
 func initialize():
+	rotation_override = 0.0
 	phase = phases.get("start")
-	if phase:
-		phase.enter()
 
 
 # TODO: move into initialize()
@@ -25,16 +24,11 @@ func _ready():
 		"stable" : Stable.new(state_owner, self)
 	}
 	phase = phases.start
-	phase.enter()
 
 
 func on_process(delta):
 	super(delta)
-	var next_phase = phase.on_process(delta)
-	if next_phase != phase:
-		phase.exit()
-		phase = next_phase
-		phase.enter()
+	phase = phase.on_process(delta)
 
 
 func rotate_sprite(delta):
@@ -59,15 +53,8 @@ func rotate_sprite(delta):
 		phase_host = phase_host_
 	
 	@abstract func on_process(delta) -> Phase
-	func enter():
-		pass
-	func exit():
-		pass
 
 class Start extends Phase:
-	func enter():
-		phase_host.rotation_override = 0.0
-		
 	func on_process(delta):
 		if is_equal_approx(state_host.sprite_2d.global_rotation, 0.0):
 			phase_host.DEBUG_steamy_label.text = "phase: %s" % ["Start"]
@@ -87,10 +74,7 @@ class Rotating extends Phase:
 		return self
 
 class Stable extends Phase:
-	func enter():
-		state_host.sprite_2d.global_rotation = 0.0
-		
-	func on_process(delta):
+	func on_process(_delta):
 		state_host.sprite_2d.global_rotation = 0.0
 		phase_host.DEBUG_steamy_label.text = "phase: %s" % ["Stable"]
 		return self
