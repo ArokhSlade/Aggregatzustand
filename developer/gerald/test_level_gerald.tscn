@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://bofup41sljli8" path="res://level/level_base.tscn" id="1_xpanb"]
 [ext_resource type="Script" uid="uid://b8tx4w0r4xv4u" path="res://developer/gerald/test_level_gerald.gd" id="2_2sfkk"]
 [ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="2_b3kng"]
-[ext_resource type="PackedScene" uid="uid://bmuetdnaqli2o" path="res://player/bubble_2/bubble_2.tscn" id="3_1edn2"]
 [ext_resource type="PackedScene" uid="uid://b6jm1ruws84qw" path="res://level/interactables/pusher.tscn" id="3_xpanb"]
 [ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="4_i0isw"]
 [ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="5_y4stb"]
@@ -14,7 +13,6 @@
 
 [node name="TestLevelGerald" unique_id=893623266 instance=ExtResource("1_xpanb")]
 script = ExtResource("2_2sfkk")
-player_scene = ExtResource("3_1edn2")
 
 [node name="ColdTemperatureZone" parent="TemperatureZones" parent_id_path=PackedInt32Array(1149663614) index="0" unique_id=198987449 instance=ExtResource("2_b3kng")]
 modulate = Color(0.5420429, 0.97216827, 0.9859143, 1)
@@ -98,9 +96,7 @@ alpha_rad = 0.371
 position = Vector2(490, 328)
 texture = ExtResource("10_xisyx")
 script = ExtResource("11_aue2u")
-angle_delta = -0.17453292519999009
 
 [node name="Icon2" type="Sprite2D" parent="Icon" index="0" unique_id=1331832490]
-position = Vector2(1.0000076, -0.9999924)
 scale = Vector2(0.33982685, 0.33982685)
 texture = ExtResource("10_xisyx")
