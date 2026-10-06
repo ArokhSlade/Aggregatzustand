@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bofup41sljli8"]
 
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://level/level.gd" id="1_d8qi5"]
-[ext_resource type="PackedScene" uid="uid://dqfsum7vwqwnx" path="res://player/bubble.tscn" id="2_j7wmq"]
+[ext_resource type="PackedScene" uid="uid://bmuetdnaqli2o" path="res://player/bubble_2.tscn" id="2_tvde0"]
 [ext_resource type="Resource" uid="uid://mn5f7fwwl6q1" path="res://temperaturezones/defaullt_aggregate_states_profile.tres" id="3_6tqrk"]
 [ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="3_tvde0"]
 [ext_resource type="PackedScene" uid="uid://biaayea07sh1x" path="res://level/key_points/level_goal.tscn" id="4_j7wmq"]
@@ -10,7 +10,7 @@
 
 [node name="Level_Base" type="Node2D" unique_id=893623266 node_paths=PackedStringArray("level_start", "player_parent")]
 script = ExtResource("1_d8qi5")
-player_scene = ExtResource("2_j7wmq")
+player_scene = ExtResource("2_tvde0")
 level_start = NodePath("LevelStart")
 player_parent = NodePath("Players")
 DEBUG_aggregate_state_profile = ExtResource("3_6tqrk")
