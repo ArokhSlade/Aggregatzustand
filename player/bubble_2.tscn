@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://djjrxkfxmbl0r" path="res://player/bubble_state_steamy.gd" id="6_6fodm"]
 [ext_resource type="Material" uid="uid://c2ahrsqpis53p" path="res://art/materials/character_water_material.tres" id="6_mxgo2"]
 [ext_resource type="Material" uid="uid://ccm8snwmivhkb" path="res://art/materials/character_gas_material.tres" id="7_6fodm"]
+[ext_resource type="Script" uid="uid://day47ch14r7tc" path="res://player/bubble_state_base.gd" id="9_tbvrd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c1qun"]
 friction = 0.82
@@ -26,6 +27,7 @@ can_sleep = false
 continuous_cd = 2
 script = ExtResource("1_bswli")
 states_map = {
+0: NodePath("States/None"),
 1: NodePath("States/Watery"),
 2: NodePath("States/Steamy")
 }
@@ -63,6 +65,11 @@ script = ExtResource("6_6fodm")
 DEBUG_steamy_label = NodePath("../../Control/BoxContainer/SteamyLabel")
 material = ExtResource("7_6fodm")
 gravity_scale = -0.4
+state_owner = NodePath("../..")
+DEBUG_base_label = NodePath("../../Control/BoxContainer/BaseLabel")
+
+[node name="None" type="Node" parent="States" unique_id=1101823464 node_paths=PackedStringArray("state_owner", "DEBUG_base_label")]
+script = ExtResource("9_tbvrd")
 state_owner = NodePath("../..")
 DEBUG_base_label = NodePath("../../Control/BoxContainer/BaseLabel")
 

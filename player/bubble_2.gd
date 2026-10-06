@@ -2,16 +2,28 @@ extends RigidBody2D
 
 const AggState = AggregateStateProfile.Type
 const BubbleState = preload("uid://day47ch14r7tc")
+
 signal aggregate_changed(aggregate_state)
 
-var state
 @export var states_map : Dictionary[AggState, BubbleState]
 
+@export_category("Debug")
+@export var DEBUG_start_aggregate_state = AggState.NONE
+
 @onready var sprite_2d: Sprite2D = $Sprite2D
+
+var state
+var initialized = false
+
+func _ready():
+	if not initialized:
+		push_warning("need to initialize() before _ready()! doing DEBUG fallback initialization...")
+		initialize(DEBUG_start_aggregate_state, null)
 
 
 func initialize(start_aggregate_state, aggregate_state_profile):
 	apply_aggregate_state.call_deferred(start_aggregate_state)
+	initialized = true
 
 
 func _on_temperature_sensor_aggregate_changed(aggregate_state: Variant) -> void:
