@@ -40,6 +40,7 @@ script = ExtResource("2_yflih")
 shape = SubResource("CircleShape2D_l4j7i")
 
 [node name="Sprite2D" parent="." unique_id=393402349 instance=ExtResource("3_bswli")]
+top_level = false
 material = null
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=185632694]
@@ -49,16 +50,52 @@ texture = ExtResource("4_6fodm")
 
 [node name="States" type="Node" parent="." unique_id=1491004246]
 
-[node name="Watery" type="Node" parent="States" unique_id=1639160077 node_paths=PackedStringArray("state_owner")]
+[node name="Watery" type="Node" parent="States" unique_id=1639160077 node_paths=PackedStringArray("DEBUG_watery_label", "state_owner", "DEBUG_base_label")]
 script = ExtResource("5_bswli")
-sprite_material = ExtResource("6_mxgo2")
+DEBUG_watery_label = NodePath("../../Control/BoxContainer/WateryLabel")
+material = ExtResource("6_mxgo2")
 gravity_scale = 1.0
 state_owner = NodePath("../..")
+DEBUG_base_label = NodePath("../../Control/BoxContainer/BaseLabel")
 
-[node name="Steamy" type="Node" parent="States" unique_id=1214926080 node_paths=PackedStringArray("state_owner")]
+[node name="Steamy" type="Node" parent="States" unique_id=1214926080 node_paths=PackedStringArray("DEBUG_steamy_label", "state_owner", "DEBUG_base_label")]
 script = ExtResource("6_6fodm")
-sprite_material = ExtResource("7_6fodm")
+DEBUG_steamy_label = NodePath("../../Control/BoxContainer/SteamyLabel")
+material = ExtResource("7_6fodm")
 gravity_scale = -0.4
 state_owner = NodePath("../..")
+DEBUG_base_label = NodePath("../../Control/BoxContainer/BaseLabel")
+
+[node name="Control" type="Control" parent="." unique_id=532076492]
+top_level = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BoxContainer" type="BoxContainer" parent="Control" unique_id=498270582]
+layout_mode = 0
+offset_left = 759.0
+offset_top = 749.0
+offset_right = 1088.0
+offset_bottom = 849.0
+theme_override_constants/separation = 21
+vertical = true
+
+[node name="BaseLabel" type="Label" parent="Control/BoxContainer" unique_id=61623793]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "asdfsas"
+
+[node name="SteamyLabel" type="Label" parent="Control/BoxContainer" unique_id=1583702760]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "asdfsas"
+
+[node name="WateryLabel" type="Label" parent="Control/BoxContainer" unique_id=1949232640]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "asdfsas"
 
 [connection signal="aggregate_changed" from="TemperatureSensor" to="." method="_on_temperature_sensor_aggregate_changed"]
