@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="5_y4stb"]
 [ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="6_hienj"]
 [ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="7_d764s"]
+[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="10_xisyx"]
+[ext_resource type="Script" uid="uid://c6tbb27yu1yqv" path="res://developer/gerald/test_rotator.gd" id="11_aue2u"]
 
 [node name="TestLevelGerald" unique_id=893623266 instance=ExtResource("1_xpanb")]
 script = ExtResource("2_2sfkk")
@@ -74,7 +76,31 @@ position = Vector2(-156.00002, -780)
 position = Vector2(951, 751)
 
 [node name="Pusher" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="0" unique_id=1242537064 instance=ExtResource("3_xpanb")]
-position = Vector2(155, 357)
+position = Vector2(2, 357)
 strength = 1000.0
 DEBUG_draw_push_vector = true
 alpha_rad = 0.371
+
+[node name="Pusher3" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="1" unique_id=1152761304 instance=ExtResource("3_xpanb")]
+position = Vector2(321, 481)
+strength = 1000.0
+DEBUG_draw_push_vector = true
+alpha_rad = 0.371
+
+[node name="Pusher2" parent="Schnuffis" parent_id_path=PackedInt32Array(1241823136) index="2" unique_id=1943537098 instance=ExtResource("3_xpanb")]
+position = Vector2(1139, 481)
+scale = Vector2(-1, 1)
+strength = -1000.0
+DEBUG_draw_push_vector = true
+alpha_rad = 0.371
+
+[node name="Icon" type="Sprite2D" parent="." index="7" unique_id=642309328]
+position = Vector2(490, 328)
+texture = ExtResource("10_xisyx")
+script = ExtResource("11_aue2u")
+angle_delta = -0.17453292519999009
+
+[node name="Icon2" type="Sprite2D" parent="Icon" index="0" unique_id=1331832490]
+position = Vector2(1.0000076, -0.9999924)
+scale = Vector2(0.33982685, 0.33982685)
+texture = ExtResource("10_xisyx")
