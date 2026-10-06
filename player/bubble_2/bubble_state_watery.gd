@@ -1,4 +1,4 @@
-extends "res://player/bubble_state_base.gd"
+extends "res://player/bubble_2/bubble_state_base.gd"
 
 @export var DEBUG_watery_label : Label
 

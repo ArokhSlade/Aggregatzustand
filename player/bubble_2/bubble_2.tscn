@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://bmuetdnaqli2o"]
 
-[ext_resource type="Script" uid="uid://dh5jji2t0ivrj" path="res://player/bubble_2.gd" id="1_bswli"]
+[ext_resource type="Script" uid="uid://dh5jji2t0ivrj" path="res://player/bubble_2/bubble_2.gd" id="1_bswli"]
 [ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://player/temperature_sensor.gd" id="2_yflih"]
 [ext_resource type="PackedScene" uid="uid://cgqljjuuqjwu8" path="res://art/scenes/bubble_sprite.tscn" id="3_bswli"]
 [ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="4_6fodm"]
-[ext_resource type="Script" uid="uid://cmvwhaj7653hv" path="res://player/bubble_state_watery.gd" id="5_bswli"]
-[ext_resource type="Script" uid="uid://djjrxkfxmbl0r" path="res://player/bubble_state_steamy.gd" id="6_6fodm"]
+[ext_resource type="Script" uid="uid://cmvwhaj7653hv" path="res://player/bubble_2/bubble_state_watery.gd" id="5_bswli"]
+[ext_resource type="Script" uid="uid://djjrxkfxmbl0r" path="res://player/bubble_2/bubble_state_steamy.gd" id="6_6fodm"]
 [ext_resource type="Material" uid="uid://c2ahrsqpis53p" path="res://art/materials/character_water_material.tres" id="6_mxgo2"]
 [ext_resource type="Material" uid="uid://ccm8snwmivhkb" path="res://art/materials/character_gas_material.tres" id="7_6fodm"]
-[ext_resource type="Script" uid="uid://day47ch14r7tc" path="res://player/bubble_state_base.gd" id="9_tbvrd"]
+[ext_resource type="Script" uid="uid://day47ch14r7tc" path="res://player/bubble_2/bubble_state_base.gd" id="9_tbvrd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c1qun"]
 friction = 0.82
