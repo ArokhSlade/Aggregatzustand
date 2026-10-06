@@ -41,7 +41,7 @@ func rotate_sprite(delta):
 	DEBUG_steamy_label.modulate = Color.AQUAMARINE
 	rotation_override += angle_delta
 	state_owner.sprite_2d.global_rotation = rotation_override
-	DEBUG_steamy_label.text = "phase: %s\ncurrent_rotation: %s\nangle_delta: %s\nangle_diff: %s" % ["phase", rotation_override, angle_delta, angle_diff]
+	DEBUG_steamy_label.text = "phase: %s\ncurrent_rotation: %s\nangle_delta: %s\nangle_diff: %s" % [phase, rotation_override, angle_delta, angle_diff]
 
 
 @abstract class Phase:
@@ -53,11 +53,12 @@ func rotate_sprite(delta):
 		phase_host = phase_host_
 	
 	@abstract func on_process(delta) -> Phase
+	@abstract func _to_string()
 
 class Start extends Phase:
 	func on_process(delta):
 		if is_equal_approx(state_host.sprite_2d.global_rotation, 0.0):
-			phase_host.DEBUG_steamy_label.text = "phase: %s" % ["Start"]
+			phase_host.DEBUG_steamy_label.text = "phase: %s" % [self]
 			return phase_host.phases.stable
 		else:
 			phase_host.rotation_override = state_host.sprite_2d.global_rotation
@@ -65,6 +66,8 @@ class Start extends Phase:
 			if is_equal_approx(state_host.sprite_2d.global_rotation, 0.0):
 				return phase_host.phases.stable
 			return phase_host.phases.rotating
+	func _to_string():
+		return "Start"
 
 class Rotating extends Phase:
 	func on_process(delta):
@@ -72,9 +75,13 @@ class Rotating extends Phase:
 		if is_equal_approx(state_host.sprite_2d.global_rotation, 0.0):
 			return phase_host.phases.stable
 		return self
+	func _to_string():
+		return "Rotating"
 
 class Stable extends Phase:
 	func on_process(_delta):
 		state_host.sprite_2d.global_rotation = 0.0
-		phase_host.DEBUG_steamy_label.text = "phase: %s" % ["Stable"]
+		phase_host.DEBUG_steamy_label.text = "phase: %s" % [self]
 		return self
+	func _to_string():
+		return "Stable"
