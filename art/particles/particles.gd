@@ -10,7 +10,6 @@ extends CPUParticles2D
 func update_amount():
 	var area = emission_rect_extents.x * emission_rect_extents.y
 	amount = maxi(1,int(roundf(area * particle_density)))
-	print(amount)
 
 
 func set_rect_extents(w,h):
