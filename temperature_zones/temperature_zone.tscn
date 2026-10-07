@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbim8wabmbhvg"]
 
-[ext_resource type="Script" uid="uid://tdrlfypk8gkj" path="res://temperaturezones/temperature_zone.gd" id="1_ekn2d"]
+[ext_resource type="Script" uid="uid://tdrlfypk8gkj" path="res://temperature_zones/temperature_zone.gd" id="1_ekn2d"]
 [ext_resource type="Material" uid="uid://8dn7h4hrvgn2" path="res://art/materials/cold_distortion_material.tres" id="2_d6bvp"]
 [ext_resource type="Material" uid="uid://b7xpfrej47bk4" path="res://art/materials/neutral_distortion_material.tres" id="2_maum8"]
 [ext_resource type="Material" uid="uid://bwe0k7ukshinh" path="res://art/materials/heat_distortion_material.tres" id="4_po8cf"]

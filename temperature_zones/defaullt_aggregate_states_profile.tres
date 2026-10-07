@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AggregateStateProfile" format=3 uid="uid://mn5f7fwwl6q1"]
 
-[ext_resource type="Script" uid="uid://d7lqqt56xyby" path="res://temperaturezones/aggregate_state_profile.gd" id="1_8uweo"]
+[ext_resource type="Script" uid="uid://d7lqqt56xyby" path="res://temperature_zones/aggregate_state_profile.gd" id="1_8uweo"]
 
 [sub_resource type="Curve" id="Curve_mddvq"]
 _limits = [-1.0, 1.0, 0.0, 1.0]

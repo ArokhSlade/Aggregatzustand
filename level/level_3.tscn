@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dbohdunlakc40"]
 
 [ext_resource type="PackedScene" uid="uid://bofup41sljli8" path="res://level/level_base.tscn" id="1_bstey"]
-[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="2_5mhvx"]
-[ext_resource type="PackedScene" uid="uid://2n5qcpk0onw1" path="res://temperaturezones/movable_temperature_zone.tscn" id="3_hrebq"]
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperature_zones/temperature_zone.tscn" id="2_5mhvx"]
+[ext_resource type="PackedScene" uid="uid://2n5qcpk0onw1" path="res://temperature_zones/movable_temperature_zone.tscn" id="3_hrebq"]
 [ext_resource type="Texture2D" uid="uid://5b1ysjodclqp" path="res://art/arrow.png" id="4_wcq0y"]
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://level/ground/ground_zone_tool.tscn" id="5_3lca4"]
 [ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="6_w5o0a"]

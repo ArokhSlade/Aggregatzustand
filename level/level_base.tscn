@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bw6n3kncq0hqi" path="res://level/level.gd" id="1_d8qi5"]
 [ext_resource type="PackedScene" uid="uid://bmuetdnaqli2o" path="res://player/bubble_2/bubble_2.tscn" id="2_tvde0"]
-[ext_resource type="Resource" uid="uid://mn5f7fwwl6q1" path="res://temperaturezones/defaullt_aggregate_states_profile.tres" id="3_6tqrk"]
+[ext_resource type="Resource" uid="uid://mn5f7fwwl6q1" path="res://temperature_zones/defaullt_aggregate_states_profile.tres" id="3_6tqrk"]
 [ext_resource type="PackedScene" uid="uid://dej6lwvffedmf" path="res://level/key_points/level_start.tscn" id="3_tvde0"]
 [ext_resource type="PackedScene" uid="uid://biaayea07sh1x" path="res://level/key_points/level_goal.tscn" id="4_j7wmq"]
 

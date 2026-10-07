@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dbccd3v8jd5ih"]
 
 [ext_resource type="PackedScene" uid="uid://bofup41sljli8" path="res://level/level_base.tscn" id="1_cwafv"]
-[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="2_mytjb"]
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperature_zones/temperature_zone.tscn" id="2_mytjb"]
 [ext_resource type="PackedScene" uid="uid://i85qqaldnt2e" path="res://level/ground/ground_zone_tool.tscn" id="3_sdpr0"]
 [ext_resource type="PackedScene" uid="uid://bp3qb06rwpxxw" path="res://level/blocks/indestructible/bottom_left_corner_house.tscn" id="8_deimu"]
 [ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="9_l6gqv"]
@@ -26,6 +26,12 @@ modulate = Color(0.7137255, 0.02745098, 0.19607843, 0.67058825)
 position = Vector2(899, 626.99994)
 scale = Vector2(0.14612031, 2.4744563)
 
+[node name="LevelStart" parent="." index="1" unique_id=1790299339]
+position = Vector2(251, 171)
+
+[node name="LevelGoal" parent="." index="2" unique_id=1453480285]
+position = Vector2(1082, 781)
+
 [node name="ground_zone_tool" parent="GroundZones" parent_id_path=PackedInt32Array(678743018) index="0" unique_id=1615348414 instance=ExtResource("3_sdpr0")]
 position = Vector2(134.99998, 0)
 scale = Vector2(1.3329632, 1.3329632)
@@ -33,12 +39,6 @@ color = Color(0.9843137, 0, 0.99215686, 0)
 polygon = PackedVector2Array(1261, 143, 1390, 441, 1324, 711, 1010, 749, 659, 779, 638, 524, 1119, 443, 1015, 278, 519, 322, 294, 498, 634, 505, 650, 753, 271, 801, -25, 507, -96, 124, 90, 213, 335, 97)
 max_offset_x = 11.0
 max_offset_y = 9.5
-
-[node name="LevelStart" parent="." index="2" unique_id=1790299339]
-position = Vector2(251, 171)
-
-[node name="LevelGoal" parent="." index="3" unique_id=1453480285]
-position = Vector2(1082, 781)
 
 [node name="BottomLeftCornerHouse" parent="StaticBlockers" parent_id_path=PackedInt32Array(31184531) index="0" unique_id=651454461 instance=ExtResource("8_deimu")]
 position = Vector2(-167, 387.99997)

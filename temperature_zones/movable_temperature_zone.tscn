@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2n5qcpk0onw1"]
 
-[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperaturezones/temperature_zone.tscn" id="1_5uq6h"]
-[ext_resource type="Script" uid="uid://cd7kggw6735d8" path="res://temperaturezones/movable_temperature_zone.gd" id="2_jnetu"]
+[ext_resource type="PackedScene" uid="uid://bbim8wabmbhvg" path="res://temperature_zones/temperature_zone.tscn" id="1_5uq6h"]
+[ext_resource type="Script" uid="uid://cd7kggw6735d8" path="res://temperature_zones/movable_temperature_zone.gd" id="2_jnetu"]
 [ext_resource type="Texture2D" uid="uid://nqi0xcwqu2qq" path="res://art/textures/hand.png" id="4_epw0w"]
 
 [node name="MovableTemperatureZone" unique_id=198987449 instance=ExtResource("1_5uq6h")]
