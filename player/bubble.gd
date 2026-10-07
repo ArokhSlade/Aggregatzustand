@@ -25,7 +25,7 @@ func _enter_tree():
 		initialize(AggregateStateProfile.Type.WATER, DEBUG_aggregate_state_profile)
 
 
-# NOTE: for TDD: initialize methods need to be written in a style that they can be called before _ready(). maybe call them pre_ready_init()?
+# NOTE: initialize() methods are intended to be callable before _ready().
 func initialize(aggregte_state_, aggregate_state_profile_):
 	aggregate_state_profile = aggregate_state_profile_
 	for agg_state in map_prototypes.keys():
@@ -34,7 +34,6 @@ func initialize(aggregte_state_, aggregate_state_profile_):
 	init_apply_aggregate_state(aggregte_state_)
 
 	initialized = true
-	
 
 
 func init_apply_aggregate_state(aggregate_state_):

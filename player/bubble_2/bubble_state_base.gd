@@ -2,8 +2,6 @@ extends Node
 
 const AggState = AggregateStateProfile.Type
 
-signal aggregate_changed(aggregate_state)
-
 @export var material : Material
 @export var gravity_scale : float
 
@@ -14,9 +12,9 @@ signal aggregate_changed(aggregate_state)
 func initialize():
 	pass
 
-func on_integrate_forces(physics_state):
+func on_integrate_forces(_physics_state):
 	pass
 
-func on_process(delta):
+func on_process(_delta):
 	DEBUG_base_label.text = "body_rotation: %s\nsprite_rotation %s" % [state_owner.global_rotation, state_owner.sprite_2d.global_rotation]
 	pass
