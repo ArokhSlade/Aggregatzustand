@@ -50,11 +50,11 @@ func switch_state(new_state):
 
 @abstract class State:
 	var owner
-	func on_pointer_just_pressed(event : InputEventMouseButton):
+	func on_pointer_just_pressed(_event : InputEventMouseButton):
 		pass
-	func on_pointer_released(event : InputEventMouseButton):
+	func on_pointer_released(_event : InputEventMouseButton):
 		pass
-	func on_pointer_moved(event : InputEventMouseMotion):
+	func on_pointer_moved(_event : InputEventMouseMotion):
 		pass
 	
 	func _init(owner_):
@@ -74,7 +74,7 @@ class Dragging extends State:
 	func initialize(offset_):
 		offset = offset_
 	
-	func on_pointer_released(event : InputEventMouseButton):
+	func on_pointer_released(_event : InputEventMouseButton):
 		owner.switch_state(owner.states.Default)
 	
 	func on_pointer_moved(event : InputEventMouseMotion):

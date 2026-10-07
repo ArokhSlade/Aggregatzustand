@@ -25,7 +25,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		nodes_to_push.append(body)
 
 
-func _process(delta: float) -> void:
+func _process(_delta):
 	if is_pushing:
 		push()
 	queue_redraw()
@@ -47,7 +47,7 @@ func get_push_vector():
 	return push_vector
 
 
-func _on_click_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_click_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventScreenTouch:
 		if event.pressed:
 			active_touch_id = event.index

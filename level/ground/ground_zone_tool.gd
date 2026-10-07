@@ -58,10 +58,10 @@ func get_spawn_positions() -> Array[Vector2]:
 		var y: float = min_pos.y
 		while y <= max_pos.y:
 
-			var offset := Vector2(
+			var _offset := Vector2(
 				randf_range(-max_offset_x, max_offset_x),
 				randf_range(-max_offset_y, max_offset_y))
-			var candidate_pos: Vector2 = Vector2(x, y) + offset
+			var candidate_pos: Vector2 = Vector2(x, y) + _offset
 
 			if Geometry2D.is_point_in_polygon(candidate_pos, polygon):
 				positions.append(candidate_pos)

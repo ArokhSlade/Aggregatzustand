@@ -21,7 +21,7 @@ func _ready():
 		initialize(DEBUG_start_aggregate_state, null)
 
 
-func initialize(start_aggregate_state, aggregate_state_profile):
+func initialize(start_aggregate_state, _aggregate_state_profile):
 	apply_aggregate_state.call_deferred(start_aggregate_state)
 	initialized = true
 
@@ -39,8 +39,10 @@ func apply_aggregate_state(agg_state):
 	gravity_scale = state.gravity_scale
 	$Sprite2D.material = state.material
 
+
 func _integrate_forces(physics_state: PhysicsDirectBodyState2D) -> void:
 	state.on_integrate_forces(physics_state)
+
 
 func _process(delta):
 	state.on_process(delta)
