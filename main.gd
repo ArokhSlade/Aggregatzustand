@@ -5,7 +5,7 @@ extends Node
 var level_index = 0
 
 ## Resource that defines balancing values for aggregate states
-@export var aggregate_states_resoure : AggregateStateProfile
+@export var aggregate_states_profile : AggregateStateProfile
 
 @onready var level_parent = $LevelParent
 @onready var menu = $MenuMain
@@ -27,7 +27,7 @@ func _ready():
 
 func load_level():
 	level = level_scenes[level_index].instantiate()
-	level.initialize(aggregate_states_resoure)
+	level.initialize(aggregate_states_profile)
 	level.connect("level_finished",on_level_finished)
 	level_parent.add_child(level)
 

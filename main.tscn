@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drv3pyrh45wog" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b7adqbthgl7nk" path="res://level/level_1.tscn" id="2_dg77c"]
-[ext_resource type="Resource" uid="uid://mn5f7fwwl6q1" path="res://temperature_zones/defaullt_aggregate_states_profile.tres" id="3_1bvp3"]
+[ext_resource type="Resource" uid="uid://mn5f7fwwl6q1" path="res://temperature_zones/default_aggregate_states_profile.tres" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://lxei0yg0nkmf" path="res://level/level_2.tscn" id="3_dg77c"]
 [ext_resource type="PackedScene" uid="uid://dbohdunlakc40" path="res://level/level_3.tscn" id="4_dg77c"]
 [ext_resource type="AudioStream" uid="uid://c5tvo5vgmmjs4" path="res://sound/physics-lesson.wav" id="5_7mycd"]
@@ -16,7 +16,7 @@
 [node name="Main" type="Node" unique_id=1820909058]
 script = ExtResource("1_h2yge")
 level_scenes = Array[PackedScene]([ExtResource("2_dg77c"), ExtResource("3_dg77c"), ExtResource("4_dg77c"), ExtResource("5_ycdy4")])
-aggregate_states_resoure = ExtResource("3_1bvp3")
+aggregate_states_profile = ExtResource("3_1bvp3")
 
 [node name="Mikrobcore_BG" parent="." unique_id=1391745599 instance=ExtResource("8_5vw27")]
 position = Vector2(1228, -406)
