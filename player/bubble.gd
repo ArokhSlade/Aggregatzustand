@@ -10,10 +10,7 @@ extends RigidBody2D
 		apply_aggregate_state(value)
 
 const AggState = AggregateStateProfile.Type
-var states = {
-	AggState.WATER : Watery.new(self),
-	AggState.STEAM : Steamy.new(self)
-}
+
 
 # initialize()'able dependency
 var aggregate_state_profile : AggregateStateProfile
@@ -21,7 +18,6 @@ var aggregate_state_profile : AggregateStateProfile
 var aggregate_state : AggregateStateProfile.Type
 var sprite : Sprite2D
 var initialized = false
-var state : State
 
 func _enter_tree():
 	if not initialized:
@@ -54,7 +50,6 @@ func init_apply_aggregate_state(aggregate_state_):
 	
 	sprite = map_prototypes[aggregate_state]
 	$SpriteParent.add_child(sprite)
-	state = states[aggregate_state]
 
 
 func apply_aggregate_state(aggregate_state_):
@@ -69,18 +64,6 @@ func apply_aggregate_state(aggregate_state_):
 	$SpriteParent.remove_child(sprite)
 	sprite = map_prototypes[aggregate_state]
 	$SpriteParent.add_child(sprite)
-	
-	transition_to(aggregate_state_)
-
-
-func transition_to(agg_state):
-	var new_state = states.get(agg_state)
-	if not new_state:
-		push_error("transition_to: invalid new state")
-		return
-	state.on_exit()
-	new_state.on_enter(state.get_data())
-	state = new_state
 
 
 func _on_temperature_sensor_aggregate_changed(aggregate_state_):
@@ -91,10 +74,6 @@ func temp_to_gravity_scale(temp):
 	gravity_scale = aggregate_state_profile.map_temperature_to_gravity_scale(temp)
 
 
-func _integrate_forces(physics_state: PhysicsDirectBodyState2D) -> void:
-	state.on_integrate_forces(physics_state)
-
-
 func _process(_delta):
 	sprite.global_position = global_position
 
@@ -102,48 +81,3 @@ func _process(_delta):
 func get_temperature():
 	var temperature = aggregate_state_profile.map_agg_state_to_temp(aggregate_state)
 	return temperature
-
-
-class State:
-	var owner
-	func _init(owner_):
-		owner = owner_
-	func on_process():
-		pass
-	func on_physics_process(): 
-		pass
-	func on_integrate_forces(physics_state):
-		pass
-	#func apply_aggregate
-	func on_enter(data):
-		pass
-	func on_exit():
-		pass
-	func get_data():
-		return {}
-
-class Watery extends State:
-	var target_rotation = PI
-	var rotation_reset = false
-	
-	func on_enter(data):
-		rotation_reset = false
-		target_rotation = PI
-		copy_sprite_rotation_to_physics_body(data.sprite_2d.rotation)
-	
-	func copy_sprite_rotation_to_physics_body(rotation_):
-		target_rotation = rotation_
-	
-	func on_integrate_forces(physics_state : PhysicsDirectBodyState2D):
-		if not rotation_reset: 
-			var cur_pos = physics_state.transform.get_origin()
-			physics_state.transform = Transform2D(0, cur_pos)
-			rotation_reset = true
-
-
-class Steamy extends State:
-	func get_data():
-		return {
-			"sprite_2d" : owner.map_prototypes.get(AggState.STEAM)
-		}
-	pass
