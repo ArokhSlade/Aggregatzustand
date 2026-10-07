@@ -8,8 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://chle5ge3afpuy" path="res://level/blocks/indestructible/top_left_corner_house.tscn" id="5_y4stb"]
 [ext_resource type="PackedScene" uid="uid://cbwhhvmdb3w3o" path="res://level/blocks/indestructible/bottom_right_corner_house.tscn" id="6_hienj"]
 [ext_resource type="PackedScene" uid="uid://in7x16u2wak8" path="res://level/blocks/indestructible/top_right_corner_house.tscn" id="7_d764s"]
-[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="10_xisyx"]
-[ext_resource type="Script" uid="uid://c6tbb27yu1yqv" path="res://developer/gerald/test_rotator.gd" id="11_aue2u"]
 
 [node name="TestLevelGerald" unique_id=893623266 instance=ExtResource("1_xpanb")]
 script = ExtResource("2_2sfkk")
@@ -91,12 +89,3 @@ scale = Vector2(-1, 1)
 strength = -1000.0
 DEBUG_draw_push_vector = true
 alpha_rad = 0.371
-
-[node name="Icon" type="Sprite2D" parent="." index="7" unique_id=642309328]
-position = Vector2(490, 328)
-texture = ExtResource("10_xisyx")
-script = ExtResource("11_aue2u")
-
-[node name="Icon2" type="Sprite2D" parent="Icon" index="0" unique_id=1331832490]
-scale = Vector2(0.33982685, 0.33982685)
-texture = ExtResource("10_xisyx")
