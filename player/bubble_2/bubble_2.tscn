@@ -46,25 +46,22 @@ material = null
 
 [node name="States" type="Node" parent="." unique_id=1491004246]
 
-[node name="Watery" type="Node" parent="States" unique_id=1639160077 node_paths=PackedStringArray("DEBUG_watery_label", "state_owner", "DEBUG_base_label")]
+[node name="None" type="Node" parent="States" unique_id=1101823464 node_paths=PackedStringArray("DEBUG_base_label")]
+script = ExtResource("9_tbvrd")
+DEBUG_base_label = NodePath("../../DebugDisplay/BoxContainer/BaseLabel")
+
+[node name="Watery" type="Node" parent="States" unique_id=1639160077 node_paths=PackedStringArray("DEBUG_watery_label", "DEBUG_base_label")]
 script = ExtResource("5_bswli")
 DEBUG_watery_label = NodePath("../../DebugDisplay/BoxContainer/WateryLabel")
 material = ExtResource("6_mxgo2")
 gravity_scale = 1.0
-state_owner = NodePath("../..")
 DEBUG_base_label = NodePath("../../DebugDisplay/BoxContainer/BaseLabel")
 
-[node name="Steamy" type="Node" parent="States" unique_id=1214926080 node_paths=PackedStringArray("DEBUG_steamy_label", "state_owner", "DEBUG_base_label")]
+[node name="Steamy" type="Node" parent="States" unique_id=1214926080 node_paths=PackedStringArray("DEBUG_steamy_label", "DEBUG_base_label")]
 script = ExtResource("6_6fodm")
 DEBUG_steamy_label = NodePath("../../DebugDisplay/BoxContainer/SteamyLabel")
 material = ExtResource("7_6fodm")
 gravity_scale = -0.4
-state_owner = NodePath("../..")
-DEBUG_base_label = NodePath("../../DebugDisplay/BoxContainer/BaseLabel")
-
-[node name="None" type="Node" parent="States" unique_id=1101823464 node_paths=PackedStringArray("state_owner", "DEBUG_base_label")]
-script = ExtResource("9_tbvrd")
-state_owner = NodePath("../..")
 DEBUG_base_label = NodePath("../../DebugDisplay/BoxContainer/BaseLabel")
 
 [node name="DebugDisplay" type="Control" parent="." unique_id=532076492]

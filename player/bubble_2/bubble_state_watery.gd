@@ -4,7 +4,9 @@ extends "res://player/bubble_2/bubble_state_base.gd"
 
 var should_override_rotation = false
 
-func initialize():
+func initialize(state_owner_):
+	super(state_owner_)
+	
 	should_override_rotation = true
 
 

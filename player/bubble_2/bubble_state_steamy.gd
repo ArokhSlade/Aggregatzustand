@@ -8,22 +8,21 @@ const Utils = preload("uid://djaoinm1vv7kw")
 
 var phases = {}
 var phase : Phase
-
 var rotation_override = 0.0
 
-func initialize():
-	rotation_override = 0.0
-	phase = phases.get("start")
-
-
-# TODO: move into initialize()
-func _ready():
+func initialize(state_owner_):
+	super(state_owner_)
+	
 	phases = {
-		"start" : Start.new(state_owner, self),
-		"rotating" : Rotating.new(state_owner, self),
-		"stable" : Stable.new(state_owner, self)
+		"start" : Start.new(state_owner_, self),
+		"rotating" : Rotating.new(state_owner_, self),
+		"stable" : Stable.new(state_owner_, self)
 	}
+
+
+func on_enter():
 	phase = phases.start
+	rotation_override = 0.0
 
 
 func on_process(delta):

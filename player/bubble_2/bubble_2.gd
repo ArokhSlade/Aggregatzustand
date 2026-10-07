@@ -21,21 +21,23 @@ func _ready():
 		initialize(DEBUG_start_aggregate_state, null)
 
 
-func initialize(start_aggregate_state, _aggregate_state_profile):
-	apply_aggregate_state.call_deferred(start_aggregate_state)
+func initialize(start_agg_state, _agg_states_profile):
+	for state in $States.get_children():
+		state.initialize(self)
+	apply_aggregate_state.call_deferred(start_agg_state)
 	initialized = true
 
 
-func _on_temperature_sensor_aggregate_changed(aggregate_state: Variant) -> void:
-	aggregate_changed.emit(aggregate_state)
-	apply_aggregate_state(aggregate_state)
+func _on_temperature_sensor_aggregate_changed(agg_state):
+	aggregate_changed.emit(agg_state)
+	apply_aggregate_state(agg_state)
 
 
 func apply_aggregate_state(agg_state):
 	state = states_map.get(agg_state)
 	if not state:
 		push_error("unknown state")
-	state.initialize()
+	state.on_enter()
 	gravity_scale = state.gravity_scale
 	$Sprite2D.material = state.material
 

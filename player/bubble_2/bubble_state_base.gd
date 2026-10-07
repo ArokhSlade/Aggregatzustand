@@ -5,11 +5,15 @@ const AggState = AggregateStateProfile.Type
 @export var material : Material
 @export var gravity_scale : float
 
-@export var state_owner : Node
-
+@export_category("Debug")
 @export var DEBUG_base_label : Label
 
-func initialize():
+var state_owner : Node
+
+func initialize(state_owner_):
+	state_owner = state_owner_
+
+func on_enter():
 	pass
 
 func on_integrate_forces(_physics_state):
