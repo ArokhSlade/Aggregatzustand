@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dh5jji2t0ivrj" path="res://player/bubble_2/bubble_2.gd" id="1_bswli"]
 [ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://player/temperature_sensor.gd" id="2_yflih"]
 [ext_resource type="PackedScene" uid="uid://cgqljjuuqjwu8" path="res://art/scenes/bubble_sprite.tscn" id="3_bswli"]
-[ext_resource type="Texture2D" uid="uid://bm27pt34w5oxe" path="res://icon.svg" id="4_6fodm"]
 [ext_resource type="Script" uid="uid://cmvwhaj7653hv" path="res://player/bubble_2/bubble_state_watery.gd" id="5_bswli"]
 [ext_resource type="Script" uid="uid://djjrxkfxmbl0r" path="res://player/bubble_2/bubble_state_steamy.gd" id="6_6fodm"]
 [ext_resource type="Material" uid="uid://c2ahrsqpis53p" path="res://art/materials/character_water_material.tres" id="6_mxgo2"]
@@ -44,11 +43,6 @@ shape = SubResource("CircleShape2D_l4j7i")
 [node name="Sprite2D" parent="." unique_id=393402349 instance=ExtResource("3_bswli")]
 top_level = false
 material = null
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=185632694]
-position = Vector2(120.999985, 0)
-scale = Vector2(0.285, 0.285)
-texture = ExtResource("4_6fodm")
 
 [node name="States" type="Node" parent="." unique_id=1491004246]
 
