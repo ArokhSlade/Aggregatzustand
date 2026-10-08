@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqfsum7vwqwnx"]
 
-[ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://developer/gerald/bubble_v1/bubble.gd" id="1_0h62n"]
+[ext_resource type="Script" uid="uid://6bdad5a6363t" path="res://developer/gerald/bubble_v1/bubble_v1.gd" id="1_0h62n"]
 [ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://player/temperature_sensor.gd" id="3_mddvq"]
 [ext_resource type="Material" uid="uid://c2ahrsqpis53p" path="res://art/materials/character_water_material.tres" id="3_nvuyj"]
 [ext_resource type="PackedScene" uid="uid://cgqljjuuqjwu8" path="res://art/scenes/bubble_sprite.tscn" id="9_2eeoj"]
@@ -15,7 +15,7 @@ radius = 44.04543
 [sub_resource type="CircleShape2D" id="CircleShape2D_l4j7i"]
 radius = 4.0
 
-[node name="Bubble" type="RigidBody2D" unique_id=1361995442 node_paths=PackedStringArray("map_prototypes") groups=["bubble"]]
+[node name="BubbleV1" type="RigidBody2D" unique_id=1361995442 node_paths=PackedStringArray("map_prototypes") groups=["bubble"]]
 physics_material_override = SubResource("PhysicsMaterial_c1qun")
 gravity_scale = 0.0
 can_sleep = false
