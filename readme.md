@@ -12,8 +12,8 @@ with extensive code refactor afterwards and some content upgrades.
 
 # Code Structure
 
-## Bubble2
-adAggregate states are expressed visually by switching material and functionally via gravity scale.  
+## [Bubble](/player/bubble.gd)
+Aggregate states are expressed visually by switching material and functionally via gravity scale.  
 State pattern is used to modify transforms of sprite and physics body as needed.
 
 <table>
@@ -37,7 +37,7 @@ State pattern is used to modify transforms of sprite and physics body as needed.
 </tr>
 </table>
 
-## Bubble
+## BubbleOld
 The more complex first iteration with these non-essentials:
 - an aggregate states profile - a resource that defines a curve mapping temperature to gravity scale - potential for more complex game design; not used.
 - nested prototype objects allow customizing visuals directly where they are used. Useful for transform offsets if desired.
