@@ -1,7 +1,7 @@
 # Aggregatzustand
 
 ## made at InnoGames Gamejam #17
-
+with extensive code refactor afterwards and some content upgrades.
 ## Credits
 * Lizzy - Game Design
 * Tommy - Programming, Sound, Music, Tech Art
