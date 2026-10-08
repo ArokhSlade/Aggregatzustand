@@ -37,7 +37,7 @@ State pattern is used to modify transforms of sprite and physics body as needed.
 </tr>
 </table>
 
-## BubbleOld
+## [Bubble V1](developer/gerald/bubble_v1/bubble_v1.gd)
 The more complex first iteration with these non-essentials:
 - an aggregate states profile - a resource that defines a curve mapping temperature to gravity scale - potential for more complex game design; not used.
 - nested prototype objects allow customizing visuals directly where they are used. Useful for transform offsets if desired.
