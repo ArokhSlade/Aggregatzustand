@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmuetdnaqli2o"]
 
-[ext_resource type="Script" uid="uid://dh5jji2t0ivrj" path="res://player/bubble_2.gd" id="1_nvuyj"]
+[ext_resource type="Script" uid="uid://dh5jji2t0ivrj" path="res://player/bubble.gd" id="1_nvuyj"]
 [ext_resource type="Script" uid="uid://bo6wsb24k0vi4" path="res://player/temperature_sensor.gd" id="2_2eeoj"]
 [ext_resource type="PackedScene" uid="uid://cgqljjuuqjwu8" path="res://art/scenes/bubble_sprite.tscn" id="3_e57qv"]
 [ext_resource type="Script" uid="uid://day47ch14r7tc" path="res://player/bubble_state_base.gd" id="4_5jau8"]
