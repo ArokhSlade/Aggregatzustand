@@ -1,5 +1,5 @@
 @tool
-extends "res://player/bubble_2/bubble_state_base.gd"
+extends "res://player/bubble_state_base.gd"
 
 const Utils = preload("uid://djaoinm1vv7kw")
 
