@@ -22,8 +22,8 @@ func _ready():
 
 
 func initialize(start_agg_state, _agg_states_profile):
-	for state in $States.get_children():
-		state.initialize(self)
+	for _state in $States.get_children():
+		_state.initialize(self)
 	apply_aggregate_state.call_deferred(start_agg_state)
 	initialized = true
 
